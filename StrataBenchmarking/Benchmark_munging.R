@@ -46,7 +46,7 @@ hospital_info <- read_csv("hospital_data.csv", col_types = cols(.default = col_c
   )
 
 
-## change working directory
+## change working directoryy
 setwd("~/Desktop/Strata/PIlotPrototype/")
 
 options(civis.default_db = "Strata Decision Technologies")
