@@ -11,7 +11,7 @@ library(dplyr)
 library(readr)
 library(cowplot)
 library(ggplot2)
-library(lazyeval)
+#library(lazyeval)
 library(rlang)
 library(civis)
 #library(civis.deckR)
@@ -46,7 +46,7 @@ hospital_info <- read_csv("hospital_data.csv", col_types = cols(.default = col_c
   )
 
 
-## change working directoryy
+## change working directory
 setwd("~/Desktop/Strata/PIlotPrototype/")
 
 options(civis.default_db = "Strata Decision Technologies")
@@ -90,21 +90,21 @@ full <- do.call("bind_rows", mget(dfs_customers)) %>%  # con
 
 
 # # # write dataframes to CSV
- write.csv(hospital_info, file = "hospitals.csv")
- write.csv(full, file = "full.csv")
+# write.csv(hospital_info, file = "hospitals.csv")
+# write.csv(full, file = "full.csv")
 # 
 # # write dataframes to S3 buckets
- write_civis_file(x = full, name = "strata_full")  # 10051504
- write_civis_file(x = hospital_info, name = "strata_hospitals")  # 10051505
+# write_civis_file(x = full, name = "strata_full")  # 10051504
+# write_civis_file(x = hospital_info, name = "strata_hospitals")  # 10051505
 # 
 # # grant permissions on files to Strata robot platform account
- files_put_shares_users(id = 10051504, user_ids = 3896, permission_level = "read")
- files_put_shares_users(id = 10051505, user_ids = 3896, permission_level = "read")
+# files_put_shares_users(id = 10051504, user_ids = 3896, permission_level = "read")
+# files_put_shares_users(id = 10051505, user_ids = 3896, permission_level = "read")
 
 
 ## Write Cleaned Files to Strata Decision Technologies Cluster
- full <- read_civis(x = 10051504)
- write_civis(x = full, tablename = "public.full", distkey = "APRDRGCODE")
+# full <- read_civis(x = 10051504)
+# write_civis(x = full, tablename = "public.full", distkey = "APRDRGCODE")
 # 
- hospital_info <- read_civis(x = 10051505)
- write_civis(x = hospital_info, tablename = "public.hospital_info", distkey = "customer_entity")
+# hospital_info <- read_civis(x = 10051505)
+# write_civis(x = hospital_info, tablename = "public.hospital_info", distkey = "customer_entity")
