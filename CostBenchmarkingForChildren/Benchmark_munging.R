@@ -6,6 +6,8 @@
 
 rm(list = ls())
 
+install.packages("RCurl")
+
 library(tidyverse)
 library(dplyr)
 library(readr)
@@ -16,9 +18,16 @@ library(rlang)
 library(civis)
 #library(civis.deckR)
 
+install.packages("devtools")
+devtools::install_github("lmebrennan/benchwarmers/CostBenchmarkingForChildren/StrataFunctions.R")
+
+library(RCurl)
+script <- "https://github.com/lmebrennan/benchwarmers/CostBenchmarkingForChildren/StrataFunctions.R"
+source(script)
+eval(parse(text=script))
 
 ## load helper functions
-source("/Users/cwang/Desktop/Strata/StrataPIlotPrototype/StrataFunctions.R")
+source("~/StrataFunctions.R")
 
 
 ## --------------------------< Read in Data >--------------------------

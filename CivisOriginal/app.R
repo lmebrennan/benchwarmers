@@ -70,7 +70,7 @@ ui <- fluidPage(
                                 # select APRDRG to benchmark (options change based off which customer is selected)
                                 uiOutput("APRDRG_selector"),
                                 h3(""),
-                                # parameters for Baseline / hospitals to bencmark against
+                                # parameters for Baseline / hospitals to benchmark against
                                 h3("Benchmark Hospitals"),
                                 # select specific hospitals to compare against
                                 uiOutput("benchmark_selector"),

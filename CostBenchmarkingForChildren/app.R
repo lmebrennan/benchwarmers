@@ -16,7 +16,7 @@ install.packages(c('devtools',
                    'cowplot',
                    #    'lazyeval',
                    'rlang',
-                   #     'civis',
+                   'civis',
                    #    'rsconnect',
                    'DT',
                    'data.table'

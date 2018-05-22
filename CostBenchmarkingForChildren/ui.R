@@ -1,33 +1,39 @@
-#
-# This is the user-interface definition of a Shiny web application. You can
-# run the application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-# 
-#    http://shiny.rstudio.com/
-#
+### Laura Brennan
+### Software Developer
+### Strata Decision Technology
+### CostBenchmarkingForChildren
+###
+### UI Code
 
+#make sure Shiny package is in library
 library(shiny)
+library(shinythemes)
 
-# Define UI for application that draws a histogram
 shinyUI(fluidPage(
-  
-  # Application title
-  titlePanel("Old Faithful Geyser Data"),
-  
-  # Sidebar with a slider input for number of bins 
+  titlePanel("Children's Hospital Benchmarking Initiative"),
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
-    ),
-    
-    # Show a plot of the generated distribution
-    mainPanel(
-       plotOutput("distPlot")
-    )
-  )
-))
+      selectizeInput("customer_entity", "Select a hospital:", 
+                     choices = c("Customer 1, Entity 1", "Customer 1, Entity 8",
+                                 "Customer 3, Entity 2", "Customer 3, Entity 3",
+                                 "Customer 4, Entity 5", "Customer 4, Entity 26",
+                                 "Customer 4, Entity 6", "Customer 5, Entity 6",
+                                 "Customer 6, Entity 1", "Customer 7, Entity 2",
+                                 "Customer 9, Entity 2", "Customer 11, Entity 1",
+                                 "Customer 12, Entity 1"))
+  ),
+  mainPanel()
+  # theme = shinythemes::shinytheme("lumen"),
+  # tabsetPanel(type="tabs",
+  #     tabPanel("Benchmark",
+  #        fluidRow(
+  #          column(2,
+  #                 h3("Choose Sample Population"),
+  #                 selectizeInput("customer_entity", "Select a customer and entity:",
+  #                                choices = c("Customer 1, Entity 1","Customer 2, Entity 2",
+  #                                            "Customer 4 Entity 4")
+  #                 )
+  #           )
+  #         )
+  #       )
+ )))

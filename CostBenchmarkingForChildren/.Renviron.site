@@ -1,0 +1,2 @@
+CIVIS_API_KEY='a89a099aa6e299b947ae0b8660048e5fa3e8848346ea5f017e8902eb32ee265b'
+R_DEFAULT_PACKAGES='utils,graphics,stats,methods,shiny,shinythemes'
