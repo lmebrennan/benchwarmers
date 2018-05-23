@@ -48,7 +48,8 @@ source("StrataFunctions_adults.R", local = TRUE)
 
 # read in data
 full<-read_civis("full_a",database="Strata Decision Technologies")
-hospital_info <- read_civis("hospital_info_ad",database="Strata Decision Technologies")
+hospital_info <- read_civis("hospital_info_adult",database="Strata Decision Technologies")
+hospital_info$customer_entity<-paste0("Customer ", hospital_info$customerid, ", ", "Entity ", hospital_info$entityid)
 
 
 #### UI #### 
@@ -160,7 +161,7 @@ ui <- fluidPage(
                                                                    "Patient Discharge Status"),
                                                    choiceValues = c("rom",
                                                                     "soi",
-                                                                    "AgeBucket",
+                                                                    "agebucket",
                                                                     "patienttyperollup",
                                                                     "dischargestatusgroup")),
                                
@@ -170,8 +171,8 @@ ui <- fluidPage(
                                                    choiceNames = c("Fixed/Variable",
                                                                    "Direct/Indirect",
                                                                    "Cost Drivers"),
-                                                   choiceValues = c("FixedVariable",
-                                                                    "DirectIndirect",
+                                                   choiceValues = c("fixedvariable",
+                                                                    "directindirect",
                                                                     "costdriver")),
                                 
                                 # other options for displaying / breaking down data
@@ -294,7 +295,7 @@ server <- function(input, output, session){
   # MSDRG Code -- input options change based off which Customer & Entity are selected
   output$MSDRG_selector = renderUI({
     selectizeInput(inputId = "MSDRG", "Select an MSDRG to benchmark:",
-                   choices = labelMSDRG(unique(full$MSDRGGROUP[full$customerid == hospital_info$customerid[hospital_info$customer_entity == input$customer_entity] &
+                   choices = labelMSDRG(unique(full$msdrggroup[full$customerid == hospital_info$customerid[hospital_info$customer_entity == input$customer_entity] &
                                                                  full$entityid == hospital_info$entityid[hospital_info$customer_entity == input$customer_entity]])))
   })
   
@@ -430,7 +431,7 @@ server <- function(input, output, session){
     hospital_df <- full
     
     ## MSDRG code filter
-    hospital_df$m1 <- ifelse(hospital_df$MSDRGGROUP == input$MSDRG, TRUE, FALSE)
+    hospital_df$m1 <- ifelse(hospital_df$msdrggroup == input$MSDRG, TRUE, FALSE)
     
     ## "me" / hospital filter
     hospital_df$h1 <- ifelse(hospital_df$customer_entity == input$customer_entity, TRUE, FALSE)  # filter for input Customer ID and Entity ID
@@ -494,11 +495,11 @@ server <- function(input, output, session){
     hospital_df <- hospital_df %>%
       filter(h1 | (c5 & c_costmodel)) %>%
       mutate("Group" = ifelse(h1, "Me", "Baseline"),
-             "MSDRG_benchmark" = ifelse(m1, MSDRGGROUP, NA)) %>%
-      group_by(region, beds, specialty, customer_entity, MSDRGGROUP, encounterid, rom, soi, AgeBucket, patienttyperollup, dischargestatusgroup,
+             "MSDRG_benchmark" = ifelse(m1, msdrggroup, NA)) %>%
+      group_by(region, beds, specialty, customer_entity, msdrggroup, encounterid, rom, soi, agebucket, patienttyperollup, dischargestatusgroup,
                Group, MSDRG_benchmark) %>%
       summarise("Count" = 1,
-                "Costs" = sum(Costs)) %>% ungroup()
+                "costs" = sum(costs)) %>% ungroup()
     
     return(hospital_df)
   })
@@ -512,7 +513,7 @@ server <- function(input, output, session){
     main_df <- full
     
     ## MSDRG filter
-    main_df$m1 <- ifelse(main_df$MSDRGGROUP == input$MSDRG, TRUE, FALSE)
+    main_df$m1 <- ifelse(main_df$msdrggroup == input$MSDRG, TRUE, FALSE)
     
     
     ## "me" / hospital filter
@@ -584,7 +585,7 @@ server <- function(input, output, session){
       main_df$m3 <- TRUE
     }
     if(!is.null(input$age)){
-      main_df$m4 <- ifelse(main_df$AgeBucket %in% input$age, TRUE, FALSE)  # filter patient age buckets
+      main_df$m4 <- ifelse(main_df$agebucket %in% input$age, TRUE, FALSE)  # filter patient age buckets
     } else {
       main_df$m4 <- TRUE
     }
@@ -600,8 +601,8 @@ server <- function(input, output, session){
     }
     ## cost filters
     if(length(input$costs) > 0){ 
-      main_df$temp1 <- ifelse(main_df$FixedVariable %in% input$costs, 1, 0)   # if filtering Fixed/Variable costs, mark with 1
-      main_df$temp2 <- ifelse(main_df$DirectIndirect %in% input$costs, 1, 0)  # if filtering Direct/Indirect costs, mark with 1
+      main_df$temp1 <- ifelse(main_df$fixedvariable %in% input$costs, 1, 0)   # if filtering Fixed/Variable costs, mark with 1
+      main_df$temp2 <- ifelse(main_df$directindirect %in% input$costs, 1, 0)  # if filtering Direct/Indirect costs, mark with 1
       main_df$temp3 <- ifelse(main_df$costdriver %in% input$costs, 1, 0)      # if filtering CostDrivers, mark with 1
       main_df$temp_all <- main_df$temp1 + main_df$temp2 + main_df$temp3       # create column with sum of all cost filters (min 0, max 3)
       if(max(main_df$temp_all) == 1){
@@ -667,7 +668,7 @@ server <- function(input, output, session){
       # coalesce all of the grouping column values into one column for axis naming purposes
       main_df <- tidyr::unite_(main_df, "BenchmarkGrouping", keep_benchmarkgroups, sep = " & ", remove = FALSE)
     } else {
-      main_df$BenchmarkGrouping <- main_df$MSDRGGROUP  # if no breakdowns selected, use MSDRGGROUP as default y-axis
+      main_df$BenchmarkGrouping <- main_df$msdrggroup  # if no breakdowns selected, use MSDRGGROUP as default y-axis
     }
     ## add column for cost breakdowns; if multiple cost breakdowns selected, concatenate columns with "&" in between columns
     if(!is.null(input$costbreakdowns)){
@@ -679,27 +680,27 @@ server <- function(input, output, session){
     ## group data based off benchmark breakdowns and cost breakdowns
     # if inputs for both benchmark and cost breakdowns
     if(!is.null(input$benchmarkbreakdowns) & !is.null(input$costbreakdowns)){
-      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "MSDRGGROUP", "lengthofstay",
+      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "msdrggroup", "lengthofstay",
                      "CostGrouping", "BenchmarkGrouping", "encounterid", keep_benchmarkgroups, input$costbreakdowns)
-      outlier_groupings <- c("Name", "Group", "MSDRGGROUP", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
+      outlier_groupings <- c("Name", "Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
     }
     # if inputs for only benchmark breakdowns
     if(!is.null(input$benchmarkbreakdowns) & is.null(input$costbreakdowns)){
-      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "MSDRGGROUP", "lengthofstay",
+      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "msdrggroup", "lengthofstay",
                      "CostGrouping", "BenchmarkGrouping", "encounterid", keep_benchmarkgroups)
-      outlier_groupings <- c("Name", "Group", "MSDRGGROUP", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups)
+      outlier_groupings <- c("Name", "Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups)
     }
     # if inputs for only cost breakdowns
     if(!is.null(input$costbreakdowns) & is.null(input$benchmarkbreakdowns)){
-      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "MSDRGGROUP", "lengthofstay",
+      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "msdrggroup", "lengthofstay",
                      "CostGrouping", "BenchmarkGrouping", "encounterid", input$costbreakdowns)
-      outlier_groupings <- c("Name", "Group", "MSDRGGROUP", "CostGrouping", "BenchmarkGrouping", input$costbreakdowns)
+      outlier_groupings <- c("Name", "Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping", input$costbreakdowns)
     }
     # if no inputs for both benchmark and cost breakdowns
     if(is.null(input$costbreakdowns) & is.null(input$benchmarkbreakdowns)){
-      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "MSDRGGROUP", "lengthofstay",
+      groupings <- c("Name", "region", "beds", "specialty", "customerid", "entityid", "Group", "msdrggroup", "lengthofstay",
                      "CostGrouping", "BenchmarkGrouping", "encounterid")
-      outlier_groupings <- c("Name", "Group", "MSDRGGROUP", "CostGrouping", "BenchmarkGrouping")
+      outlier_groupings <- c("Name", "Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping")
     }
     
     
@@ -707,7 +708,7 @@ server <- function(input, output, session){
     # if no grouping parameters specified (e.g. no benchmark or cost breakdowns), most granular level is Encounter level
     main_df <- main_df %>%
       group_by(.dots = groupings) %>%
-      summarise(Costs = sum(Costs)) %>% ungroup()
+      summarise(costs = sum(costs)) %>% ungroup()
     
     
     ## remove length of stay outliers if selected
@@ -759,7 +760,7 @@ server <- function(input, output, session){
       
       # calculate LOS summary statistics and outlier cutoffs based off IQR and standard deviation
       cost_filters <- main_df %>%
-        calcSummary(df = ., summary_var = "Costs", outlier_threshold = 2, grouping_vars = outlier_groupings)
+        calcSummary(df = ., summary_var = "costs", outlier_threshold = 2, grouping_vars = outlier_groupings)
       
       # join summary statistics and outlier cutoffs to main df
       main_df <- main_df %>%
@@ -769,7 +770,7 @@ server <- function(input, output, session){
       if("cost_IQR" %in% input$otherfilteroptions){
         main_df$o1_cost <- case_when(
           main_df$obs == 1 ~ TRUE,  # if only one observation, keep (can't be an outlier if you're solo)
-          main_df$Costs > main_df$IQR_outlier_high | main_df$Costs < main_df$IQR_outlier_low ~ FALSE,  # IQR outliers
+          main_df$costs > main_df$IQR_outlier_high | main_df$costs < main_df$IQR_outlier_low ~ FALSE,  # IQR outliers
           TRUE ~ TRUE)  # keep non-outliers
       } 
       else {
@@ -779,7 +780,7 @@ server <- function(input, output, session){
       if("cost_SD" %in% input$otherfilteroptions){
         main_df$o2_cost <- case_when(
           main_df$obs == 1 ~ TRUE,  # if only one observation, keep (can't be an outlier if you're solo)
-          main_df$Costs > main_df$sd_outlier_high | main_df$Costs < main_df$sd_outlier_low ~ FALSE,  # standard deviation outliers
+          main_df$costs > main_df$sd_outlier_high | main_df$costs < main_df$sd_outlier_low ~ FALSE,  # standard deviation outliers
           TRUE ~ TRUE)  # keep non-outliers
       }
       else {
@@ -815,11 +816,11 @@ server <- function(input, output, session){
     # remove unwanted groupings if specified
     keep_benchmarkgroups <- setdiff(all_groupings, c(remove_ROM, remove_SOI))
     
-    groups <- c("Group", "MSDRGGROUP", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
+    groups <- c("Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
     
     summary_df_benchmark <- main_df() %>%
       filter(Group == "Baseline") %>%
-      calcSummary(df = ., summary_var = "Costs", outlier_threshold = 2, grouping_vars = groups)
+      calcSummary(df = ., summary_var = "costs", outlier_threshold = 2, grouping_vars = groups)
     
     ## check to see there's still data to benchmark against after filtering main_df for just the baseline data
     validate(
@@ -845,11 +846,11 @@ server <- function(input, output, session){
     # remove unwanted groupings if specified
     keep_benchmarkgroups <- setdiff(all_groupings, c(remove_ROM, remove_SOI))
     
-    groups <- c("Group", "MSDRGGROUP", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
+    groups <- c("Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
     
     summary_df_me <- main_df() %>%
       filter(Group == "Me") %>%
-      calcSummary(df = ., summary_var = "Costs", outlier_threshold = 2, grouping_vars = groups)
+      calcSummary(df = ., summary_var = "costs", outlier_threshold = 2, grouping_vars = groups)
     
     ## check to see there's still data to benchmark after filtering main_df for just the "Me" data
     validate(
@@ -874,7 +875,7 @@ server <- function(input, output, session){
     # remove unwanted groupings if specified
     keep_benchmarkgroups <- setdiff(all_groupings, c(remove_ROM, remove_SOI))
     
-    groups <- c("MSDRGGROUP", "BenchmarkGrouping", "CostGrouping", keep_benchmarkgroups, input$costbreakdowns)
+    groups <- c("msdrggroup", "BenchmarkGrouping", "CostGrouping", keep_benchmarkgroups, input$costbreakdowns)
     
     # grab summary df of "Me"
     me <- summary_df_me()
@@ -913,9 +914,9 @@ server <- function(input, output, session){
   msdrg_plot <- eventReactive(input$hospital_refresh, {
     hospital_df <- hospital_df()
     hospital_df <- hospital_df %>%
-      group_by(Group, MSDRGGROUP, customer_entity) %>%
+      group_by(Group, msdrggroup, customer_entity) %>%
       summarise(Count = sum(Count)) %>% ungroup() %>%
-      mutate(MSDRGGROUP = str_wrap(labelMSDRG(MSDRGGROUP, values = TRUE), width = 20))
+      mutate(msdrggroup = str_wrap(labelMSDRG(msdrggroup, values = TRUE), width = 20))
     
     msdrg_plot <- ggplot() +
       geom_vline(data = hospital_df[hospital_df$Group == "Me", ],
@@ -929,7 +930,7 @@ server <- function(input, output, session){
                                     "Me" = "#ff7f00"),         # orange
                          guide = FALSE) +
       scale_y_continuous(expand = c(0,0)) +
-      facet_wrap("MSDRGGROUP") +
+      facet_wrap("msdrggroup") +
       labs(x = "# of Encounters",
            y = "# of Benchmark Institutions") +
       theme(axis.text.y = element_blank(),
@@ -1004,12 +1005,12 @@ server <- function(input, output, session){
     hospital_df <- hospital_df()
     hospital_df <- hospital_df %>%
       filter(!is.na(MSDRG_benchmark)) %>%
-      group_by(Group, AgeBucket, customer_entity) %>%
+      group_by(Group, agebucket, customer_entity) %>%
       summarise(Count = sum(Count)) %>% ungroup() %>%
-      mutate(AgeBucket = case_when(AgeBucket == "Infant" ~ "Infant (less than 1 yr)",
-                                   AgeBucket == "Pediatric" ~ "Pediatric (1 yr - 17 yrs)",
-                                   AgeBucket == "Adult" ~ "Adult (18 yrs - 64 yrs)",
-                                   AgeBucket == "Senior" ~ "Senior (65 years or older)"))
+      mutate(agebucket = case_when(agebucket == "Infant" ~ "Infant (less than 1 yr)",
+                                   agebucket == "Pediatric" ~ "Pediatric (1 yr - 17 yrs)",
+                                   agebucket == "Adult" ~ "Adult (18 yrs - 64 yrs)",
+                                   agebucket == "Senior" ~ "Senior (65 years or older)"))
     
     age_plot <- ggplot() +
       geom_vline(data = hospital_df[hospital_df$Group == "Me", ],
@@ -1023,7 +1024,7 @@ server <- function(input, output, session){
                                     "Me" = "#ff7f00"),         # orange
                          guide = FALSE) +
       scale_y_continuous(expand = c(0,0)) +
-      facet_wrap("AgeBucket") +
+      facet_wrap("agebucket") +
       labs(x = "# of Encounters",
            y = "# of Benchmark Institutions") +
       theme(axis.text.y = element_blank(),
@@ -1130,7 +1131,7 @@ server <- function(input, output, session){
     
     ## -----------<<< gg -- "Baseline" vs. "Me" plot >>>-----------
     gg <- ggplot(main_df) +
-      geom_boxplot(aes(x = BenchmarkGrouping, y = Costs, color = Group), position = "dodge") +
+      geom_boxplot(aes(x = BenchmarkGrouping, y = costs, color = Group), position = "dodge") +
       geom_text(data = all,
                 aes(x = BenchmarkGrouping, y = median, label = paste0("$", scales::comma(median)), group = Group, 
                     hjust = -0.2, vjust = -0.5,
@@ -1231,32 +1232,32 @@ server <- function(input, output, session){
     df <- hospital_df()
     
     df <- df %>%
-      group_by(MSDRGGROUP, Group) %>%
-      summarise(MedianCost = median(Costs),
+      group_by(msdrggroup, Group) %>%
+      summarise(MedianCost = median(costs),
                 N = sum(Count)) %>% ungroup()
-    df <- data.table::dcast(setDT(df), MSDRGGROUP ~ Group, value.var = c("MedianCost", "N")) %>%
+    df <- data.table::dcast(setDT(df), msdrggroup ~ Group, value.var = c("MedianCost", "N")) %>%
       mutate(MedianCost_Diff = MedianCost_Me - MedianCost_Baseline,
              N_Diff = N_Me - N_Baseline,
              Impact = N_Me * MedianCost_Diff,
              Direction = ifelse(Impact < 0, "Below the Benchmark", "Cost Savings Opportunity"),
-             MSDRGGROUP = labelMSDRG(MSDRGGROUP, values = TRUE)) %>%
+             msdrggroup = labelMSDRG(msdrggroup, values = TRUE)) %>%
       filter(!is.na(MedianCost_Diff))
     
-    df$MSDRGGROUP <- factor(df$MSDRGGROUP, levels = df$MSDRGGROUP[order(df$Impact)], ordered = TRUE)
+    df$msdrggroup <- factor(df$msdrggroup, levels = df$msdrggroup[order(df$Impact)], ordered = TRUE)
     
     costsavings_plot <- ggplot(df) +
-      geom_bar(aes(x = MSDRGGROUP, y = Impact, fill = Direction),
+      geom_bar(aes(x = msdrggroup, y = Impact, fill = Direction),
                stat = 'identity', width = .95) +
       # line at 0 mark
       geom_hline(color = 'black', yintercept = 0) +  
       # lines that separate different groupings
       # remove first value in sequence (0.5) because don't want one between panel border and first plot
-      geom_vline(xintercept = seq(from = 0.5, to = length(unique(df[["MSDRGGROUP"]]))-0.5, by = 1)[-1], 
+      geom_vline(xintercept = seq(from = 0.5, to = length(unique(df[["msdrggroup"]]))-0.5, by = 1)[-1], 
                  color = "black") +
       geom_text(aes(label = ifelse(Impact >= 0,
                                    paste0("Potential Savings: ", scales::dollar(Impact), "\n# of Encounters: ", N_Me, "\nCost Difference per Encounter: ", scales::dollar(MedianCost_Diff)),
                                    paste0("Current Savings: ", scales::dollar(Impact), "\n# of Encounters: ", N_Me, "\nCost Difference per Encounter: ", scales::dollar(MedianCost_Diff))),
-                    x = MSDRGGROUP,
+                    x = msdrggroup,
                     y = case_when(is.na(MedianCost_Diff) ~ 0,   # if NA because no comparisons, put it at zero and should have "NA" label
                                   Impact >= 0 ~ 0.15*(min(abs(coalesce(df$Impact, 0)))),
                                   Impact < 0 ~ -0.15*(min(abs(coalesce(df$Impact, 0))))),
@@ -1399,9 +1400,9 @@ server <- function(input, output, session){
         if(!is.null(input$msdrg_plotbrush)){
           df1 <- df %>%
             filter(Group == "Baseline") %>%
-            group_by(Group, MSDRGGROUP, customer_entity) %>%
+            group_by(Group, msdrggroup, customer_entity) %>%
             summarise(Count = sum(Count)) %>% ungroup() %>%
-            mutate(MSDRGGROUP = str_wrap(labelMSDRG(MSDRGGROUP, values = TRUE), width = 20))
+            mutate(msdrggroup = str_wrap(labelMSDRG(msdrggroup, values = TRUE), width = 20))
           
           out_msdrg <- brushedPoints(df = df1, brush = input$msdrg_plotbrush, xvar = "Count")$customer_entity
         } 
@@ -1430,12 +1431,12 @@ server <- function(input, output, session){
           df4 <- df %>%
             filter(Group == "Baseline") %>%
             filter(!is.na(MSDRG_benchmark)) %>%
-            group_by(Group, AgeBucket, customer_entity) %>%
+            group_by(Group, agebucket, customer_entity) %>%
             summarise(Count = sum(Count)) %>% ungroup() %>%
-            mutate(AgeBucket = case_when(AgeBucket == "Infant" ~ "Infant (less than 1 yr)",
-                                         AgeBucket == "Pediatric" ~ "Pediatric (1 yr - 17 yrs)",
-                                         AgeBucket == "Adult" ~ "Adult (18 yrs - 64 yrs)",
-                                         AgeBucket == "Senior" ~ "Senior (65 years or older)"))
+            mutate(agebucket = case_when(agebucket == "Infant" ~ "Infant (less than 1 yr)",
+                                         agebucket == "Pediatric" ~ "Pediatric (1 yr - 17 yrs)",
+                                         agebucket == "Adult" ~ "Adult (18 yrs - 64 yrs)",
+                                         agebucket == "Senior" ~ "Senior (65 years or older)"))
           
           out_age <- brushedPoints(df = df4, brush = input$age_plotbrush, xvar = "Count")$customer_entity
         }
