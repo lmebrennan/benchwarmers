@@ -4,9 +4,6 @@
 ## Civis Analytics
 ## R version 3.5.0
 
-#### PREPARE WORKSPACE ####
-setwd("S:/Users/sxie/Adult Rshiny App")
-
 install.packages(c('devtools',
                    'shiny',
                    'shinythemes',
