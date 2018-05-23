@@ -47,8 +47,8 @@ library(stringr)
 source("StrataFunctions_adults.R", local = TRUE)
 
 # read in data
-full<-read_civis("full_adult",database="Strata Decision Technologies")
-hospital_info <- read_civis("hospital_info_a",database="Strata Decision Technologies")
+full<-read_civis("full_a",database="Strata Decision Technologies")
+hospital_info <- read_civis("hospital_info_ad",database="Strata Decision Technologies")
 
 
 #### UI #### 
@@ -172,7 +172,7 @@ ui <- fluidPage(
                                                                    "Cost Drivers"),
                                                    choiceValues = c("FixedVariable",
                                                                     "DirectIndirect",
-                                                                    "CostDriver")),
+                                                                    "costdriver")),
                                 
                                 # other options for displaying / breaking down data
                                 h3("Other Options"),
@@ -602,7 +602,7 @@ server <- function(input, output, session){
     if(length(input$costs) > 0){ 
       main_df$temp1 <- ifelse(main_df$FixedVariable %in% input$costs, 1, 0)   # if filtering Fixed/Variable costs, mark with 1
       main_df$temp2 <- ifelse(main_df$DirectIndirect %in% input$costs, 1, 0)  # if filtering Direct/Indirect costs, mark with 1
-      main_df$temp3 <- ifelse(main_df$CostDriver %in% input$costs, 1, 0)      # if filtering CostDrivers, mark with 1
+      main_df$temp3 <- ifelse(main_df$costdriver %in% input$costs, 1, 0)      # if filtering CostDrivers, mark with 1
       main_df$temp_all <- main_df$temp1 + main_df$temp2 + main_df$temp3       # create column with sum of all cost filters (min 0, max 3)
       if(max(main_df$temp_all) == 1){
         main_df$m7<- ifelse(main_df$temp_all == 1, TRUE, FALSE)   # filtering by 1 of the 3 cost column filters
