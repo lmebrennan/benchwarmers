@@ -24,6 +24,7 @@ repos='https://cran.rstudio.com/')
 
 #devtools::install_github("civisanalytics/civis_deckR")
 
+
 library(ggplot2)
 library(tidyverse)
 library(readr)
@@ -45,6 +46,8 @@ library(stringr)
 
 ## -----------< Load Helper Functions and Data >-----------
 source("StrataFunctions_adults.R", local = TRUE)
+
+Sys.setenv(CIVIS_API_KEY='a89a099aa6e299b947ae0b8660048e5fa3e8848346ea5f017e8902eb32ee265b')
 
 # read in data
 full<-read_civis("full_a",database="Strata Decision Technologies")
