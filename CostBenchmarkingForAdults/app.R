@@ -49,9 +49,11 @@ source("StrataFunctions_adults.R", local = TRUE)
 
 # read in data
 full<-read_civis("full_a",database="Strata Decision Technologies")
-hospital_info <- read_civis("hospital_info_adult",database="Strata Decision Technologies")
-hospital_info$customer_entity<-paste0("Customer ", hospital_info$customerid, ", ", "Entity ", hospital_info$entityid)
+names <- c('customer_entity' ,'dischargestatusgroup')
+full[,names] <- lapply(full[,names], as.character)
 
+hospital_info <- read_civis("hospital_info_ad",database="Strata Decision Technologies")
+hospital_info$customer_entity<-as.character(hospital_info$customer_entity)
 
 #### UI #### 
 ui <- fluidPage(
