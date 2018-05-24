@@ -94,5 +94,4 @@ save(encounter_data,file="encounter_data_adult.Rdata")
 save(full,file="full_adult.Rdata")
 
 # write dataframe to Civis platform 
-write_civis(hospital_info,"public.hospital_info_ad", database = "Strata Decision Technologies")
-write_civis(full,"public.full_a", database = "Strata Decision Technologies")
+write_civis(full,"public.full_adult", database = "Strata Decision Technologies")
