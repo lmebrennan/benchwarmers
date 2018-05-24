@@ -47,8 +47,6 @@ library(stringr)
 ## -----------< Load Helper Functions and Data >-----------
 source("StrataFunctions_adults.R", local = TRUE)
 
-Sys.setenv(CIVIS_API_KEY='a89a099aa6e299b947ae0b8660048e5fa3e8848346ea5f017e8902eb32ee265b')
-
 # read in data
 full<-read_civis("full_a",database="Strata Decision Technologies")
 hospital_info <- read_civis("hospital_info_adult",database="Strata Decision Technologies")
@@ -336,7 +334,7 @@ server <- function(input, output, session){
   output$benchmark_institutions = renderText({
     if(length(input$costmodel) == 1 & "standard" %in% input$costmodel){
       df <- hospital_info %>%
-        filter(isstratastandardcost == TRUE)
+        filter(isstratastandardcost == "Y")
       
       paste("<b>Benchmark Institution(s):</b><br/>", 
             ifelse(is.null(input$customer_entity_benchmark) & is.null(input$region) & is.null(input$size) & is.null(input$specialty),
@@ -355,7 +353,7 @@ server <- function(input, output, session){
     }
     else if(length(input$costmodel) == 1 & "non" %in% input$costmodel){
       df <- hospital_info %>%
-        filter(isstratastandardcost == FALSE)
+        filter(isstratastandardcost == "N")
       
       paste("<b>Benchmark Institution(s):</b><br/>", 
             ifelse(is.null(input$customer_entity_benchmark) & is.null(input$region) & is.null(input$size) & is.null(input$specialty),
