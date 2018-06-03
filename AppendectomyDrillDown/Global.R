@@ -27,8 +27,12 @@ packages<-c('rlang',
             'httr',
             'shinydashboard',
             'plotly')
+
 #install each package
 install.packages(packages,repos = 'https://cran.rstudio.com/')
+
+devtools::install_github("civisanalytics/civis-r")
+
 #load each package into r library
 inst = lapply(packages,require,character.only=TRUE)
 
