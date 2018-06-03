@@ -4,30 +4,26 @@
 ## May 2018
 
 dbSidebar <- dashboardSidebar(
-  width=220,
   sidebarMenu(
-    #parameters for selected entity
-    h3("What you are comparing with:"),
-    selectizeInput("customer_entity","Select an entity:", choices=''),
-    uiOutput("MSDRG_selector"),
+    ### Note: All selectizeInput choices will be populated via server using the df
+    h3("Compare",align="center"),
+    # Select entity to benchmark
+    selectizeInput(inputId="customer_entity",label="Select an entity:",choices=NULL),
 
-    h3(""),
-    h3(""),
-    uiOutput(""),
-    selectizeInput("region", "Region(s):",
-                   choices = c(ALL="","South","Midwest","East"),
-                   multiple=TRUE),
-    selectizeInput("size","Bedsize(s):",
-                   choices = c(ALL="","Under 200", "Over 200"),
-                   multiple=TRUE),
-    selectizeInput("specialty","Specialty(ies):",
-                   choices = c(ALL="","Rural", "Urban"),
-                   multiple=TRUE),
-    selectizeInput("costmodel","Select Cost model(s):",
-                   choices = c(ALL="",
-                               "Hospitals with Strata Standardized Cost Models" = "standard",
-                               "Hospitals without Strata Standardized Cost Models" = "non"),
-                   multiple=TRUE),
-    actionBttn("hospital_refresh", "Refresh")
+    ## uiOutput("MSDRG_selector"),
+
+    hr(),
+
+    h3("With",align="center"),
+
+    ## uiOutput(""),
+
+    # create population to benchmark against
+    selectizeInput(inputId="region",label="Region(s):",choices=c(ALL=""),multiple=TRUE),
+    selectizeInput(inputId="size",label="Bedsize(s):",choices=c(ALL=""),multiple=TRUE),
+    selectizeInput(inputId="specialty",label="Specialty(ies):",choices=c(ALL=""),multiple=TRUE),
+    selectizeInput(inputId="costmodel",label="Select Cost model(s):",choices = c(ALL=""),multiple=TRUE),
+
+    actionBttn(inputId="hospital_refresh",label="Refresh")
   )
 )

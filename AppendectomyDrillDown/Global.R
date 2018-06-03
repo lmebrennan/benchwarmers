@@ -3,7 +3,8 @@
 ## Strata Decision Technology
 ## May 2018
 
-##Global.R files run first
+### NOTE: Global.R files run first
+### This file contains general set up, data cleaning, global functions
 
 
 # SET UP ------------------------------------------------------------------
@@ -37,8 +38,7 @@ devtools::install_github("civisanalytics/civis-r")
 inst = lapply(packages,require,character.only=TRUE)
 
 
-
-# DATA ---------------------------------------------------------------
+# DATA  ---------------------------------------------------------------
 
 #load data from civis
 Sys.setenv(CIVIS_API_KEY='6156c21bdeeb714a16511f176b896d568787abf51deb1bd1165d1ee3685f1c2d')
@@ -78,8 +78,6 @@ if(!(exists("hospital_df"))){
 }
 
 
-# data manipulation ------------------------------------------------
-
 #combine all customer data to create encounter dataframe
 encounter_df<-rbind(customer1,customer2,customer3,customer4,customer6,customer7,customer8,customer9,customer10)
 
@@ -90,16 +88,16 @@ hospital_df$customer_entity<-paste0("Customer ", hospital_df$customerid, ", ", "
 #build full data table to use in application
 
 #list columns to include in df
-columns<-c('region',
-           'beds',
-           'specialty',
-           'customerid',
-           'entityid',
-           'MSDRGGROUP',
-           'customer_entity',
-           'isstratastandardcost',
-           'encounterid'
-           )
+# columns<-c('region',
+#            'beds',
+#            'specialty',
+#            'customerid',
+#            'entityid',
+#            'MSDRGGROUP',
+#            'customer_entity',
+#            'isstratastandardcost',
+#            'encounterid'
+#            )
 
 #build dataframe
 full_df<-left_join(encounter_df,hospital_df,by=c('customerid'='customerid','entityid'='entityid')) %>%
@@ -109,11 +107,12 @@ full_df<-left_join(encounter_df,hospital_df,by=c('customerid'='customerid','enti
   )
 
 #save as dataframe
-save(encounter_df,file='encounter_df_adult.Rdata')
-save(hospital_df,file='hospital_df_adult.Rdata')
-save(full_df,file='full_df_adult.Rdata')
+save(encounter_df,file='encounter_df.Rdata')
+save(hospital_df,file='hospital_df.Rdata')
+save(full_df,file='full_df.Rdata')
 
-#### FUNCTIONS ####
+
+# FUNCTIONS ---------------------------------------------------------------
 
 #Function to label APR-DRG codes
 labelMSDRG <- function(codes, values = FALSE){
@@ -132,12 +131,10 @@ labelMSDRG <- function(codes, values = FALSE){
 
 
 
-#### VARS AND REFS ####
+# LOAD FILES --------------------------------------------------------------
 source('header.R')
 source('sidebar.R')
 source('body.R')
-
-
 
 
 
