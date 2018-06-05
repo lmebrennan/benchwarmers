@@ -4,49 +4,39 @@
 ## May 2018
 
 dbBody = dashboardBody(
+
   fluidRow(
-    # column(
-    #   width=12, offset=0, align='center',
-    #   tabItems(
-    #     tabItem(
-    #       tabName="TAB NAME",
-    #       fluidRow(
-    #         column(
-    #           width=12, offset=0, align='center',
-    #           box(
-    #             title="ANALYSIS", status="success", solidHeader = TRUE, collapsible= TRUE,
-    #             tabBox(
-    #               title=NULL,width=NULL,
-    #               tabPanel(title="TAB PANEL TITLE", plotlyOutput(outputId='distPlot'))
-    #             )
-    #           )
-    #         )
-    #       )
-    #     )
-    #   )
-    # )
+    # Benchmarking Information ----------------------------------------------------
     box(
-      title="Inputs",
+     title="Selected Entity Information",
+     status="warning",
+     solidHeader=TRUE,
+     collapsible=TRUE,
+     htmlOutput("selected_entity"),
+     htmlOutput("selected_region"),
+     htmlOutput("selected_size"),
+     htmlOutput("selected_specialty")
+    ),
+    box(
+      title="Selected Population Information",
       status="warning",
       solidHeader=TRUE,
       collapsible=TRUE,
-      "Box Content here",
-      br(),
-      "More box content",
-      sliderInput("slider","Slider input:",1,100,50),
-      textInput("text","Text input:")
+      # box(
+      #   width=12,
+      #   title="Comparison Entities",
+      #   collapsible=TRUE,
+        htmlOutput("comparison_entities"),
+      # ),
+      htmlOutput("comparison_regions"),
+      htmlOutput("comparison_sizes"),
+      htmlOutput("comparison_specialties")
     )
   ),
+  # Benchmarking Results ----------------------------------------------------
   fluidRow(
     box(
-      title="Output",
-      status="primary",
-      solidHeader=TRUE,
-      "Box Content Here",
-      br(),
-      "MORE CONTENT?!"
-    ),
-    box(
+      width=12,
       title="Output",
       status="primary",
       solidHeader=TRUE,
