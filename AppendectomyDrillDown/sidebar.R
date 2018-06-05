@@ -13,7 +13,8 @@ dbSidebar <- dashboardSidebar(
     hr(),
     h3("With",align="center"),
     # create population to benchmark against
-    selectizeInput(inputId="comparison_entity",label="Entity(ies):",choices=c(ALL=""),multiple=TRUE),
+
+    # selectizeInput(inputId="comparison_entity",label="Entity(ies):",choices=c(ALL=""),multiple=TRUE),
     selectizeInput(inputId="region",label="Region(s):",choices=c(ALL=""),multiple=TRUE),
     selectizeInput(inputId="beds",label="Bedsize(s):",choices=c(ALL=""),multiple=TRUE),
     selectizeInput(inputId="specialty",label="Specialty(ies):",choices=c(ALL=""),multiple=TRUE),

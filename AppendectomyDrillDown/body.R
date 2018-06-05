@@ -35,15 +35,20 @@ dbBody = dashboardBody(
   ),
   # Benchmarking Results ----------------------------------------------------
   fluidRow(
-    box(
-      width=12,
-      title="Output",
-      status="primary",
-      solidHeader=TRUE,
-      "Box Content Here",
-      br(),
-      "MORE CONTENT?!"
+    tabsetPanel(type = "tabs",
+                tabPanel("Plot", plotOutput("plot")),
+                tabPanel("Summary", verbatimTextOutput("summary")),
+                tabPanel("Table", tableOutput("table"))
     )
+    # box(
+    #   width=12,
+    #   title="Output",
+    #   status="primary",
+    #   solidHeader=TRUE,
+    #   "Box Content Here",
+    #   br(),
+    #   "MORE CONTENT?!"
+    # )
   )
 )
 
