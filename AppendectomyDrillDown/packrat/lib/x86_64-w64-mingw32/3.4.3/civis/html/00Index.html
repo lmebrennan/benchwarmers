@@ -1,0 +1,1548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>R: R Client for the 'Civis data science API'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+<h1> R Client for the 'Civis data science API'
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;civis&rsquo; version 1.4.0</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<p style="text-align: center;">
+<a href="#A">A</a>
+<a href="#C">C</a>
+<a href="#D">D</a>
+<a href="#E">E</a>
+<a href="#F">F</a>
+<a href="#G">G</a>
+<a href="#H">H</a>
+<a href="#I">I</a>
+<a href="#J">J</a>
+<a href="#M">M</a>
+<a href="#N">N</a>
+<a href="#O">O</a>
+<a href="#P">P</a>
+<a href="#Q">Q</a>
+<a href="#R">R</a>
+<a href="#S">S</a>
+<a href="#T">T</a>
+<a href="#U">U</a>
+<a href="#W">W</a>
+</p>
+
+
+<h2><a name="A">-- A --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="announcements_list.html">announcements_list</a></td>
+<td>List announcements</td></tr>
+<tr><td style="width: 25%;"><a href="apps_delete_instances_projects.html">apps_delete_instances_projects</a></td>
+<td>Remove a AppInstance from a project</td></tr>
+<tr><td style="width: 25%;"><a href="apps_delete_instances_shares_groups.html">apps_delete_instances_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="apps_delete_instances_shares_users.html">apps_delete_instances_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="apps_get.html">apps_get</a></td>
+<td>List details of a Decision Application</td></tr>
+<tr><td style="width: 25%;"><a href="apps_get_instances.html">apps_get_instances</a></td>
+<td>Return a given app instance</td></tr>
+<tr><td style="width: 25%;"><a href="apps_get_releases.html">apps_get_releases</a></td>
+<td>Return a given app release</td></tr>
+<tr><td style="width: 25%;"><a href="apps_list.html">apps_list</a></td>
+<td>List apps</td></tr>
+<tr><td style="width: 25%;"><a href="apps_list_instances.html">apps_list_instances</a></td>
+<td>List the instances of a Decision Application</td></tr>
+<tr><td style="width: 25%;"><a href="apps_list_instances_projects.html">apps_list_instances_projects</a></td>
+<td>List the projects a AppInstance belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="apps_list_instances_shares.html">apps_list_instances_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="apps_list_releases.html">apps_list_releases</a></td>
+<td>List the releases of a particular Decision Application</td></tr>
+<tr><td style="width: 25%;"><a href="apps_patch_instances.html">apps_patch_instances</a></td>
+<td>Update a given app instance</td></tr>
+<tr><td style="width: 25%;"><a href="apps_post_instances.html">apps_post_instances</a></td>
+<td>Create a new instance of an application of the given slug</td></tr>
+<tr><td style="width: 25%;"><a href="apps_put_instances_archive.html">apps_put_instances_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="apps_put_instances_projects.html">apps_put_instances_projects</a></td>
+<td>Add a AppInstance to a project</td></tr>
+<tr><td style="width: 25%;"><a href="apps_put_instances_shares_groups.html">apps_put_instances_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="apps_put_instances_shares_users.html">apps_put_instances_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="await.html">await</a></td>
+<td>Call a function repeatedly until a status is reached.</td></tr>
+<tr><td style="width: 25%;"><a href="await.html">await_all</a></td>
+<td>Call a function repeatedly until a status is reached.</td></tr>
+</table>
+
+<h2><a name="C">-- C --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="cancel.html">cancel</a></td>
+<td>Cancel the evaluation of a CivisFuture.</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">CivisConnection-class</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">CivisDriver-class</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="CivisFuture.html">CivisFuture</a></td>
+<td>Evaluate an expression in Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">CivisResult-class</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="civis_file.html">civis_file</a></td>
+<td>A file in the Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="civis_file_manifest.html">civis_file_manifest</a></td>
+<td>A manifest file in the Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml.html">civis_ml</a></td>
+<td>Interface for modeling in the Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="CIVIS_ML_CLASSIFIERS.html">CIVIS_ML_CLASSIFIERS</a></td>
+<td>List of classification models.</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_extra_trees_classifier.html">civis_ml_extra_trees_classifier</a></td>
+<td>CivisML Extra Trees Classifier</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_extra_trees_regressor.html">civis_ml_extra_trees_regressor</a></td>
+<td>CivisML Extra Trees Regressor</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml.html">civis_ml_fetch_existing</a></td>
+<td>Interface for modeling in the Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_gradient_boosting_classifier.html">civis_ml_gradient_boosting_classifier</a></td>
+<td>CivisML Gradient Boosting Classifier</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_gradient_boosting_regressor.html">civis_ml_gradient_boosting_regressor</a></td>
+<td>CivisML Gradient Boosting Regressor</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_random_forest_classifier.html">civis_ml_random_forest_classifier</a></td>
+<td>CivisML Random Forest Classifier</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_random_forest_regressor.html">civis_ml_random_forest_regressor</a></td>
+<td>CivisML Random Forest Regressor</td></tr>
+<tr><td style="width: 25%;"><a href="CIVIS_ML_REGRESSORS.html">CIVIS_ML_REGRESSORS</a></td>
+<td>List of civis_ml regression models.</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_sparse_linear_regressor.html">civis_ml_sparse_linear_regressor</a></td>
+<td>CivisML Sparse Linear Regression</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_sparse_logistic.html">civis_ml_sparse_logistic</a></td>
+<td>CivisML Sparse Logistic</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml_sparse_ridge_regressor.html">civis_ml_sparse_ridge_regressor</a></td>
+<td>CivisML Sparse Ridge Regression</td></tr>
+<tr><td style="width: 25%;"><a href="civis_platform.html">civis_platform</a></td>
+<td>Evaluate an expression in Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="civis_table.html">civis_table</a></td>
+<td>A table in the Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="civis_to_multifile_csv.html">civis_to_multifile_csv</a></td>
+<td>Split a Redshift table into multiple CSV parts on S3</td></tr>
+<tr><td style="width: 25%;"><a href="clusters_get_kubernetes.html">clusters_get_kubernetes</a></td>
+<td>Describe a Kubernetes Cluster</td></tr>
+<tr><td style="width: 25%;"><a href="clusters_get_workers.html">clusters_get_workers</a></td>
+<td>Describe a Worker Cluster</td></tr>
+<tr><td style="width: 25%;"><a href="clusters_list_kubernetes.html">clusters_list_kubernetes</a></td>
+<td>List Kubernetes Clusters</td></tr>
+<tr><td style="width: 25%;"><a href="clusters_list_workers.html">clusters_list_workers</a></td>
+<td>List Worker Clusters</td></tr>
+<tr><td style="width: 25%;"><a href="clusters_list_workers_active_jobs.html">clusters_list_workers_active_jobs</a></td>
+<td>List Active Jobs for a Worker Cluster</td></tr>
+<tr><td style="width: 25%;"><a href="clusters_list_workers_queued_jobs.html">clusters_list_workers_queued_jobs</a></td>
+<td>List Queued Jobs for a Worker Cluster</td></tr>
+<tr><td style="width: 25%;"><a href="codes_delete.html">codes_delete</a></td>
+<td>Delete a code</td></tr>
+<tr><td style="width: 25%;"><a href="codes_get.html">codes_get</a></td>
+<td>Show basic code info</td></tr>
+<tr><td style="width: 25%;"><a href="codes_list.html">codes_list</a></td>
+<td>List codes</td></tr>
+<tr><td style="width: 25%;"><a href="codes_patch.html">codes_patch</a></td>
+<td>Update a code</td></tr>
+<tr><td style="width: 25%;"><a href="codes_post.html">codes_post</a></td>
+<td>Create a new code</td></tr>
+<tr><td style="width: 25%;"><a href="codes_put.html">codes_put</a></td>
+<td>Update a code</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_delete_shares_groups.html">credentials_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_delete_shares_users.html">credentials_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_get.html">credentials_get</a></td>
+<td>Get a credential</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_list.html">credentials_list</a></td>
+<td>List credentials</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_list_shares.html">credentials_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_post.html">credentials_post</a></td>
+<td>Create a credential</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_post_authenticate.html">credentials_post_authenticate</a></td>
+<td>Authenticate against a remote host</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_post_temporary.html">credentials_post_temporary</a></td>
+<td>Generate a temporary credential for accessing S3</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_put.html">credentials_put</a></td>
+<td>Update an existing credential</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_put_shares_groups.html">credentials_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="credentials_put_shares_users.html">credentials_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+</table>
+
+<h2><a name="D">-- D --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="databases_delete_whitelist_ips.html">databases_delete_whitelist_ips</a></td>
+<td>Remove a whitelisted IP address</td></tr>
+<tr><td style="width: 25%;"><a href="databases_get_whitelist_ips.html">databases_get_whitelist_ips</a></td>
+<td>View details about a whitelisted IP</td></tr>
+<tr><td style="width: 25%;"><a href="databases_list.html">databases_list</a></td>
+<td>List databases</td></tr>
+<tr><td style="width: 25%;"><a href="databases_list_schemas.html">databases_list_schemas</a></td>
+<td>List schemas in this database</td></tr>
+<tr><td style="width: 25%;"><a href="databases_list_tables.html">databases_list_tables</a></td>
+<td>List tables in the specified database, deprecated use "GET /tables" instead</td></tr>
+<tr><td style="width: 25%;"><a href="databases_list_tables_search.html">databases_list_tables_search</a></td>
+<td>List tables in the specified database, deprecated use "GET /tables" instead</td></tr>
+<tr><td style="width: 25%;"><a href="databases_list_whitelist_ips.html">databases_list_whitelist_ips</a></td>
+<td>List whitelisted IPs for the specified database</td></tr>
+<tr><td style="width: 25%;"><a href="databases_post_whitelist_ips.html">databases_post_whitelist_ips</a></td>
+<td>Whitelist an IP address</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbBegin-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbBind-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbClearResult-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbColumnInfo-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbCommit-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbConnect-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbDataType-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbDisconnect-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbExistsTable-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbFetch-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbGetInfo-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbGetRowCount-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbGetRowsAffected-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbGetStatement-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbHasCompleted-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">DBI</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="dbIsReadOnly.html">dbIsReadOnly</a></td>
+<td>Is this DBMS object in read-only mode</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbIsReadOnly-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbIsValid-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="dbi_driver.html">dbi_driver</a></td>
+<td>Civis DBI driver</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbListFields-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbListTables-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbQuoteIdentifier-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbQuoteString-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbReadTable-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbRemoveTable-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbRollback-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbSendQuery-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbSendStatement-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">dbWriteTable-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="default_credential.html">default_credential</a></td>
+<td>The current user's default credential.</td></tr>
+<tr><td style="width: 25%;"><a href="download_civis.html">download_civis</a></td>
+<td>Download a table or a file from the Civis Platform to local disk</td></tr>
+<tr><td style="width: 25%;"><a href="download_civis.html">download_civis.character</a></td>
+<td>Download a table or a file from the Civis Platform to local disk</td></tr>
+<tr><td style="width: 25%;"><a href="download_civis.html">download_civis.numeric</a></td>
+<td>Download a table or a file from the Civis Platform to local disk</td></tr>
+<tr><td style="width: 25%;"><a href="download_civis.html">download_civis.sql</a></td>
+<td>Download a table or a file from the Civis Platform to local disk</td></tr>
+</table>
+
+<h2><a name="E">-- E --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="endpoints_list.html">endpoints_list</a></td>
+<td>List API endpoints</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_delete_cass_ncoa_projects.html">enhancements_delete_cass_ncoa_projects</a></td>
+<td>Remove a JobTypes::CassNcoa from a project</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_delete_cass_ncoa_runs.html">enhancements_delete_cass_ncoa_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_delete_cass_ncoa_shares_groups.html">enhancements_delete_cass_ncoa_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_delete_cass_ncoa_shares_users.html">enhancements_delete_cass_ncoa_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_delete_person_matching_projects.html">enhancements_delete_person_matching_projects</a></td>
+<td>Remove a container docker from a project</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_delete_person_matching_shares_groups.html">enhancements_delete_person_matching_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_delete_person_matching_shares_users.html">enhancements_delete_person_matching_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_get_cass_ncoa.html">enhancements_get_cass_ncoa</a></td>
+<td>Get a CASS/NCOA Enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_get_cass_ncoa_runs.html">enhancements_get_cass_ncoa_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list.html">enhancements_list</a></td>
+<td>List Enhancements</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_cass_ncoa_projects.html">enhancements_list_cass_ncoa_projects</a></td>
+<td>List the projects a JobTypes::CassNcoa belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_cass_ncoa_runs.html">enhancements_list_cass_ncoa_runs</a></td>
+<td>List runs for the given cass_ncoa</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_cass_ncoa_runs_logs.html">enhancements_list_cass_ncoa_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_cass_ncoa_runs_outputs.html">enhancements_list_cass_ncoa_runs_outputs</a></td>
+<td>List the outputs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_cass_ncoa_shares.html">enhancements_list_cass_ncoa_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_person_matching_projects.html">enhancements_list_person_matching_projects</a></td>
+<td>List the projects a container docker belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_person_matching_shares.html">enhancements_list_person_matching_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_list_types.html">enhancements_list_types</a></td>
+<td>List available enhancement types</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_patch_cass_ncoa.html">enhancements_patch_cass_ncoa</a></td>
+<td>Update some attributes of this CASS/NCOA Enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_post_cass_ncoa.html">enhancements_post_cass_ncoa</a></td>
+<td>Create a CASS/NCOA Enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_post_cass_ncoa_cancel.html">enhancements_post_cass_ncoa_cancel</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_post_cass_ncoa_runs.html">enhancements_post_cass_ncoa_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_cass_ncoa.html">enhancements_put_cass_ncoa</a></td>
+<td>Replace all attributes of this CASS/NCOA Enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_cass_ncoa_archive.html">enhancements_put_cass_ncoa_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_cass_ncoa_projects.html">enhancements_put_cass_ncoa_projects</a></td>
+<td>Add a JobTypes::CassNcoa to a project</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_cass_ncoa_shares_groups.html">enhancements_put_cass_ncoa_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_cass_ncoa_shares_users.html">enhancements_put_cass_ncoa_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_person_matching_archive.html">enhancements_put_person_matching_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_person_matching_projects.html">enhancements_put_person_matching_projects</a></td>
+<td>Add a container docker to a project</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_person_matching_shares_groups.html">enhancements_put_person_matching_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="enhancements_put_person_matching_shares_users.html">enhancements_put_person_matching_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="exports_list.html">exports_list</a></td>
+<td>List</td></tr>
+</table>
+
+<h2><a name="F">-- F --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="fetch_all.html">fetch_all</a></td>
+<td>Retrieve all results from a paginated endpoint</td></tr>
+<tr><td style="width: 25%;"><a href="fetch_and_generate_client.html">fetch_and_generate_client</a></td>
+<td>Fetches and generates the client in generated_client.R</td></tr>
+<tr><td style="width: 25%;"><a href="fetch_logs.html">fetch_logs</a></td>
+<td>Fetch job logs from the Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="fetch_oos_scores.html">fetch_oos_scores</a></td>
+<td>Retrieve out of sample/fold predictions</td></tr>
+<tr><td style="width: 25%;"><a href="fetch_predictions.html">fetch_predictions</a></td>
+<td>Retrieve predictions from a CivisML prediction job</td></tr>
+<tr><td style="width: 25%;"><a href="fetch_until.html">fetch_until</a></td>
+<td>Retrieve some results from a paginated endpoint</td></tr>
+<tr><td style="width: 25%;"><a href="files_delete_projects.html">files_delete_projects</a></td>
+<td>Remove a Data::S3File from a project</td></tr>
+<tr><td style="width: 25%;"><a href="files_delete_shares_groups.html">files_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="files_delete_shares_users.html">files_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="files_get.html">files_get</a></td>
+<td>Get details about a file</td></tr>
+<tr><td style="width: 25%;"><a href="files_list_projects.html">files_list_projects</a></td>
+<td>List the projects a Data::S3File belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="files_list_shares.html">files_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="files_post.html">files_post</a></td>
+<td>Initiate an upload of a file into the platform</td></tr>
+<tr><td style="width: 25%;"><a href="files_post_multipart.html">files_post_multipart</a></td>
+<td>Initiate a multipart upload</td></tr>
+<tr><td style="width: 25%;"><a href="files_post_multipart_complete.html">files_post_multipart_complete</a></td>
+<td>Complete a multipart upload</td></tr>
+<tr><td style="width: 25%;"><a href="files_put_projects.html">files_put_projects</a></td>
+<td>Add a Data::S3File to a project</td></tr>
+<tr><td style="width: 25%;"><a href="files_put_shares_groups.html">files_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="files_put_shares_users.html">files_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+</table>
+
+<h2><a name="G">-- G --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="generate_client.html">generate_client</a></td>
+<td>Generate a client</td></tr>
+<tr><td style="width: 25%;"><a href="get_database_id.html">get_database_id</a></td>
+<td>Return the database id for a given database name</td></tr>
+<tr><td style="width: 25%;"><a href="get_error.html">get_error</a></td>
+<td>Get error data from civis_errors</td></tr>
+<tr><td style="width: 25%;"><a href="get_metric.html">get_metric</a></td>
+<td>Get model metrics</td></tr>
+<tr><td style="width: 25%;"><a href="get_status.html">get_status</a></td>
+<td>Get the status from results of 'await'</td></tr>
+<tr><td style="width: 25%;"><a href="get_table_id.html">get_table_id</a></td>
+<td>Return the table id for a given table</td></tr>
+<tr><td style="width: 25%;"><a href="git_repos_delete.html">git_repos_delete</a></td>
+<td>Remove the bookmark on a git repository</td></tr>
+<tr><td style="width: 25%;"><a href="git_repos_get.html">git_repos_get</a></td>
+<td>Get a bookmarked git repository</td></tr>
+<tr><td style="width: 25%;"><a href="git_repos_list.html">git_repos_list</a></td>
+<td>List bookmarked git repositories</td></tr>
+<tr><td style="width: 25%;"><a href="git_repos_post.html">git_repos_post</a></td>
+<td>Bookmark a git repository</td></tr>
+<tr><td style="width: 25%;"><a href="groups_list.html">groups_list</a></td>
+<td>List Groups</td></tr>
+</table>
+
+<h2><a name="H">-- H --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="hist.civis_ml.html">hist.civis_ml</a></td>
+<td>Plot a histogram of the predicted scores or probabilities for a CivisML object</td></tr>
+</table>
+
+<h2><a name="I">-- I --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="imports_delete_files_runs.html">imports_delete_files_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="imports_delete_projects.html">imports_delete_projects</a></td>
+<td>Remove a JobTypes::Import from a project</td></tr>
+<tr><td style="width: 25%;"><a href="imports_delete_shares_groups.html">imports_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="imports_delete_shares_users.html">imports_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="imports_delete_syncs.html">imports_delete_syncs</a></td>
+<td>Archive a sync (deprecated, use the /archive endpoint instead)</td></tr>
+<tr><td style="width: 25%;"><a href="imports_get.html">imports_get</a></td>
+<td>Get details about an import</td></tr>
+<tr><td style="width: 25%;"><a href="imports_get_batches.html">imports_get_batches</a></td>
+<td>Get details about a batch import</td></tr>
+<tr><td style="width: 25%;"><a href="imports_get_files_runs.html">imports_get_files_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list.html">imports_list</a></td>
+<td>List</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list_batches.html">imports_list_batches</a></td>
+<td>List batch imports</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list_files_runs.html">imports_list_files_runs</a></td>
+<td>List runs for the given import</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list_files_runs_logs.html">imports_list_files_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list_projects.html">imports_list_projects</a></td>
+<td>List the projects a JobTypes::Import belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list_runs.html">imports_list_runs</a></td>
+<td>Get the run history of this import</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list_runs_logs.html">imports_list_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="imports_list_shares.html">imports_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="imports_post.html">imports_post</a></td>
+<td>Create a new import configuration</td></tr>
+<tr><td style="width: 25%;"><a href="imports_post_batches.html">imports_post_batches</a></td>
+<td>Upload multiple files to Redshift</td></tr>
+<tr><td style="width: 25%;"><a href="imports_post_cancel.html">imports_post_cancel</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="imports_post_files.html">imports_post_files</a></td>
+<td>Initate an import of a tabular file into the platform</td></tr>
+<tr><td style="width: 25%;"><a href="imports_post_files_runs.html">imports_post_files_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="imports_post_runs.html">imports_post_runs</a></td>
+<td>Run an import</td></tr>
+<tr><td style="width: 25%;"><a href="imports_post_syncs.html">imports_post_syncs</a></td>
+<td>Create a sync</td></tr>
+<tr><td style="width: 25%;"><a href="imports_put.html">imports_put</a></td>
+<td>Update an import</td></tr>
+<tr><td style="width: 25%;"><a href="imports_put_archive.html">imports_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="imports_put_projects.html">imports_put_projects</a></td>
+<td>Add a JobTypes::Import to a project</td></tr>
+<tr><td style="width: 25%;"><a href="imports_put_shares_groups.html">imports_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="imports_put_shares_users.html">imports_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="imports_put_syncs.html">imports_put_syncs</a></td>
+<td>Update a sync</td></tr>
+<tr><td style="width: 25%;"><a href="imports_put_syncs_archive.html">imports_put_syncs_archive</a></td>
+<td>Update the archive status of this sync</td></tr>
+</table>
+
+<h2><a name="J">-- J --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="jobs_delete_projects.html">jobs_delete_projects</a></td>
+<td>Remove a Job from a project</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_delete_runs.html">jobs_delete_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_delete_shares_groups.html">jobs_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_delete_shares_users.html">jobs_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_get.html">jobs_get</a></td>
+<td>Show basic job info</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_get_runs.html">jobs_get_runs</a></td>
+<td>Check status of a job</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_list.html">jobs_list</a></td>
+<td>List</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_list_children.html">jobs_list_children</a></td>
+<td>Show nested tree of children that this job triggers</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_list_parents.html">jobs_list_parents</a></td>
+<td>Show chain of parents as a list that this job triggers from</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_list_projects.html">jobs_list_projects</a></td>
+<td>List the projects a Job belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_list_shares.html">jobs_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_list_workflows.html">jobs_list_workflows</a></td>
+<td>List the workflows a job belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_post_runs.html">jobs_post_runs</a></td>
+<td>Run a job</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_post_trigger_email.html">jobs_post_trigger_email</a></td>
+<td>Generate and retrieve trigger email address</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_put_projects.html">jobs_put_projects</a></td>
+<td>Add a Job to a project</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_put_shares_groups.html">jobs_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="jobs_put_shares_users.html">jobs_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+</table>
+
+<h2><a name="M">-- M --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="match_targets_get.html">match_targets_get</a></td>
+<td>Show Match Target info</td></tr>
+<tr><td style="width: 25%;"><a href="match_targets_list.html">match_targets_list</a></td>
+<td>List match targets</td></tr>
+<tr><td style="width: 25%;"><a href="match_targets_patch.html">match_targets_patch</a></td>
+<td>Update a match target</td></tr>
+<tr><td style="width: 25%;"><a href="match_targets_post.html">match_targets_post</a></td>
+<td>Create a new match target</td></tr>
+<tr><td style="width: 25%;"><a href="media_delete_optimizations_runs.html">media_delete_optimizations_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="media_delete_optimizations_shares_groups.html">media_delete_optimizations_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_delete_optimizations_shares_users.html">media_delete_optimizations_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_delete_ratecards_shares_groups.html">media_delete_ratecards_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_delete_ratecards_shares_users.html">media_delete_ratecards_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_delete_spot_orders_shares_groups.html">media_delete_spot_orders_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_delete_spot_orders_shares_users.html">media_delete_spot_orders_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_get_optimizations.html">media_get_optimizations</a></td>
+<td>Show a single optimization</td></tr>
+<tr><td style="width: 25%;"><a href="media_get_optimizations_runs.html">media_get_optimizations_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="media_get_ratecards.html">media_get_ratecards</a></td>
+<td>Get a Ratecard</td></tr>
+<tr><td style="width: 25%;"><a href="media_get_spot_orders.html">media_get_spot_orders</a></td>
+<td>Show a single spot order</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_dmas.html">media_list_dmas</a></td>
+<td>List all Designated Market Areas</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_optimizations.html">media_list_optimizations</a></td>
+<td>List all optimizations</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_optimizations_runs.html">media_list_optimizations_runs</a></td>
+<td>List runs for the given optimization</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_optimizations_runs_logs.html">media_list_optimizations_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_optimizations_shares.html">media_list_optimizations_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_ratecards.html">media_list_ratecards</a></td>
+<td>List all ratecards</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_ratecards_shares.html">media_list_ratecards_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_spot_orders.html">media_list_spot_orders</a></td>
+<td>List all spot orders</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_spot_orders_shares.html">media_list_spot_orders_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_list_targets.html">media_list_targets</a></td>
+<td>List all Media Targets</td></tr>
+<tr><td style="width: 25%;"><a href="media_patch_optimizations.html">media_patch_optimizations</a></td>
+<td>Edit an existing optimization</td></tr>
+<tr><td style="width: 25%;"><a href="media_patch_ratecards.html">media_patch_ratecards</a></td>
+<td>Update some attributes of this Ratecard</td></tr>
+<tr><td style="width: 25%;"><a href="media_post_optimizations.html">media_post_optimizations</a></td>
+<td>Create a new optimization</td></tr>
+<tr><td style="width: 25%;"><a href="media_post_optimizations_clone.html">media_post_optimizations_clone</a></td>
+<td>Clone an existing optimization</td></tr>
+<tr><td style="width: 25%;"><a href="media_post_optimizations_runs.html">media_post_optimizations_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="media_post_ratecards.html">media_post_ratecards</a></td>
+<td>Create a Ratecard</td></tr>
+<tr><td style="width: 25%;"><a href="media_post_spot_orders.html">media_post_spot_orders</a></td>
+<td>Create a spot order</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_optimizations_archive.html">media_put_optimizations_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_optimizations_shares_groups.html">media_put_optimizations_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_optimizations_shares_users.html">media_put_optimizations_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_ratecards.html">media_put_ratecards</a></td>
+<td>Replace all attributes of this Ratecard</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_ratecards_archive.html">media_put_ratecards_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_ratecards_shares_groups.html">media_put_ratecards_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_ratecards_shares_users.html">media_put_ratecards_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_spot_orders.html">media_put_spot_orders</a></td>
+<td>Edit the specified spot order</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_spot_orders_archive.html">media_put_spot_orders_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_spot_orders_shares_groups.html">media_put_spot_orders_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="media_put_spot_orders_shares_users.html">media_put_spot_orders_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="models_delete_builds.html">models_delete_builds</a></td>
+<td>Cancel a build</td></tr>
+<tr><td style="width: 25%;"><a href="models_delete_projects.html">models_delete_projects</a></td>
+<td>Remove a models from a project</td></tr>
+<tr><td style="width: 25%;"><a href="models_delete_shares_groups.html">models_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="models_delete_shares_users.html">models_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="models_get.html">models_get</a></td>
+<td>Retrieve model configuration</td></tr>
+<tr><td style="width: 25%;"><a href="models_get_builds.html">models_get_builds</a></td>
+<td>Check status of a build</td></tr>
+<tr><td style="width: 25%;"><a href="models_list.html">models_list</a></td>
+<td>List</td></tr>
+<tr><td style="width: 25%;"><a href="models_list_builds.html">models_list_builds</a></td>
+<td>List builds for the given model</td></tr>
+<tr><td style="width: 25%;"><a href="models_list_builds_logs.html">models_list_builds_logs</a></td>
+<td>Get the logs for a build</td></tr>
+<tr><td style="width: 25%;"><a href="models_list_projects.html">models_list_projects</a></td>
+<td>List the projects a models belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="models_list_schedules.html">models_list_schedules</a></td>
+<td>Show the model build schedule</td></tr>
+<tr><td style="width: 25%;"><a href="models_list_shares.html">models_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="models_list_types.html">models_list_types</a></td>
+<td>List all available model types</td></tr>
+<tr><td style="width: 25%;"><a href="models_patch.html">models_patch</a></td>
+<td>Update model configuration</td></tr>
+<tr><td style="width: 25%;"><a href="models_post.html">models_post</a></td>
+<td>Create new configuration for a model</td></tr>
+<tr><td style="width: 25%;"><a href="models_post_builds.html">models_post_builds</a></td>
+<td>Start a build</td></tr>
+<tr><td style="width: 25%;"><a href="models_put_archive.html">models_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="models_put_predictions.html">models_put_predictions</a></td>
+<td>Add a table on which to apply the predictive model</td></tr>
+<tr><td style="width: 25%;"><a href="models_put_projects.html">models_put_projects</a></td>
+<td>Add a models to a project</td></tr>
+<tr><td style="width: 25%;"><a href="models_put_schedules.html">models_put_schedules</a></td>
+<td>Schedule the model build</td></tr>
+<tr><td style="width: 25%;"><a href="models_put_shares_groups.html">models_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="models_put_shares_users.html">models_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="multipart_upload.html">multipart_upload</a></td>
+<td>Upload to files endpoint in parts.</td></tr>
+</table>
+
+<h2><a name="N">-- N --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="notebooks_delete.html">notebooks_delete</a></td>
+<td>Archive a Notebook (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_delete_deployments.html">notebooks_delete_deployments</a></td>
+<td>Delete a Notebook deployment</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_delete_projects.html">notebooks_delete_projects</a></td>
+<td>Remove a Notebook from a project</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_delete_shares_groups.html">notebooks_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_delete_shares_users.html">notebooks_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_get.html">notebooks_get</a></td>
+<td>Get a Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_get_deployments.html">notebooks_get_deployments</a></td>
+<td>Get details about a Notebook deployment</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_get_git_commits.html">notebooks_get_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list.html">notebooks_list</a></td>
+<td>List Notebooks</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list_deployments.html">notebooks_list_deployments</a></td>
+<td>List deployments for a Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list_deployments_logs.html">notebooks_list_deployments_logs</a></td>
+<td>Get the logs for a Notebook deployment</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list_git.html">notebooks_list_git</a></td>
+<td>Get the git metadata attached to this Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list_git_commits.html">notebooks_list_git_commits</a></td>
+<td>Get the git commits for this Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list_projects.html">notebooks_list_projects</a></td>
+<td>List the projects a Notebook belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list_shares.html">notebooks_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_list_update_links.html">notebooks_list_update_links</a></td>
+<td>Get URLs to update notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_patch.html">notebooks_patch</a></td>
+<td>Update some attributes of this Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_post.html">notebooks_post</a></td>
+<td>Create a Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_post_clone.html">notebooks_post_clone</a></td>
+<td>Clone this Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_post_deployments.html">notebooks_post_deployments</a></td>
+<td>Deploy a Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_post_git_commits.html">notebooks_post_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_put.html">notebooks_put</a></td>
+<td>Replace all attributes of this Notebook</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_put_archive.html">notebooks_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_put_git.html">notebooks_put_git</a></td>
+<td>Attach this Notebook to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_put_projects.html">notebooks_put_projects</a></td>
+<td>Add a Notebook to a project</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_put_shares_groups.html">notebooks_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="notebooks_put_shares_users.html">notebooks_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="notifications_list.html">notifications_list</a></td>
+<td>Receive a stream of notifications as they come in</td></tr>
+</table>
+
+<h2><a name="O">-- O --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="ontology_list.html">ontology_list</a></td>
+<td>List the ontology of column names Civis uses</td></tr>
+</table>
+
+<h2><a name="P">-- P --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="plot.civis_ml_classifier.html">plot.civis_ml_classifier</a></td>
+<td>Decile plot for classification with civis_ml</td></tr>
+<tr><td style="width: 25%;"><a href="plot.civis_ml_regressor.html">plot.civis_ml_regressor</a></td>
+<td>Y-yhat plot for regression with civis_ml</td></tr>
+<tr><td style="width: 25%;"><a href="civis_ml.html">predict.civis_ml</a></td>
+<td>Interface for modeling in the Civis Platform</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_delete_runs.html">predictions_delete_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_get.html">predictions_get</a></td>
+<td>Show the specified prediction</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_get_runs.html">predictions_get_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_list.html">predictions_list</a></td>
+<td>List predictions</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_list_runs.html">predictions_list_runs</a></td>
+<td>List runs for the given prediction</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_list_runs_logs.html">predictions_list_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_list_schedules.html">predictions_list_schedules</a></td>
+<td>Show the prediction schedule</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_patch.html">predictions_patch</a></td>
+<td>Update a prediction</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_post_runs.html">predictions_post_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="predictions_put_schedules.html">predictions_put_schedules</a></td>
+<td>Schedule the prediction</td></tr>
+<tr><td style="width: 25%;"><a href="print.civis_api.html">print.civis_api</a></td>
+<td>Print results from a Civis API call</td></tr>
+<tr><td style="width: 25%;"><a href="projects_delete.html">projects_delete</a></td>
+<td>Archive a project (deprecated, use the /archive endpoint instead)</td></tr>
+<tr><td style="width: 25%;"><a href="projects_delete_shares_groups.html">projects_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="projects_delete_shares_users.html">projects_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="projects_get.html">projects_get</a></td>
+<td>Get a detailed view of a project and the objects in it</td></tr>
+<tr><td style="width: 25%;"><a href="projects_list.html">projects_list</a></td>
+<td>List projects</td></tr>
+<tr><td style="width: 25%;"><a href="projects_list_shares.html">projects_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="projects_post.html">projects_post</a></td>
+<td>Create a project</td></tr>
+<tr><td style="width: 25%;"><a href="projects_put.html">projects_put</a></td>
+<td>Update a project</td></tr>
+<tr><td style="width: 25%;"><a href="projects_put_archive.html">projects_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="projects_put_shares_groups.html">projects_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="projects_put_shares_users.html">projects_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="publish_addin.html">publish_addin</a></td>
+<td>Add in to Publish an R Markdown file to Platform Reports from RStudio</td></tr>
+<tr><td style="width: 25%;"><a href="publish_html.html">publish_html</a></td>
+<td>Publish HTML to Platform Reports</td></tr>
+<tr><td style="width: 25%;"><a href="publish_rmd.html">publish_rmd</a></td>
+<td>Publish an R Markdown file to Platform Reports</td></tr>
+</table>
+
+<h2><a name="Q">-- Q --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="queries_delete_runs.html">queries_delete_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="queries_get.html">queries_get</a></td>
+<td>Get details about a query</td></tr>
+<tr><td style="width: 25%;"><a href="queries_get_runs.html">queries_get_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="queries_list.html">queries_list</a></td>
+<td>List</td></tr>
+<tr><td style="width: 25%;"><a href="queries_list_runs.html">queries_list_runs</a></td>
+<td>List runs for the given query</td></tr>
+<tr><td style="width: 25%;"><a href="queries_list_runs_logs.html">queries_list_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="queries_post.html">queries_post</a></td>
+<td>Execute a query</td></tr>
+<tr><td style="width: 25%;"><a href="queries_post_runs.html">queries_post_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="queries_put_scripts.html">queries_put_scripts</a></td>
+<td>Update the query's associated script</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis.html">query_civis</a></td>
+<td>Run a Query on Platform</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis.html">query_civis.character</a></td>
+<td>Run a Query on Platform</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis.html">query_civis.numeric</a></td>
+<td>Run a Query on Platform</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis.html">query_civis.sql</a></td>
+<td>Run a Query on Platform</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis_file.html">query_civis_file</a></td>
+<td>Export results from a query to S3 and return a file id.</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis_file.html">query_civis_file.character</a></td>
+<td>Export results from a query to S3 and return a file id.</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis_file.html">query_civis_file.numeric</a></td>
+<td>Export results from a query to S3 and return a file id.</td></tr>
+<tr><td style="width: 25%;"><a href="query_civis_file.html">query_civis_file.sql</a></td>
+<td>Export results from a query to S3 and return a file id.</td></tr>
+</table>
+
+<h2><a name="R">-- R --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="read_civis.html">read_civis</a></td>
+<td>Read a table or file from the Civis Platform as a data frame</td></tr>
+<tr><td style="width: 25%;"><a href="read_civis.html">read_civis.character</a></td>
+<td>Read a table or file from the Civis Platform as a data frame</td></tr>
+<tr><td style="width: 25%;"><a href="read_civis.html">read_civis.numeric</a></td>
+<td>Read a table or file from the Civis Platform as a data frame</td></tr>
+<tr><td style="width: 25%;"><a href="read_civis.html">read_civis.sql</a></td>
+<td>Read a table or file from the Civis Platform as a data frame</td></tr>
+<tr><td style="width: 25%;"><a href="refresh_table.html">refresh_table</a></td>
+<td>Refresh a table</td></tr>
+<tr><td style="width: 25%;"><a href="remote_hosts_list.html">remote_hosts_list</a></td>
+<td>List the remote hosts</td></tr>
+<tr><td style="width: 25%;"><a href="remote_hosts_list_data_sets.html">remote_hosts_list_data_sets</a></td>
+<td>List data sets available from a remote host</td></tr>
+<tr><td style="width: 25%;"><a href="remote_hosts_post.html">remote_hosts_post</a></td>
+<td>Create a new remote host</td></tr>
+<tr><td style="width: 25%;"><a href="remote_hosts_post_authenticate.html">remote_hosts_post_authenticate</a></td>
+<td>Authenticate against a remote host using either a credential or a user name and password</td></tr>
+<tr><td style="width: 25%;"><a href="reports_delete_grants.html">reports_delete_grants</a></td>
+<td>Revoke permission for this report to perform Civis platform API operations on your behalf</td></tr>
+<tr><td style="width: 25%;"><a href="reports_delete_projects.html">reports_delete_projects</a></td>
+<td>Remove a Report from a project</td></tr>
+<tr><td style="width: 25%;"><a href="reports_delete_services_shares_groups.html">reports_delete_services_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_delete_services_shares_users.html">reports_delete_services_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_delete_shares_groups.html">reports_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_delete_shares_users.html">reports_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_get.html">reports_get</a></td>
+<td>Show a single report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_get_git_commits.html">reports_get_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="reports_get_services.html">reports_get_services</a></td>
+<td>Show a single service report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_list.html">reports_list</a></td>
+<td>List</td></tr>
+<tr><td style="width: 25%;"><a href="reports_list_git.html">reports_list_git</a></td>
+<td>Get the git metadata attached to this Report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_list_git_commits.html">reports_list_git_commits</a></td>
+<td>Get the git commits for this Report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_list_projects.html">reports_list_projects</a></td>
+<td>List the projects a Report belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="reports_list_services_shares.html">reports_list_services_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_list_shares.html">reports_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_list_snapshots.html">reports_list_snapshots</a></td>
+<td>Get details about the report's snapshot automation settings</td></tr>
+<tr><td style="width: 25%;"><a href="reports_patch.html">reports_patch</a></td>
+<td>Update a report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_patch_services.html">reports_patch_services</a></td>
+<td>Update some attributes of this service report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_patch_snapshots.html">reports_patch_snapshots</a></td>
+<td>Update the report's snapshot automation settings</td></tr>
+<tr><td style="width: 25%;"><a href="reports_post.html">reports_post</a></td>
+<td>Create a report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_post_git_commits.html">reports_post_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="reports_post_grants.html">reports_post_grants</a></td>
+<td>Grant this report the ability to perform Civis platform API operations on your behalf</td></tr>
+<tr><td style="width: 25%;"><a href="reports_post_services.html">reports_post_services</a></td>
+<td>Create a service report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_post_snapshots.html">reports_post_snapshots</a></td>
+<td>Generate and optionally email a snapshot of the specified report</td></tr>
+<tr><td style="width: 25%;"><a href="reports_put_archive.html">reports_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_put_git.html">reports_put_git</a></td>
+<td>Attach this Report to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="reports_put_projects.html">reports_put_projects</a></td>
+<td>Add a Report to a project</td></tr>
+<tr><td style="width: 25%;"><a href="reports_put_services_shares_groups.html">reports_put_services_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_put_services_shares_users.html">reports_put_services_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_put_shares_groups.html">reports_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="reports_put_shares_users.html">reports_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_delete_grants.html">results_delete_grants</a></td>
+<td>Revoke permission for this report to perform Civis platform API operations on your behalf</td></tr>
+<tr><td style="width: 25%;"><a href="results_delete_projects.html">results_delete_projects</a></td>
+<td>Remove a Report from a project</td></tr>
+<tr><td style="width: 25%;"><a href="results_delete_services_shares_groups.html">results_delete_services_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_delete_services_shares_users.html">results_delete_services_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_delete_shares_groups.html">results_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_delete_shares_users.html">results_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_get.html">results_get</a></td>
+<td>Show a single report</td></tr>
+<tr><td style="width: 25%;"><a href="results_get_git_commits.html">results_get_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="results_get_services.html">results_get_services</a></td>
+<td>Show a single service report</td></tr>
+<tr><td style="width: 25%;"><a href="results_list.html">results_list</a></td>
+<td>List</td></tr>
+<tr><td style="width: 25%;"><a href="results_list_git.html">results_list_git</a></td>
+<td>Get the git metadata attached to this Report</td></tr>
+<tr><td style="width: 25%;"><a href="results_list_git_commits.html">results_list_git_commits</a></td>
+<td>Get the git commits for this Report</td></tr>
+<tr><td style="width: 25%;"><a href="results_list_projects.html">results_list_projects</a></td>
+<td>List the projects a Report belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="results_list_services_shares.html">results_list_services_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_list_shares.html">results_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_list_snapshots.html">results_list_snapshots</a></td>
+<td>Get details about the report's snapshot automation settings</td></tr>
+<tr><td style="width: 25%;"><a href="results_patch.html">results_patch</a></td>
+<td>Update a report</td></tr>
+<tr><td style="width: 25%;"><a href="results_patch_services.html">results_patch_services</a></td>
+<td>Update some attributes of this service report</td></tr>
+<tr><td style="width: 25%;"><a href="results_patch_snapshots.html">results_patch_snapshots</a></td>
+<td>Update the report's snapshot automation settings</td></tr>
+<tr><td style="width: 25%;"><a href="results_post.html">results_post</a></td>
+<td>Create a report</td></tr>
+<tr><td style="width: 25%;"><a href="results_post_git_commits.html">results_post_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="results_post_grants.html">results_post_grants</a></td>
+<td>Grant this report the ability to perform Civis platform API operations on your behalf</td></tr>
+<tr><td style="width: 25%;"><a href="results_post_services.html">results_post_services</a></td>
+<td>Create a service report</td></tr>
+<tr><td style="width: 25%;"><a href="results_post_snapshots.html">results_post_snapshots</a></td>
+<td>Generate and optionally email a snapshot of the specified report</td></tr>
+<tr><td style="width: 25%;"><a href="results_put_archive.html">results_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_put_git.html">results_put_git</a></td>
+<td>Attach this Report to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="results_put_projects.html">results_put_projects</a></td>
+<td>Add a Report to a project</td></tr>
+<tr><td style="width: 25%;"><a href="results_put_services_shares_groups.html">results_put_services_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_put_services_shares_users.html">results_put_services_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_put_shares_groups.html">results_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="results_put_shares_users.html">results_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+</table>
+
+<h2><a name="S">-- S --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="scripts_delete.html">scripts_delete</a></td>
+<td>Archive a script (deprecated, use archive endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_containers.html">scripts_delete_containers</a></td>
+<td>Archive a container (deprecated, use archive endpoints)</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_containers_projects.html">scripts_delete_containers_projects</a></td>
+<td>Remove a container docker from a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_containers_runs.html">scripts_delete_containers_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_containers_shares_groups.html">scripts_delete_containers_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_containers_shares_users.html">scripts_delete_containers_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_custom.html">scripts_delete_custom</a></td>
+<td>Archive a Custom Script (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_custom_projects.html">scripts_delete_custom_projects</a></td>
+<td>Remove a Job from a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_custom_runs.html">scripts_delete_custom_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_custom_shares_groups.html">scripts_delete_custom_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_custom_shares_users.html">scripts_delete_custom_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_javascript.html">scripts_delete_javascript</a></td>
+<td>Archive a JavaScript Script (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_javascript_projects.html">scripts_delete_javascript_projects</a></td>
+<td>Remove a scripted sql from a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_javascript_runs.html">scripts_delete_javascript_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_javascript_shares_groups.html">scripts_delete_javascript_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_javascript_shares_users.html">scripts_delete_javascript_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_python3.html">scripts_delete_python3</a></td>
+<td>Archive a Python Script (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_python3_projects.html">scripts_delete_python3_projects</a></td>
+<td>Remove a python docker from a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_python3_runs.html">scripts_delete_python3_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_python3_shares_groups.html">scripts_delete_python3_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_python3_shares_users.html">scripts_delete_python3_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_r.html">scripts_delete_r</a></td>
+<td>Archive an R Script (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_r_projects.html">scripts_delete_r_projects</a></td>
+<td>Remove a r docker from a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_r_runs.html">scripts_delete_r_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_r_shares_groups.html">scripts_delete_r_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_r_shares_users.html">scripts_delete_r_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_sql.html">scripts_delete_sql</a></td>
+<td>Archive a SQL script (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_sql_projects.html">scripts_delete_sql_projects</a></td>
+<td>Remove a scripts from a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_sql_runs.html">scripts_delete_sql_runs</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_sql_shares_groups.html">scripts_delete_sql_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_delete_sql_shares_users.html">scripts_delete_sql_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get.html">scripts_get</a></td>
+<td>Get details about a script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_containers.html">scripts_get_containers</a></td>
+<td>View a container</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_containers_runs.html">scripts_get_containers_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_custom.html">scripts_get_custom</a></td>
+<td>Get a Custom Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_custom_runs.html">scripts_get_custom_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_javascript.html">scripts_get_javascript</a></td>
+<td>Get a JavaScript Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_javascript_git_commits.html">scripts_get_javascript_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_javascript_runs.html">scripts_get_javascript_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_python3.html">scripts_get_python3</a></td>
+<td>Get a Python Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_python3_git_commits.html">scripts_get_python3_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_python3_runs.html">scripts_get_python3_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_r.html">scripts_get_r</a></td>
+<td>Get an R Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_r_git_commits.html">scripts_get_r_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_r_runs.html">scripts_get_r_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_sql.html">scripts_get_sql</a></td>
+<td>Get a SQL script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_sql_git_commits.html">scripts_get_sql_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_get_sql_runs.html">scripts_get_sql_runs</a></td>
+<td>Check status of a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list.html">scripts_list</a></td>
+<td>List scripts</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_containers_projects.html">scripts_list_containers_projects</a></td>
+<td>List the projects a container docker belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_containers_runs.html">scripts_list_containers_runs</a></td>
+<td>List runs for the given container</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_containers_runs_logs.html">scripts_list_containers_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_containers_runs_outputs.html">scripts_list_containers_runs_outputs</a></td>
+<td>List the outputs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_containers_shares.html">scripts_list_containers_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_custom.html">scripts_list_custom</a></td>
+<td>List Custom Scripts</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_custom_projects.html">scripts_list_custom_projects</a></td>
+<td>List the projects a Job belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_custom_runs.html">scripts_list_custom_runs</a></td>
+<td>List runs for the given custom</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_custom_runs_logs.html">scripts_list_custom_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_custom_runs_outputs.html">scripts_list_custom_runs_outputs</a></td>
+<td>List the outputs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_custom_shares.html">scripts_list_custom_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_history.html">scripts_list_history</a></td>
+<td>Get the run history and outputs of this script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_javascript_git.html">scripts_list_javascript_git</a></td>
+<td>Get the git metadata attached to this scripted sql</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_javascript_git_commits.html">scripts_list_javascript_git_commits</a></td>
+<td>Get the git commits for this scripted sql</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_javascript_projects.html">scripts_list_javascript_projects</a></td>
+<td>List the projects a scripted sql belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_javascript_runs.html">scripts_list_javascript_runs</a></td>
+<td>List runs for the given javascript</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_javascript_runs_logs.html">scripts_list_javascript_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_javascript_runs_outputs.html">scripts_list_javascript_runs_outputs</a></td>
+<td>List the outputs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_javascript_shares.html">scripts_list_javascript_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_python3_git.html">scripts_list_python3_git</a></td>
+<td>Get the git metadata attached to this python docker</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_python3_git_commits.html">scripts_list_python3_git_commits</a></td>
+<td>Get the git commits for this python docker</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_python3_projects.html">scripts_list_python3_projects</a></td>
+<td>List the projects a python docker belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_python3_runs.html">scripts_list_python3_runs</a></td>
+<td>List runs for the given python</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_python3_runs_logs.html">scripts_list_python3_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_python3_runs_outputs.html">scripts_list_python3_runs_outputs</a></td>
+<td>List the outputs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_python3_shares.html">scripts_list_python3_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_r_git.html">scripts_list_r_git</a></td>
+<td>Get the git metadata attached to this r docker</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_r_git_commits.html">scripts_list_r_git_commits</a></td>
+<td>Get the git commits for this r docker</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_r_projects.html">scripts_list_r_projects</a></td>
+<td>List the projects a r docker belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_r_runs.html">scripts_list_r_runs</a></td>
+<td>List runs for the given r</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_r_runs_logs.html">scripts_list_r_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_r_runs_outputs.html">scripts_list_r_runs_outputs</a></td>
+<td>List the outputs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_r_shares.html">scripts_list_r_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_sql_git.html">scripts_list_sql_git</a></td>
+<td>Get the git metadata attached to this scripts</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_sql_git_commits.html">scripts_list_sql_git_commits</a></td>
+<td>Get the git commits for this scripts</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_sql_projects.html">scripts_list_sql_projects</a></td>
+<td>List the projects a scripts belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_sql_runs.html">scripts_list_sql_runs</a></td>
+<td>List runs for the given sql</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_sql_runs_logs.html">scripts_list_sql_runs_logs</a></td>
+<td>Get the logs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_sql_runs_outputs.html">scripts_list_sql_runs_outputs</a></td>
+<td>List the outputs for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_sql_shares.html">scripts_list_sql_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_list_types.html">scripts_list_types</a></td>
+<td>List available script types</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_patch.html">scripts_patch</a></td>
+<td>Update a script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_patch_containers.html">scripts_patch_containers</a></td>
+<td>Update a container</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_patch_custom.html">scripts_patch_custom</a></td>
+<td>Update some attributes of this Custom Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_patch_javascript.html">scripts_patch_javascript</a></td>
+<td>Update some attributes of this JavaScript Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_patch_python3.html">scripts_patch_python3</a></td>
+<td>Update some attributes of this Python Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_patch_r.html">scripts_patch_r</a></td>
+<td>Update some attributes of this R Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_patch_sql.html">scripts_patch_sql</a></td>
+<td>Update some attributes of this SQL script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post.html">scripts_post</a></td>
+<td>Create a script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_cancel.html">scripts_post_cancel</a></td>
+<td>Cancel a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_containers.html">scripts_post_containers</a></td>
+<td>Create a container</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_containers_clone.html">scripts_post_containers_clone</a></td>
+<td>Clone this Container Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_containers_runs.html">scripts_post_containers_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_containers_runs_logs.html">scripts_post_containers_runs_logs</a></td>
+<td>Add log messages</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_containers_runs_outputs.html">scripts_post_containers_runs_outputs</a></td>
+<td>Add an output for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_custom.html">scripts_post_custom</a></td>
+<td>Create a Custom Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_custom_clone.html">scripts_post_custom_clone</a></td>
+<td>Clone this Custom Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_custom_runs.html">scripts_post_custom_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_custom_runs_outputs.html">scripts_post_custom_runs_outputs</a></td>
+<td>Add an output for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_javascript.html">scripts_post_javascript</a></td>
+<td>Create a JavaScript Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_javascript_clone.html">scripts_post_javascript_clone</a></td>
+<td>Clone this JavaScript Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_javascript_git_commits.html">scripts_post_javascript_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_javascript_runs.html">scripts_post_javascript_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_javascript_runs_outputs.html">scripts_post_javascript_runs_outputs</a></td>
+<td>Add an output for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_python3.html">scripts_post_python3</a></td>
+<td>Create a Python Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_python3_clone.html">scripts_post_python3_clone</a></td>
+<td>Clone this Python Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_python3_git_commits.html">scripts_post_python3_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_python3_runs.html">scripts_post_python3_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_python3_runs_outputs.html">scripts_post_python3_runs_outputs</a></td>
+<td>Add an output for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_r.html">scripts_post_r</a></td>
+<td>Create an R Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_run.html">scripts_post_run</a></td>
+<td>Run a script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_r_clone.html">scripts_post_r_clone</a></td>
+<td>Clone this R Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_r_git_commits.html">scripts_post_r_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_r_runs.html">scripts_post_r_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_r_runs_outputs.html">scripts_post_r_runs_outputs</a></td>
+<td>Add an output for a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_sql.html">scripts_post_sql</a></td>
+<td>Create a SQL script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_sql_clone.html">scripts_post_sql_clone</a></td>
+<td>Clone this SQL script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_sql_git_commits.html">scripts_post_sql_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_post_sql_runs.html">scripts_post_sql_runs</a></td>
+<td>Start a run</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_containers.html">scripts_put_containers</a></td>
+<td>Edit a container</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_containers_archive.html">scripts_put_containers_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_containers_projects.html">scripts_put_containers_projects</a></td>
+<td>Add a container docker to a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_containers_shares_groups.html">scripts_put_containers_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_containers_shares_users.html">scripts_put_containers_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_custom.html">scripts_put_custom</a></td>
+<td>Replace all attributes of this Custom Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_custom_archive.html">scripts_put_custom_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_custom_projects.html">scripts_put_custom_projects</a></td>
+<td>Add a Job to a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_custom_shares_groups.html">scripts_put_custom_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_custom_shares_users.html">scripts_put_custom_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_javascript.html">scripts_put_javascript</a></td>
+<td>Replace all attributes of this JavaScript Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_javascript_archive.html">scripts_put_javascript_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_javascript_git.html">scripts_put_javascript_git</a></td>
+<td>Attach this scripted sql to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_javascript_projects.html">scripts_put_javascript_projects</a></td>
+<td>Add a scripted sql to a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_javascript_shares_groups.html">scripts_put_javascript_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_javascript_shares_users.html">scripts_put_javascript_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_python3.html">scripts_put_python3</a></td>
+<td>Replace all attributes of this Python Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_python3_archive.html">scripts_put_python3_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_python3_git.html">scripts_put_python3_git</a></td>
+<td>Attach this python docker to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_python3_projects.html">scripts_put_python3_projects</a></td>
+<td>Add a python docker to a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_python3_shares_groups.html">scripts_put_python3_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_python3_shares_users.html">scripts_put_python3_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_r.html">scripts_put_r</a></td>
+<td>Replace all attributes of this R Script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_r_archive.html">scripts_put_r_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_r_git.html">scripts_put_r_git</a></td>
+<td>Attach this r docker to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_r_projects.html">scripts_put_r_projects</a></td>
+<td>Add a r docker to a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_r_shares_groups.html">scripts_put_r_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_r_shares_users.html">scripts_put_r_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_sql.html">scripts_put_sql</a></td>
+<td>Replace all attributes of this SQL script</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_sql_archive.html">scripts_put_sql_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_sql_git.html">scripts_put_sql_git</a></td>
+<td>Attach this scripts to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_sql_projects.html">scripts_put_sql_projects</a></td>
+<td>Add a scripts to a project</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_sql_shares_groups.html">scripts_put_sql_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="scripts_put_sql_shares_users.html">scripts_put_sql_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="search_list.html">search_list</a></td>
+<td>Perform a search</td></tr>
+<tr><td style="width: 25%;"><a href="search_list_types.html">search_list_types</a></td>
+<td>List available search types</td></tr>
+<tr><td style="width: 25%;"><a href="services_delete.html">services_delete</a></td>
+<td>Archive a Service (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="services_delete_deployments.html">services_delete_deployments</a></td>
+<td>Delete a ShinyApp deployment</td></tr>
+<tr><td style="width: 25%;"><a href="services_delete_projects.html">services_delete_projects</a></td>
+<td>Remove a ShinyApp from a project</td></tr>
+<tr><td style="width: 25%;"><a href="services_delete_shares_groups.html">services_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="services_delete_shares_users.html">services_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="services_delete_tokens.html">services_delete_tokens</a></td>
+<td>Revoke a token by id</td></tr>
+<tr><td style="width: 25%;"><a href="services_get.html">services_get</a></td>
+<td>Get a Service</td></tr>
+<tr><td style="width: 25%;"><a href="services_get_deployments.html">services_get_deployments</a></td>
+<td>Get details about a ShinyApp deployment</td></tr>
+<tr><td style="width: 25%;"><a href="services_list.html">services_list</a></td>
+<td>List Services</td></tr>
+<tr><td style="width: 25%;"><a href="services_list_deployments.html">services_list_deployments</a></td>
+<td>List deployments for a ShinyApp</td></tr>
+<tr><td style="width: 25%;"><a href="services_list_deployments_logs.html">services_list_deployments_logs</a></td>
+<td>Get the logs for a Service deployment</td></tr>
+<tr><td style="width: 25%;"><a href="services_list_projects.html">services_list_projects</a></td>
+<td>List the projects a ShinyApp belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="services_list_shares.html">services_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="services_list_tokens.html">services_list_tokens</a></td>
+<td>List tokens</td></tr>
+<tr><td style="width: 25%;"><a href="services_patch.html">services_patch</a></td>
+<td>Update some attributes of this Service</td></tr>
+<tr><td style="width: 25%;"><a href="services_post.html">services_post</a></td>
+<td>Create a Service</td></tr>
+<tr><td style="width: 25%;"><a href="services_post_clone.html">services_post_clone</a></td>
+<td>Clone this Service</td></tr>
+<tr><td style="width: 25%;"><a href="services_post_deployments.html">services_post_deployments</a></td>
+<td>Deploy a ShinyApp</td></tr>
+<tr><td style="width: 25%;"><a href="services_post_redeploy.html">services_post_redeploy</a></td>
+<td>Redeploy a ShinyApp</td></tr>
+<tr><td style="width: 25%;"><a href="services_post_tokens.html">services_post_tokens</a></td>
+<td>Create a new long-lived service token</td></tr>
+<tr><td style="width: 25%;"><a href="services_put.html">services_put</a></td>
+<td>Replace all attributes of this Service</td></tr>
+<tr><td style="width: 25%;"><a href="services_put_archive.html">services_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="services_put_projects.html">services_put_projects</a></td>
+<td>Add a ShinyApp to a project</td></tr>
+<tr><td style="width: 25%;"><a href="services_put_shares_groups.html">services_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="services_put_shares_users.html">services_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="DBI.html">show-method</a></td>
+<td>DBI methods</td></tr>
+<tr><td style="width: 25%;"><a href="stash_local_dataframe.html">stash_local_dataframe</a></td>
+<td>Stash a data frame in feather or csv format, depending on CivisML version.</td></tr>
+</table>
+
+<h2><a name="T">-- T --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="tables_get.html">tables_get</a></td>
+<td>Show basic table info</td></tr>
+<tr><td style="width: 25%;"><a href="tables_get_enhancements_cass_ncoa.html">tables_get_enhancements_cass_ncoa</a></td>
+<td>View the status of a CASS / NCOA table enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="tables_get_enhancements_geocodings.html">tables_get_enhancements_geocodings</a></td>
+<td>View the status of a geocoding table enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="tables_get_enhancements_prepared_matchings.html">tables_get_enhancements_prepared_matchings</a></td>
+<td>View a prepared matching enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="tables_get_enhancements_table_matchings.html">tables_get_enhancements_table_matchings</a></td>
+<td>View a table matching enhancement</td></tr>
+<tr><td style="width: 25%;"><a href="tables_list.html">tables_list</a></td>
+<td>List tables</td></tr>
+<tr><td style="width: 25%;"><a href="tables_list_columns.html">tables_list_columns</a></td>
+<td>List columns in the specified table</td></tr>
+<tr><td style="width: 25%;"><a href="tables_patch.html">tables_patch</a></td>
+<td>Update a table</td></tr>
+<tr><td style="width: 25%;"><a href="tables_post.html">tables_post</a></td>
+<td>Import a file into a table</td></tr>
+<tr><td style="width: 25%;"><a href="tables_post_enhance.html">tables_post_enhance</a></td>
+<td>Run an enhancement on a table, deprecated use "POST /tables/:source_table_id/enhancements/&lt;enhancement-type&gt;" instead</td></tr>
+<tr><td style="width: 25%;"><a href="tables_post_enhancements_cass_ncoa.html">tables_post_enhancements_cass_ncoa</a></td>
+<td>Standardize addresses in a table</td></tr>
+<tr><td style="width: 25%;"><a href="tables_post_enhancements_geocodings.html">tables_post_enhancements_geocodings</a></td>
+<td>Geocode a table</td></tr>
+<tr><td style="width: 25%;"><a href="tables_post_enhancements_prepared_matchings.html">tables_post_enhancements_prepared_matchings</a></td>
+<td>Match person records against a dynamo table prepared by Civis</td></tr>
+<tr><td style="width: 25%;"><a href="tables_post_enhancements_table_matchings.html">tables_post_enhancements_table_matchings</a></td>
+<td>Match person records against an arbitrary Redshift table</td></tr>
+<tr><td style="width: 25%;"><a href="tables_post_refresh.html">tables_post_refresh</a></td>
+<td>Request a refresh for column and table statistics</td></tr>
+<tr><td style="width: 25%;"><a href="templates_delete_reports.html">templates_delete_reports</a></td>
+<td>Archive a Report Template (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="templates_delete_reports_shares_groups.html">templates_delete_reports_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_delete_reports_shares_users.html">templates_delete_reports_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_delete_scripts.html">templates_delete_scripts</a></td>
+<td>Archive a Script Template (deprecated, use archiving endpoints instead)</td></tr>
+<tr><td style="width: 25%;"><a href="templates_delete_scripts_projects.html">templates_delete_scripts_projects</a></td>
+<td>Remove a Template::Script from a project</td></tr>
+<tr><td style="width: 25%;"><a href="templates_delete_scripts_shares_groups.html">templates_delete_scripts_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_delete_scripts_shares_users.html">templates_delete_scripts_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_get_reports.html">templates_get_reports</a></td>
+<td>Get a Report Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_get_scripts.html">templates_get_scripts</a></td>
+<td>Get a Script Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_list_reports.html">templates_list_reports</a></td>
+<td>List Report Templates</td></tr>
+<tr><td style="width: 25%;"><a href="templates_list_reports_shares.html">templates_list_reports_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_list_scripts.html">templates_list_scripts</a></td>
+<td>List Script Templates</td></tr>
+<tr><td style="width: 25%;"><a href="templates_list_scripts_projects.html">templates_list_scripts_projects</a></td>
+<td>List the projects a Template::Script belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="templates_list_scripts_shares.html">templates_list_scripts_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_patch_reports.html">templates_patch_reports</a></td>
+<td>Update some attributes of this Report Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_patch_scripts.html">templates_patch_scripts</a></td>
+<td>Update some attributes of this Script Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_post_reports.html">templates_post_reports</a></td>
+<td>Create a Report Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_post_scripts.html">templates_post_scripts</a></td>
+<td>Create a Script Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_put_reports.html">templates_put_reports</a></td>
+<td>Replace all attributes of this Report Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_put_reports_shares_groups.html">templates_put_reports_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_put_reports_shares_users.html">templates_put_reports_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_put_scripts.html">templates_put_scripts</a></td>
+<td>Replace all attributes of this Script Template</td></tr>
+<tr><td style="width: 25%;"><a href="templates_put_scripts_projects.html">templates_put_scripts_projects</a></td>
+<td>Add a Template::Script to a project</td></tr>
+<tr><td style="width: 25%;"><a href="templates_put_scripts_shares_groups.html">templates_put_scripts_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="templates_put_scripts_shares_users.html">templates_put_scripts_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="transfer_table.html">transfer_table</a></td>
+<td>Transfer a table from one location to another.</td></tr>
+</table>
+
+<h2><a name="U">-- U --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="users_delete_api_keys.html">users_delete_api_keys</a></td>
+<td>Revoke the specified API key</td></tr>
+<tr><td style="width: 25%;"><a href="users_get.html">users_get</a></td>
+<td>Show info about a user</td></tr>
+<tr><td style="width: 25%;"><a href="users_get_api_keys.html">users_get_api_keys</a></td>
+<td>Show the specified API key</td></tr>
+<tr><td style="width: 25%;"><a href="users_list.html">users_list</a></td>
+<td>List users</td></tr>
+<tr><td style="width: 25%;"><a href="users_list_api_keys.html">users_list_api_keys</a></td>
+<td>Show API keys belonging to the specified user</td></tr>
+<tr><td style="width: 25%;"><a href="users_list_me.html">users_list_me</a></td>
+<td>Show info about the logged-in user</td></tr>
+<tr><td style="width: 25%;"><a href="users_patch_me.html">users_patch_me</a></td>
+<td>Update info about the logged-in user</td></tr>
+<tr><td style="width: 25%;"><a href="users_post_api_keys.html">users_post_api_keys</a></td>
+<td>Create a new API key belonging to the logged-in user</td></tr>
+</table>
+
+<h2><a name="W">-- W --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="workflows_delete_projects.html">workflows_delete_projects</a></td>
+<td>Remove a Workflow::Workflow from a project</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_delete_shares_groups.html">workflows_delete_shares_groups</a></td>
+<td>Revoke the permissions a group has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_delete_shares_users.html">workflows_delete_shares_users</a></td>
+<td>Revoke the permissions a user has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_get.html">workflows_get</a></td>
+<td>Get a Workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_get_executions.html">workflows_get_executions</a></td>
+<td>Get a workflow execution</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_get_git_commits.html">workflows_get_git_commits</a></td>
+<td>Get file contents at commit_hash</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_list.html">workflows_list</a></td>
+<td>List Workflows</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_list_executions.html">workflows_list_executions</a></td>
+<td>List workflow executions</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_list_git.html">workflows_list_git</a></td>
+<td>Get the git metadata attached to this Workflow::Workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_list_git_commits.html">workflows_list_git_commits</a></td>
+<td>Get the git commits for this Workflow::Workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_list_projects.html">workflows_list_projects</a></td>
+<td>List the projects a Workflow::Workflow belongs to</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_list_shares.html">workflows_list_shares</a></td>
+<td>List users and groups permissioned on this object</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_patch.html">workflows_patch</a></td>
+<td>Update some attributes of this Workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_post.html">workflows_post</a></td>
+<td>Create a Workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_post_clone.html">workflows_post_clone</a></td>
+<td>Clone this Workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_post_executions.html">workflows_post_executions</a></td>
+<td>Execute a workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_post_executions_cancel.html">workflows_post_executions_cancel</a></td>
+<td>Cancel a workflow execution</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_post_executions_resume.html">workflows_post_executions_resume</a></td>
+<td>Resume a paused workflow execution</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_post_executions_retry.html">workflows_post_executions_retry</a></td>
+<td>Retry a failed task, or all failed tasks in an execution</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_post_git_commits.html">workflows_post_git_commits</a></td>
+<td>Commit and push a new version of the file</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_put.html">workflows_put</a></td>
+<td>Replace all attributes of this Workflow</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_put_archive.html">workflows_put_archive</a></td>
+<td>Update the archive status of this object</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_put_git.html">workflows_put_git</a></td>
+<td>Attach this Workflow::Workflow to a git repo/file</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_put_projects.html">workflows_put_projects</a></td>
+<td>Add a Workflow::Workflow to a project</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_put_shares_groups.html">workflows_put_shares_groups</a></td>
+<td>Set the permissions groups has on this object</td></tr>
+<tr><td style="width: 25%;"><a href="workflows_put_shares_users.html">workflows_put_shares_users</a></td>
+<td>Set the permissions users have on this object</td></tr>
+<tr><td style="width: 25%;"><a href="write_chunks.html">write_chunks</a></td>
+<td>Split a file into chunks of a given chunk size, returning a list of file names.</td></tr>
+<tr><td style="width: 25%;"><a href="write_civis.html">write_civis</a></td>
+<td>Upload a local data frame or csv file to the Civis Platform (Redshift)</td></tr>
+<tr><td style="width: 25%;"><a href="write_civis.html">write_civis.character</a></td>
+<td>Upload a local data frame or csv file to the Civis Platform (Redshift)</td></tr>
+<tr><td style="width: 25%;"><a href="write_civis.html">write_civis.data.frame</a></td>
+<td>Upload a local data frame or csv file to the Civis Platform (Redshift)</td></tr>
+<tr><td style="width: 25%;"><a href="write_civis.html">write_civis.numeric</a></td>
+<td>Upload a local data frame or csv file to the Civis Platform (Redshift)</td></tr>
+<tr><td style="width: 25%;"><a href="write_civis_file.html">write_civis_file</a></td>
+<td>Upload a R object or file to Civis Platform (Files endpoint)</td></tr>
+<tr><td style="width: 25%;"><a href="write_civis_file.html">write_civis_file.character</a></td>
+<td>Upload a R object or file to Civis Platform (Files endpoint)</td></tr>
+<tr><td style="width: 25%;"><a href="write_civis_file.html">write_civis_file.default</a></td>
+<td>Upload a R object or file to Civis Platform (Files endpoint)</td></tr>
+</table>
+</body></html>
