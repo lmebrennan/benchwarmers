@@ -1,5 +1,9 @@
 cd1f5828e307a856f2844936aea84ef9 *CITATION
+<<<<<<< Updated upstream
 bfb861056403afe3018a82e1267435ad *DESCRIPTION
+=======
+919bd7a18ca7b79c8ae1585117cbddfd *DESCRIPTION
+>>>>>>> Stashed changes
 7480c806555a3224bbac0fc6f182d2d1 *INDEX
 6f65d9c641c09f93190b76ab84bd1654 *LICENSE
 ef4386cc34aa80cf29456bba5fadb695 *Meta/Rd.rds
@@ -7,7 +11,11 @@ ef4386cc34aa80cf29456bba5fadb695 *Meta/Rd.rds
 b847eee724958b68ff730449eefc62ca *Meta/hsearch.rds
 b0059010d33efcc677db3e1ac18e5d44 *Meta/links.rds
 3356cb7201db65165a6b8d27a511f68a *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 cf66b8f2042bc0b2a8ee102dd7c37104 *Meta/package.rds
+=======
+743cfedc8f7d61b7e35e2242f19edff0 *Meta/package.rds
+>>>>>>> Stashed changes
 9c2edea81b090411843ffce73e6b5270 *Meta/vignette.rds
 010977d524f30a08eed33047f974a264 *NAMESPACE
 d22a8dbc8e0f92d14d3d0800ecb226ab *NEWS.md
@@ -21,18 +29,30 @@ e46018900435596de16165a09c204fdb *doc/custom-expectation.Rmd
 44f9f1caa3387532b166b6fa9cfddc89 *help/AnIndex
 53549762430028757e708d79c8ded96a *help/aliases.rds
 b7e68745669ec4141b7940f4dbebc48f *help/figures/logo.png
+<<<<<<< Updated upstream
 287db26d83d2ff00fdcbb732851f2788 *help/paths.rds
 c8c5a416289edba399374cb33263fdb4 *help/testthat.rdb
 2067bf34ae5158e3ddf24432563499d1 *help/testthat.rdx
+=======
+96cff83028359c2582904662323d1ebd *help/paths.rds
+db856b64de06464c990e4b9eb7e74884 *help/testthat.rdb
+b2dc56d6d1df832900e813edebf32d5e *help/testthat.rdx
+>>>>>>> Stashed changes
 ea92fb950044294284a470afbe1e6434 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 543392950ccc39ed50ebf26c75de0910 *include/testthat.h
 6a5d080953ca223cb9e91690407c6680 *include/testthat/testthat.h
 875dbb7f3ff91b13364ed8937667828e *include/testthat/vendor/catch.h
 3810f3dcdb18ceca48424b5821745d53 *libs/i386/symbols.rds
+<<<<<<< Updated upstream
 f1ebfdd2c18c4a966ac736ae25c5ba72 *libs/i386/testthat.dll
 d0127702450c848a32787aecf23b1ec9 *libs/x64/symbols.rds
 08fafd46f87a3586bc70db4462f51c2c *libs/x64/testthat.dll
+=======
+afeb36bf7076e917fda9fbedb897f874 *libs/i386/testthat.dll
+d0127702450c848a32787aecf23b1ec9 *libs/x64/symbols.rds
+b87443f647b066a7016ee5fe1e1aef5d *libs/x64/testthat.dll
+>>>>>>> Stashed changes
 2d8c0561278371804f593566e3f19772 *resources/catch-routine-registration.R
 82c4713a0f02f21459e1e5a696a02eaa *resources/test-cpp.R
 3332a4affe5b211b37b65a3d3311d9ba *resources/test-example.cpp

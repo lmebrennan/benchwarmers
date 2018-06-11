@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 907b447aeac64ab371a20566daad7d94 *DESCRIPTION
+=======
+87aacdd9491db722e676ba6c5a84bf35 *DESCRIPTION
+>>>>>>> Stashed changes
 5d2ddf94d07d59d124ec622649359c9b *INDEX
 472904db5a93a07692b3fe24cabcf96c *LICENSE
 b1006a88ed42185f007301d2a5899399 *Meta/Rd.rds
@@ -6,7 +10,11 @@ b1006a88ed42185f007301d2a5899399 *Meta/Rd.rds
 4bda009adc5d026e49fd1092d8c54bb3 *Meta/hsearch.rds
 e2e489ac85c08f2b62229b7cb5ff0474 *Meta/links.rds
 e2a42dc54b133b90be477620b4d2d4b6 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 13cbd33cb77e224b0affecca78dcc49d *Meta/package.rds
+=======
+b2269eac3e9f3c662c302d1c1d55270b *Meta/package.rds
+>>>>>>> Stashed changes
 ce97ebaad581d3ce2c897cdcffa1d66c *NAMESPACE
 90b92a7f767af179e20f200b0a3f6cf5 *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/sourcetools
@@ -14,9 +22,15 @@ ebf0fc819595d631b8bf280c4b049940 *R/sourcetools
 56aa4ba17c9e3e9284e0cf5d2570372c *R/sourcetools.rdx
 6a30548de5c776d638dc5a3a2efdf24d *help/AnIndex
 3336a23054e3cfe900058a905bf6f36d *help/aliases.rds
+<<<<<<< Updated upstream
 68520ae1adf22885bd71462a0d78c597 *help/paths.rds
 0fe84d52836993f3082412ef065aaaf6 *help/sourcetools.rdb
 da1531958d84d9761d3017049b7e428f *help/sourcetools.rdx
+=======
+9b4df8daf56374106d07890a9bc18b82 *help/paths.rds
+19e2bb6f37579d64db021a3c5553675e *help/sourcetools.rdb
+5eb837462af8077c1bd00c892176b7a8 *help/sourcetools.rdx
+>>>>>>> Stashed changes
 0965748be30c998dfdf43d8ccef5bddd *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 c5215eb66349006d73ad7e65ce54046b *include/sourcetools.h
@@ -50,7 +64,13 @@ c6afafc697b747111348dabb88d9fb4a *include/sourcetools/tokenization/Registration.
 6599c5daf2f3e59861153982cc00efef *include/sourcetools/tokenization/Tokenizer.h
 00c91c6e20bc534fa3a689c79770f46c *include/sourcetools/tokenization/tokenization.h
 1491ededa24449d40554757c96bebaf0 *include/sourcetools/utf8/utf8.h
+<<<<<<< Updated upstream
 77ad3702a011b9e65ac1dca230711910 *libs/i386/sourcetools.dll
 e950ffb2bcdcd5a08de40de162c8049d *libs/i386/symbols.rds
 a5ae92213a1d13744fb6901e652d659f *libs/x64/sourcetools.dll
+=======
+4eaf9d6a25e383e54315a42dec42731c *libs/i386/sourcetools.dll
+e950ffb2bcdcd5a08de40de162c8049d *libs/i386/symbols.rds
+fdbec1a3896f1e2e169a1e0d14c6f855 *libs/x64/sourcetools.dll
+>>>>>>> Stashed changes
 b5baa0ab59c143a0e6a1e1f2f27974bb *libs/x64/symbols.rds

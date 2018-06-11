@@ -1,10 +1,15 @@
+<<<<<<< Updated upstream
 3f37d1d267c08d30c33ed7d12ef3039e *DESCRIPTION
+=======
+ad73e29ca540e85cef5f7c67f1135caa *DESCRIPTION
+>>>>>>> Stashed changes
 8c84a3af3606c71650cdc99b51080fde *INDEX
 cfca62c399c8a49742f932f1a5b92a1c *Meta/Rd.rds
 317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
 8a2d857c21d7ce4806050a7b02c1ad5c *Meta/hsearch.rds
 faf33c6c1da9bce2f680058018cb3996 *Meta/links.rds
 4628e23a95c390828decfd136c2a266d *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 b4747d947614efa1d461beea53c9a17c *Meta/package.rds
 14644175dcb84638228335ed8f48be1b *NAMESPACE
 acb2e5dce492a666eabe4a5b487fd81e *NEWS.md
@@ -18,4 +23,19 @@ c797329c1c4502cc2ccce2f2af86060e *help/figures/colours.png
 261616b7b1b215ad2a2179eed451a29f *help/pillar.rdb
 eaafa574c36add8162a498525398a9b9 *help/pillar.rdx
 9b783c79a2f53f8e7311d3ba7b42a520 *html/00Index.html
+=======
+47517b2fd772e69e6a9d6e92afa31602 *Meta/package.rds
+14644175dcb84638228335ed8f48be1b *NAMESPACE
+c6a958d40493ea7fcbd8c78c33587a21 *NEWS.md
+ebf0fc819595d631b8bf280c4b049940 *R/pillar
+c0891f878cf34e7f30a54a73e68cb3f9 *R/pillar.rdb
+034c97ce026fcc0e334876c46e4d60fe *R/pillar.rdx
+aea37a9937c7d4476f0877b860035c11 *help/AnIndex
+dbf7bc8a5ac6df1a797935fe74222efb *help/aliases.rds
+c797329c1c4502cc2ccce2f2af86060e *help/figures/colours.png
+b1489dbbdf42e76ca8233fb65dad4ea8 *help/paths.rds
+6852b3aeb01f9e96e2394fae65427bf2 *help/pillar.rdb
+9d680b2368541ecf84b4b317771bec02 *help/pillar.rdx
+e3e933b3db4cc1599bcec36f4fff393c *html/00Index.html
+>>>>>>> Stashed changes
 b6763e6916890c631fdc3f2643803b1a *html/R.css

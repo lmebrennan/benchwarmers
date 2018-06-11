@@ -1,5 +1,9 @@
 192e3ea56abfef6ee44714e69cae5e51 *CITATION
+<<<<<<< Updated upstream
 59bdbb98b47b00d5c5d3c28d4c0bfea8 *DESCRIPTION
+=======
+e6bcc087b52f29f137b5fa5323a1fda2 *DESCRIPTION
+>>>>>>> Stashed changes
 340e56eb8625e2b327f5c721240fcaea *INDEX
 1ee0683cce6d3479250337954c075d63 *LICENSE
 5f7a98be804a97c6de641fd697dd883f *Meta/Rd.rds
@@ -7,7 +11,11 @@
 66ea0000dffba42c707eb2196c1bf6b4 *Meta/hsearch.rds
 02498293f7d5ff6fc9b30f8d6f1e3f62 *Meta/links.rds
 d5bda9a7d0ea3e435fc8e550d50905b9 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 2dec68eda467d8d9b9e8cd9cae4e8fc7 *Meta/package.rds
+=======
+f45e7f9c2c0e67ed5c2f063a19355faf *Meta/package.rds
+>>>>>>> Stashed changes
 ce346c216678a56b9a46e477e5c11dcc *Meta/vignette.rds
 9fb127a8f22f73e31e6aafac46e95a96 *NAMESPACE
 1e94ade9b31d8911c33cfb2cd1375bdb *NEWS
@@ -29,6 +37,7 @@ e8973aff1c145939b0627bc92e997d33 *doc/json-paging.Rmd
 f613639dfe519c852cf3605c54add019 *doc/json-paging.html
 5c228cbcc62dcb2fe794ba9a8c6209d7 *help/AnIndex
 6acbf0866df27421c850b55bad05c40f *help/aliases.rds
+<<<<<<< Updated upstream
 4a35312ff22703e2fd4e46aa1351aa5c *help/jsonlite.rdb
 85619b6cf0f79dcdc498cd5784bc2c28 *help/jsonlite.rdx
 2a15da9b102afaba80439c218cbee79c *help/paths.rds
@@ -37,4 +46,14 @@ b6763e6916890c631fdc3f2643803b1a *html/R.css
 b1ce8b9289a99a2348e2d416584a05c9 *libs/i386/jsonlite.dll
 3aa86a7608f8e7f1848be6c5123b47e2 *libs/i386/symbols.rds
 5caae2d781f2d31ea8e47d98b20a289f *libs/x64/jsonlite.dll
+=======
+3be2ce33991e1584ac04c751b4669edf *help/jsonlite.rdb
+c13bae4873c0bf8fab70dc4f637eba2a *help/jsonlite.rdx
+cdeaadab7fa038bedd3c23235c16af97 *help/paths.rds
+4534c9955ef38ff6a28390e9fb4b17f6 *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+a83f263fe83d884020632f0300b25e57 *libs/i386/jsonlite.dll
+3aa86a7608f8e7f1848be6c5123b47e2 *libs/i386/symbols.rds
+1d0c23b030383f9ccb78816790f08d62 *libs/x64/jsonlite.dll
+>>>>>>> Stashed changes
 05b10d91d3b8f4550f2ba0607688f88b *libs/x64/symbols.rds

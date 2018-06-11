@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 3e68a06cfeeb81121e2a308881a26e75 *DESCRIPTION
+=======
+e19b79dd7bfa0cb3fd071bbaa0e579a7 *DESCRIPTION
+>>>>>>> Stashed changes
 1a4fc4b9b72c1ae878cec81f3d30539d *INDEX
 e2965db868cda3b9ce7b138d8ca0e6bc *LICENSE
 6206150c6012bf82793d4108ff341589 *Meta/Rd.rds
@@ -6,7 +10,11 @@ e2965db868cda3b9ce7b138d8ca0e6bc *LICENSE
 d9997306ad096ac9c8df5d5f89da69e6 *Meta/hsearch.rds
 39f4a6256d3d1318e5a0fa5be4f69abf *Meta/links.rds
 44716095ef5108ff99756b7cebdc2ee5 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 c5b3194a7f2fde4bc3c61635e2831cb7 *Meta/package.rds
+=======
+f1e86b7ba56fc6207d2808f0debfcf32 *Meta/package.rds
+>>>>>>> Stashed changes
 ee1b476d76c2d952dfef883028c3f8e2 *Meta/vignette.rds
 ae349adef7e0739d3386fcc0c52480de *NAMESPACE
 c47e244b4a12c4c56dd9aaa21b2921b6 *NEWS.md
@@ -22,6 +30,7 @@ fdefd28914101b894abf49588087340e *doc/transformers.Rmd
 2f01a5ef8a8464123afb47a363b20ad9 *doc/transformers.html
 d80d8c9710629a626a28184f43afd1b2 *help/AnIndex
 f28af036778f8dbc2aded0985813ba08 *help/aliases.rds
+<<<<<<< Updated upstream
 e7560c8fe673a3a5ae0a7164d1e18e4f *help/glue.rdb
 d0c2a4f5d28e4c9db92f4a2153be42b7 *help/glue.rdx
 a8351dce548067430129523c3a94f761 *help/paths.rds
@@ -30,4 +39,14 @@ b6763e6916890c631fdc3f2643803b1a *html/R.css
 9db6273a22713bbf329bb755a5a9d923 *libs/i386/glue.dll
 7db54cf289542ce4eee495d2acbb44cb *libs/i386/symbols.rds
 bf7f54d4310094d38cd1799ce50e276c *libs/x64/glue.dll
+=======
+76be7202defc3e3d76132a3ba4f00a40 *help/glue.rdb
+c8f90a85c67e2d09cb721f1299dc6011 *help/glue.rdx
+a5c4f673f0d9129815b4ac09351d4290 *help/paths.rds
+cdb7d01a34312ab77126af58dd39728b *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+a57682a023b840ed283be4ad892a40fd *libs/i386/glue.dll
+7db54cf289542ce4eee495d2acbb44cb *libs/i386/symbols.rds
+edd86fb888f0ad5c0e96a95fdd289960 *libs/x64/glue.dll
+>>>>>>> Stashed changes
 b2b036989462f4b1a30d893a108affc6 *libs/x64/symbols.rds

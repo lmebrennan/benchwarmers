@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 3df9cb0dbbf5e302854192b79c09debd *DESCRIPTION
+=======
+81fa4316be00f3a595a51d6bdbc8cef1 *DESCRIPTION
+>>>>>>> Stashed changes
 35eff1b82edb325a035532de68de0ea0 *INDEX
 22749996d5e1ecc77a6dd26d94822b4b *Meta/Rd.rds
 a1a8eaffe45984cce140c0a8fc696d5a *Meta/demo.rds
@@ -6,7 +10,11 @@ a1a8eaffe45984cce140c0a8fc696d5a *Meta/demo.rds
 c396f8d52fcbeebeddab49f09b7076a1 *Meta/hsearch.rds
 8da912c6fab330cfb5ab0388f981c262 *Meta/links.rds
 6ffba5370e8d524c8954830e665de616 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 c36922017e96e3847a3c36148e79f48c *Meta/package.rds
+=======
+71edfc22371ed31c7613e2722891112b *Meta/package.rds
+>>>>>>> Stashed changes
 b060cd581aea58ac809396ecd7d58210 *Meta/vignette.rds
 991392855eb4cfa36e921e9bf90e1ee2 *NAMESPACE
 b75d27603fa6f67a47906129f9ab24ca *NEWS
@@ -26,9 +34,15 @@ bd8d47352139b7201de1b7653765d18d *doc/future-4-startup.html
 fff717688f1e82508aa1176e04e34141 *doc/index.html
 dafd6e9cd078a56168861c7cd48f4329 *help/AnIndex
 e22ec12eda1743be39c759f8acabef66 *help/aliases.rds
+<<<<<<< Updated upstream
 9304131eee9ec8aeec14ffe35ecefcae *help/future.rdb
 eb4606bce198c7e930ed5ccb33e5fce0 *help/future.rdx
 1b24815df2582b2a653661f3961a116b *help/paths.rds
+=======
+00fc895eb090abb5eb30b406a1207dc7 *help/future.rdb
+a150cc9c6abfae66cdc2f1604675ba76 *help/future.rdx
+38d236eff55f7263876929a24d8eb7e5 *help/paths.rds
+>>>>>>> Stashed changes
 b807e8385cd018845d0f5128d862993d *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 e29337493dcfacd899c8e275863d584c *vignettes-static/future-1-overview.md.rsp.rsp

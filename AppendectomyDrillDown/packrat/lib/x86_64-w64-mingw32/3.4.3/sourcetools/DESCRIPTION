@@ -5,9 +5,15 @@ Version: 0.1.7
 Author: Kevin Ushey
 Maintainer: Kevin Ushey <kevinushey@gmail.com>
 Description: Tools for the reading and tokenization of R code. The
+<<<<<<< Updated upstream
     'sourcetools' package provides both an R and C++ interface for the tokenization
     of R code, and helpers for interacting with the tokenized representation of R
     code.
+=======
+    'sourcetools' package provides both an R and C++ interface for the
+    tokenization of R code, and helpers for interacting with the
+    tokenized representation of R code.
+>>>>>>> Stashed changes
 License: MIT + file LICENSE
 LazyData: TRUE
 Depends: R (>= 3.0.2)
@@ -19,5 +25,13 @@ NeedsCompilation: yes
 Packaged: 2018-04-25 03:19:22 UTC; kevin
 Repository: CRAN
 Date/Publication: 2018-04-25 03:38:09 UTC
+<<<<<<< Updated upstream
 Built: R 3.4.4; x86_64-w64-mingw32; 2018-06-06 15:38:24 UTC; windows
 Archs: i386, x64
+=======
+Built: R 3.4.4; x86_64-w64-mingw32; 2018-05-20 08:52:15 UTC; windows
+Archs: i386, x64
+InstallAgent: packrat 0.4.9.2
+InstallSource: CRAN
+Hash: d093478ac90064e670cd4bf1a99b47b6
+>>>>>>> Stashed changes

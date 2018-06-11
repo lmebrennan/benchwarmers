@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 2bf74958a2954ed2c91f306e1f42c9d4 *DESCRIPTION
+=======
+aaefcb563f557e240fef24a9bbf146db *DESCRIPTION
+>>>>>>> Stashed changes
 1f9ff1a7df8fc7ef2d5524736f838404 *INDEX
 4c918d7b9c1c678de2b86988f7e67a60 *Meta/Rd.rds
 09ae6f8c8d88a21a8dad43b423cce074 *Meta/data.rds
@@ -6,7 +10,11 @@
 49fee562fb02c86d2e63988d20ab409b *Meta/hsearch.rds
 8e15fdf8d4e96a558ff9bae4b19ced91 *Meta/links.rds
 d85e054769fec18ca2a07ec04920dff6 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 56a74d1823b1a73be30527ba6c3fc63e *Meta/package.rds
+=======
+150eafd0691779df046d0f7b263bd946 *Meta/package.rds
+>>>>>>> Stashed changes
 e3af5932f38b00f75e5f840bc62f6105 *Meta/vignette.rds
 90596b1e5b9b8f180ef0f99094d463fd *NAMESPACE
 c8ac98db5287387914d25ec3761959b8 *NEWS
@@ -29,8 +37,14 @@ bd0ce99b8e3bb502972639dd08d35a5f *doc/margintable.pdf
 b64bd89a854919b9c841468e570f5ab3 *doc/xtableGallery.pdf
 71ee8bfb1209aa71d6ac23e64c005c53 *help/AnIndex
 2b4cc0643a4d64ea107a9df986e31c4c *help/aliases.rds
+<<<<<<< Updated upstream
 1355adfa100e658ffdce2b5fa4fee679 *help/paths.rds
 8a28e2330c13765d1f456e75ef9daeea *help/xtable.rdb
 3d9bd362ca89f6f3162c734923062df0 *help/xtable.rdx
+=======
+7b7eae2590e21f6a56fff856000cfdef *help/paths.rds
+27832a523aa9710d64d51926a2255ea2 *help/xtable.rdb
+e922ffbed645b4df4ba41e7bb7590f3d *help/xtable.rdx
+>>>>>>> Stashed changes
 0e43c24eede3824aa70e8d09f73f7b91 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

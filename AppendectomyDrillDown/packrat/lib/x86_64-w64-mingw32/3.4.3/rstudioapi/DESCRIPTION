@@ -1,5 +1,6 @@
 Package: rstudioapi
 Title: Safely Access the RStudio API
+<<<<<<< Updated upstream
 Description: Access the RStudio API (if available) and provide informative error
     messages when it's not.
 Version: 0.7
@@ -10,6 +11,17 @@ Authors@R: c(
     person("Gary", "Ritchie", role = c("aut"), email = "gary@rstudio.com"),
     person(family = "RStudio", role = "cph")
     )
+=======
+Description: Access the RStudio API (if available) and provide
+    informative error messages when it's not.
+Version: 0.7
+Authors@R: c( person("JJ", "Allaire", role = c("aut", "cre"), email =
+    "jj@rstudio.com"), person("Hadley", "Wickham", role = c("aut"),
+    email = "hadley@rstudio.com"), person("Kevin", "Ushey", role =
+    c("aut"), email = "kevin@rstudio.com"), person("Gary", "Ritchie",
+    role = c("aut"), email = "gary@rstudio.com"), person(family =
+    "RStudio", role = "cph") )
+>>>>>>> Stashed changes
 Maintainer: JJ Allaire <jj@rstudio.com>
 License: MIT + file LICENSE
 URL: https://github.com/rstudio/rstudioapi
@@ -19,6 +31,7 @@ Suggests: testthat, knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
 Packaged: 2017-09-07 17:48:48 UTC; kevin
+<<<<<<< Updated upstream
 Author: JJ Allaire [aut, cre],
   Hadley Wickham [aut],
   Kevin Ushey [aut],
@@ -27,3 +40,13 @@ Author: JJ Allaire [aut, cre],
 Repository: CRAN
 Date/Publication: 2017-09-07 21:41:46 UTC
 Built: R 3.4.4; ; 2018-06-06 15:39:56 UTC; windows
+=======
+Author: JJ Allaire [aut, cre], Hadley Wickham [aut], Kevin Ushey [aut],
+    Gary Ritchie [aut], RStudio [cph]
+Repository: CRAN
+Date/Publication: 2017-09-07 21:41:46 UTC
+Built: R 3.4.4; ; 2018-05-20 08:53:51 UTC; windows
+InstallAgent: packrat 0.4.9.2
+InstallSource: CRAN
+Hash: e2ebaff8160aff3e6b32e6e78a693c2d
+>>>>>>> Stashed changes

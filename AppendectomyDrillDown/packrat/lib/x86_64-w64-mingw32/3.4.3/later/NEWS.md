@@ -1,7 +1,10 @@
+<<<<<<< Updated upstream
 ## later 0.7.3
 
 * Fixed [issue #57](https://github.com/r-lib/later/issues/57): If a user interrupt occurred when later (internally) called `sys.nframe()`, the R process would crash. [PR #58](https://github.com/r-lib/later/pull/58)
 
+=======
+>>>>>>> Stashed changes
 ## later 0.7.2
 
 * Fixed [issue #48](https://github.com/r-lib/later/issues/48): Occasional timedwait errors from later::run_now. Thanks, @vnijs! [PR #49](https://github.com/r-lib/later/pull/49)
