@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 ca511dbe670fceefde11e06e45a3db13 *DESCRIPTION
-=======
-98bcb00709386492b9a2f7f26414b3bd *DESCRIPTION
->>>>>>> Stashed changes
 4a0510f54b4d56913b02e13932ac458e *INDEX
 4f631b60276f1da4fb82bf51eb99ea9d *LICENSE
 813e3425131a41cd4894f47ca53f2f0a *Meta/Rd.rds
@@ -10,11 +6,7 @@ ca511dbe670fceefde11e06e45a3db13 *DESCRIPTION
 7dc505d8c1b751a7728126f00127043c *Meta/hsearch.rds
 f4af2fbb96365beb012078e616ad99b2 *Meta/links.rds
 a0652c62a0d60294ff393aab681b1798 *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 c159a8f3c7980a6994f413ec008a7b97 *Meta/package.rds
-=======
-9c1ed0b259be92273ed3de04405010bc *Meta/package.rds
->>>>>>> Stashed changes
 cd58cc7712e2fed5f4c1258b7ae983e8 *NAMESPACE
 3ac453f5ec02e1941934f171355888c4 *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/cli
@@ -24,13 +16,8 @@ a75bc2fdf0256f97644082278ba83563 *R/cli.rdx
 49ab8b31ad5b8453450ed9c9a58602d8 *R/sysdata.rdx
 94beb5bae21195f6c7688e5cf39d712d *help/AnIndex
 19ff1ec9e88ce079d4e307fdb14a158d *help/aliases.rds
-<<<<<<< Updated upstream
 54aa091f38a79627d28ad4a55471aa9d *help/cli.rdb
 09531debe5abf29483b86eba76b83d81 *help/cli.rdx
-=======
-f7f2fd4747966991db28480e636e05e1 *help/cli.rdb
-c0da660f41ea1e2327baa65f96a377c7 *help/cli.rdx
->>>>>>> Stashed changes
 6fca15b15ee4cad89db36f68ac86213c *help/figures/box-1.png
 91b569ec668268e03705951dbb8e20eb *help/figures/box-bgcolor-1.png
 3fb40d15c86edccf60cfe219e96b5fdb *help/figures/box-bgcolor-2.png
@@ -64,10 +51,6 @@ a49d4ca9ee82fd942985da6b84236005 *help/figures/rule-line-custom-2-1.png
 5c06e6e379a0532faa8b6d6a8a556107 *help/figures/rule-line-custom-3-1.png
 2652e82d8594ed590209487e81f78dca *help/figures/tree-1.png
 d26cef56c3560365f834cffbc792c416 *help/figures/tree-color-1.png
-<<<<<<< Updated upstream
 b9d6041d250ec542476a3e541a77724e *help/paths.rds
-=======
-5dfb4627490a9ba76d558b2612d687c1 *help/paths.rds
->>>>>>> Stashed changes
 dd9d402d28af1b70b316845ce58eaa46 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

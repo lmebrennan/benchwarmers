@@ -1,19 +1,11 @@
-<<<<<<< Updated upstream
 9c59a104c18dd6628bb1278d12797bc4 *DESCRIPTION
-=======
-1501559d409b7c7c3e62516402960002 *DESCRIPTION
->>>>>>> Stashed changes
 3fae8741b49d95421a243cad3f271f12 *INDEX
 b86b33aa6c531eb06d01221cb09edf82 *Meta/Rd.rds
 317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
 4affee790c33e9f249e34e3080dd2f82 *Meta/hsearch.rds
 c375a4444512f3f3c895a2e5a72d744f *Meta/links.rds
 d34e59139911431fa344239ad485c53f *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 a439a04abbda35900ff24d055ed81385 *Meta/package.rds
-=======
-393b8b680b2437b479f3cb3c5d17bdac *Meta/package.rds
->>>>>>> Stashed changes
 cb4d3be2602f74ff6a52323a8df74226 *Meta/vignette.rds
 1a91c8cd8e7515b2c6c236d68c02b16e *NAMESPACE
 f53e4d62021b82734595bff8a8e5bcc6 *NEWS
@@ -25,14 +17,8 @@ baee81052a7beb34b12362ad39fdd5cf *doc/index.html
 99b2932eaa169bace7c8e27a48d64d62 *doc/listenv.md.rsp
 78baa6699d8b1071823f470baf16a4e9 *help/AnIndex
 1000687d2b1e52f95f1b94c578a55abd *help/aliases.rds
-<<<<<<< Updated upstream
 6f0084ae2a5a8addc93a7bed9743ab34 *help/listenv.rdb
 c7ca1ef87c83ad7e3ff55f5294795438 *help/listenv.rdx
 8bde6f826798e3761f2f86c0e9866012 *help/paths.rds
-=======
-2553b016019a62ecf1caee3b3b37f143 *help/listenv.rdb
-3ec542f6d68f105e8541e7708be55941 *help/listenv.rdx
-52402a3971b25f3c6dc2017656fcd34f *help/paths.rds
->>>>>>> Stashed changes
 682a2256d8c9f497f1b7888040f5df9f *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

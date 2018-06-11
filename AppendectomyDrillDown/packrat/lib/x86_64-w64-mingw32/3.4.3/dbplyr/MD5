@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 4cf5bdaf2ffb6d7233d6d94bf1ef3a3c *DESCRIPTION
-=======
-158b8acdc598f280a256d91adc8125e8 *DESCRIPTION
->>>>>>> Stashed changes
 2076afbd5817a6fd86ec79956ad185f7 *INDEX
 4ac396cdf32c44b3d07b7d6c9fd388d0 *LICENSE
 7db3e488f4758083d2fb66908b8bf403 *Meta/Rd.rds
@@ -10,11 +6,7 @@
 a78aecb5e4d00c22bce2cee00a6ae157 *Meta/hsearch.rds
 8b20412f2c64b4438b186522946d564f *Meta/links.rds
 ce6dfa1c7ee07ada420952f15157d976 *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 7e93d74c0fe346839e5551e7369f7bae *Meta/package.rds
-=======
-ef95bc9507a86d6d36b3157c1a2bcb91 *Meta/package.rds
->>>>>>> Stashed changes
 f9ac858cef0a4dd67c5dc165499b6d0a *Meta/vignette.rds
 a3420bdfb3c11e38ebec9c772983c214 *NAMESPACE
 53ffce7a3087936c593934e31a4163fb *NEWS.md
@@ -33,16 +25,9 @@ e42e31fdae9fb72036ba8b2ab7246463 *doc/index.html
 4dede586163d10e93e27883569f13cb9 *doc/sql-translation.html
 93118fbe70f05164a29a69eda4143322 *help/AnIndex
 e3d7d6cf9ecec3a5b2f047b8aa845bbb *help/aliases.rds
-<<<<<<< Updated upstream
 7601c97899b2afa99e11d2d0ce00b2d1 *help/dbplyr.rdb
 1884603032971e113bbfd7b043ccdd45 *help/dbplyr.rdx
 f624141eaf9866aff28d18cce3eefabf *help/figures/logo.png
 85e6488fa8ddf52723d3203cadb4c68c *help/paths.rds
-=======
-fbec7866f676340849dbe9fbbac8eb3e *help/dbplyr.rdb
-0446587c1455a7941269e1360499286c *help/dbplyr.rdx
-f624141eaf9866aff28d18cce3eefabf *help/figures/logo.png
-839ba6c873e980963628b885ceaf1758 *help/paths.rds
->>>>>>> Stashed changes
 e4568d89eadcaa6a312bacf047f494aa *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

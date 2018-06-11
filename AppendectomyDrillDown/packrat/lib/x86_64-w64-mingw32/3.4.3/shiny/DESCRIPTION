@@ -122,8 +122,4 @@ Author: Winston Chang [aut, cre],
 Maintainer: Winston Chang <winston@rstudio.com>
 Repository: CRAN
 Date/Publication: 2018-05-17 20:22:53 UTC
-<<<<<<< Updated upstream
 Built: R 3.4.3; ; 2018-06-11 13:58:48 UTC; windows
-=======
-Built: R 3.4.4; ; 2018-06-06 19:31:03 UTC; windows
->>>>>>> Stashed changes

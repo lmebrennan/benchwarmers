@@ -3,19 +3,11 @@ Type: Package
 Title: Map Filenames to MIME Types
 Version: 0.5
 Date: 2016-07-07
-<<<<<<< Updated upstream
 Authors@R: c(person("Jeffrey", "Horner", role = "ctb"),
     person("Yihui", "Xie", role = c("aut", "cre"), email = "xie@yihui.name"))
 Maintainer: Yihui Xie <xie@yihui.name>
 Description: Guesses the MIME type from a filename extension using the data
     derived from /etc/mime.types in UNIX-type systems.
-=======
-Authors@R: c(person("Jeffrey", "Horner", role = "ctb"), person("Yihui",
-    "Xie", role = c("aut", "cre"), email = "xie@yihui.name"))
-Maintainer: Yihui Xie <xie@yihui.name>
-Description: Guesses the MIME type from a filename extension using the
-    data derived from /etc/mime.types in UNIX-type systems.
->>>>>>> Stashed changes
 Imports: tools
 License: GPL
 URL: https://github.com/yihui/mime
@@ -24,19 +16,9 @@ LazyData: TRUE
 RoxygenNote: 5.0.1
 NeedsCompilation: yes
 Packaged: 2016-07-07 04:44:41 UTC; yihui
-<<<<<<< Updated upstream
 Author: Jeffrey Horner [ctb],
   Yihui Xie [aut, cre]
-=======
-Author: Jeffrey Horner [ctb], Yihui Xie [aut, cre]
->>>>>>> Stashed changes
 Repository: CRAN
 Date/Publication: 2016-07-07 07:38:00
 Built: R 3.4.1; x86_64-w64-mingw32; 2017-08-16 00:38:11 UTC; windows
 Archs: i386, x64
-<<<<<<< Updated upstream
-=======
-InstallAgent: packrat 0.4.9.2
-InstallSource: CRAN
-Hash: 463550cf44fb6f0a2359368f42eebe62
->>>>>>> Stashed changes

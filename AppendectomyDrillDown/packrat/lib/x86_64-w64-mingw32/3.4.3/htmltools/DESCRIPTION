@@ -19,13 +19,5 @@ NeedsCompilation: yes
 Packaged: 2017-04-27 00:04:32 UTC; jcheng
 Repository: CRAN
 Date/Publication: 2017-04-28 07:41:46 UTC
-<<<<<<< Updated upstream
 Built: R 3.4.4; x86_64-w64-mingw32; 2018-06-06 16:51:40 UTC; windows
 Archs: i386, x64
-=======
-Built: R 3.4.4; x86_64-w64-mingw32; 2018-05-20 10:34:17 UTC; windows
-Archs: i386, x64
-InstallAgent: packrat 0.4.9.2
-InstallSource: CRAN
-Hash: b24df7ea0856eab6618f6a56016d940d
->>>>>>> Stashed changes

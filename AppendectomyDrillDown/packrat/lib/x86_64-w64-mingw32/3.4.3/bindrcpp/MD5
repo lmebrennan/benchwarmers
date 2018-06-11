@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 f0346e4aabf6b2c6e15d7ed0cd3cec46 *DESCRIPTION
-=======
-d03f6b918515bef4566334ab1dd98bad *DESCRIPTION
->>>>>>> Stashed changes
 e35d82e697a4e551f295ee42974917de *INDEX
 d3d2f503f5c96ac395a270e7c295ec0b *LICENSE
 c8af4df190d32531e7c8b9d7d6fdb3ef *Meta/Rd.rds
@@ -10,11 +6,7 @@ c8af4df190d32531e7c8b9d7d6fdb3ef *Meta/Rd.rds
 8e5a790c7889cb7796608e8cf0ff6416 *Meta/hsearch.rds
 8da82d31fa817b95a2086d4419e9e66d *Meta/links.rds
 610c74260f444b3d80b9d1829acb7c83 *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 088cf4659aa6f23118be9838e15e428e *Meta/package.rds
-=======
-7f7e437f89d31672b528533206857bd9 *Meta/package.rds
->>>>>>> Stashed changes
 3a9c92677932609677f9a6370d097c29 *NAMESPACE
 e815df11d6de279142b7cddd9ea598e5 *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/bindrcpp
@@ -22,27 +14,15 @@ ebf0fc819595d631b8bf280c4b049940 *R/bindrcpp
 e4f7226ee1a095facd7c6e74e4b64d3f *R/bindrcpp.rdx
 0ba640a1ae1e6afbfedf80862db04865 *help/AnIndex
 2ff9be678178c5a66498331b393118e5 *help/aliases.rds
-<<<<<<< Updated upstream
 dd5e4b8298a7fb2865927f03f2727746 *help/bindrcpp.rdb
 15ac833db16fcd391cc0b52a4efe8001 *help/bindrcpp.rdx
 7a6a283b4018e9e3fb3ac3223363a8ba *help/paths.rds
-=======
-137873cbe512b66aca76accc6ff2194e *help/bindrcpp.rdb
-c711202c32bdee63e4e9dda56f483e03 *help/bindrcpp.rdx
-1c13bb67c7d902526efb5a1fd070930d *help/paths.rds
->>>>>>> Stashed changes
 c2d6aabc371b08d861a30f98ce989f53 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 ebff110d87c1681eda6f30b93fa7ffde *include/bindrcpp.h
 08686924000a0f02bac2a287254ef989 *include/bindrcpp_RcppExports.h
 7b794b31e36acbd0a5061a81eb2093be *include/bindrcpp_types.h
-<<<<<<< Updated upstream
 ed2b83adc964622fe50961f6c0e7f0eb *libs/i386/bindrcpp.dll
 0b5c4c669dfedc352b04800f65bd8ff1 *libs/i386/symbols.rds
 222962e46ab8f243f5863b9420a2c3c6 *libs/x64/bindrcpp.dll
-=======
-d806c1d0bea74a90e221a6f57c0d6909 *libs/i386/bindrcpp.dll
-0b5c4c669dfedc352b04800f65bd8ff1 *libs/i386/symbols.rds
-e9ae4e413238c353c040545482334254 *libs/x64/bindrcpp.dll
->>>>>>> Stashed changes
 def4a1adb6f26d668422917f982ef8d4 *libs/x64/symbols.rds

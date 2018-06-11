@@ -1,19 +1,11 @@
-<<<<<<< Updated upstream
 639ef55beb66ff88db90b680579f3764 *DESCRIPTION
-=======
-0db7cbac1890694570ac13ffcf53dc47 *DESCRIPTION
->>>>>>> Stashed changes
 54a48bebd6216d34b30971e30f8e1957 *INDEX
 b497f9957eb0d0cc21c4b02fd69da346 *Meta/Rd.rds
 317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
 e8613a065cea440ad3c06e783fc0c48c *Meta/hsearch.rds
 25639993dc9a09f04514a89e0e891e6e *Meta/links.rds
 fb4cde9ed6fed430181af2cebdcfbd53 *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 23b1a922077f7fdeb162590147143abf *Meta/package.rds
-=======
-db5b84f2637ff4d36372799f2529b222 *Meta/package.rds
->>>>>>> Stashed changes
 521e2e3e8ce08f8e9186d76a6c8d1324 *Meta/vignette.rds
 df6dc7704eb1557c3f1aa6ab378d7b83 *NAMESPACE
 11c6882f2f6e7567029434d2a555608b *NEWS.md
@@ -26,14 +18,8 @@ dae7c0e216f4f3591570ba8e8bbe6ee1 *R/rprojroot.rdx
 319f6bd51fe92f18e7310b416db7c21a *doc/rprojroot.html
 1bbd897a2af638fe24c7a9c49b03118c *help/AnIndex
 cbcd3ca2a8fd00a67722c9f1fd4c383d *help/aliases.rds
-<<<<<<< Updated upstream
 98d08dd03d70685ba63ffcd571b3b015 *help/paths.rds
 07b37b5da4a5f008aa5dc4bb938f7160 *help/rprojroot.rdb
 71a048df520bf303963b85033db85de3 *help/rprojroot.rdx
-=======
-676edb7a03027307e75a1df1d924e8ee *help/paths.rds
-c5d009d7996844cd74c7218cf2d539cb *help/rprojroot.rdb
-251f12daed41229e6513f448504b9f38 *help/rprojroot.rdx
->>>>>>> Stashed changes
 a2003fdb3e89f2fd0beabe17ed726ab0 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

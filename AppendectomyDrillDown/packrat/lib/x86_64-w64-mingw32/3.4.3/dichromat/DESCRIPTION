@@ -3,7 +3,6 @@ Version: 2.0-0
 Date: 2013-01-23
 Title: Color Schemes for Dichromats
 Authors@R: c(person(given = "Thomas", family = "Lumley", role =
-<<<<<<< Updated upstream
         c("aut", "cre"), email = "tlumley@u.washington.edu"),
         person(given = "Ken", family = "Knoblauch", role = "ctb", email
         = "ken.knoblauch@inserm.fr"), person(given = "Scott", family =
@@ -12,33 +11,13 @@ Authors@R: c(person(given = "Thomas", family = "Lumley", role =
         = "Achim.Zeileis@R-project.org"))
 Description: Collapse red-green or green-blue distinctions to simulate
         the effects of different types of color-blindness.
-=======
-    c("aut", "cre"), email = "tlumley@u.washington.edu"), person(given
-    = "Ken", family = "Knoblauch", role = "ctb", email =
-    "ken.knoblauch@inserm.fr"), person(given = "Scott", family =
-    "Waichler", role = "ctb", email = "scott.waichler@pnl.gov"),
-    person(given = "Achim", family = "Zeileis", role = "ctb", email =
-    "Achim.Zeileis@R-project.org"))
-Description: Collapse red-green or green-blue distinctions to simulate
-    the effects of different types of color-blindness.
->>>>>>> Stashed changes
 Depends: R (>= 2.10), stats
 License: GPL-2
 LazyLoad: Yes
 Packaged: 2013-01-23 06:25:04 UTC; zeileis
 Author: Thomas Lumley [aut, cre], Ken Knoblauch [ctb], Scott Waichler
-<<<<<<< Updated upstream
         [ctb], Achim Zeileis [ctb]
-=======
-    [ctb], Achim Zeileis [ctb]
->>>>>>> Stashed changes
 Maintainer: Thomas Lumley <tlumley@u.washington.edu>
 Repository: CRAN
 Date/Publication: 2013-01-24 08:18:09
 Built: R 3.4.1; ; 2017-08-16 00:37:51 UTC; windows
-<<<<<<< Updated upstream
-=======
-InstallAgent: packrat 0.4.9.2
-InstallSource: CRAN
-Hash: 08eed0c80510af29bb15f840ccfe37ce
->>>>>>> Stashed changes

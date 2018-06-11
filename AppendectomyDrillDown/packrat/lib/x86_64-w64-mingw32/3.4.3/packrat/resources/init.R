@@ -186,11 +186,7 @@ local({
     ## an 'installed from source' version
 
     ## -- InstallAgent -- ##
-<<<<<<< Updated upstream
     installAgent <- "InstallAgent: packrat 0.4.9-3"
-=======
-    installAgent <- "InstallAgent: packrat 0.4.9-2"
->>>>>>> Stashed changes
 
     ## -- InstallSource -- ##
     installSource <- "InstallSource: source"

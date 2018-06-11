@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 84d8c9337f0ce94fc2356fafc2ce22f2 *DESCRIPTION
-=======
-85cbdf3b7c50dd89149e2638059dd854 *DESCRIPTION
->>>>>>> Stashed changes
 b5d5894ba105e08480d91b16f4bde3a3 *INDEX
 d32239bcb673463ab874e80d47fae504 *LICENSE
 d18575b27c33d8b2e68fdc26815d074c *Meta/Rd.rds
@@ -10,11 +6,7 @@ d18575b27c33d8b2e68fdc26815d074c *Meta/Rd.rds
 fc01715cdfcaf736823af44427c26b8b *Meta/hsearch.rds
 6376a8412c86c3b834360931a22e2c9d *Meta/links.rds
 3fd00b7b1e23c3de2aab807af1af8a88 *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 c8a9f05f62f1cda7d5ccd09210ab9206 *Meta/package.rds
-=======
-455af6e422847e343c2ab8340e7b9dfa *Meta/package.rds
->>>>>>> Stashed changes
 7f8d4017166791621e3620265015e625 *Meta/vignette.rds
 b8b691d3ec56c2995d0eed7679ea7311 *NAMESPACE
 5008373a408f698bcfd871b27df6d761 *NEWS.md
@@ -27,7 +19,6 @@ d0a12786bea51ec8b9d57563e6edacd8 *doc/other-langs.Rmd
 d024ef527239fafffffb6073ba6e1644 *help/AnIndex
 280634979722df6355dbe050c7f4c050 *help/aliases.rds
 1d60cfe447b30937913953382e194602 *help/figures/logo.png
-<<<<<<< Updated upstream
 47a314ad7b59fe65d0003f4f22e4f5dc *help/paths.rds
 e664de0ab47f3c4d2a6fdc5db82f7fae *help/purrr.rdb
 75ec3e7a4c4fc78e2c4cd904e157a1c7 *help/purrr.rdx
@@ -36,14 +27,4 @@ b6763e6916890c631fdc3f2643803b1a *html/R.css
 768ec604a974257997bb19aaa736c884 *libs/i386/purrr.dll
 b64748c0c5185c06df19acc435b01fbf *libs/i386/symbols.rds
 9918e532e4162437658276193963b0c4 *libs/x64/purrr.dll
-=======
-5617486284d53ff2af92d8a6fbd7bcfc *help/paths.rds
-af8d4973ad37fff8fab6cb806c6eef20 *help/purrr.rdb
-dc83482157a3d9fed4fe076d1d353542 *help/purrr.rdx
-9502f9071e2690989382c254e19c3432 *html/00Index.html
-b6763e6916890c631fdc3f2643803b1a *html/R.css
-efd11ec336741d25ad5881a87a2b617e *libs/i386/purrr.dll
-b64748c0c5185c06df19acc435b01fbf *libs/i386/symbols.rds
-c70c79e7aba00fcb32662ff3ea200366 *libs/x64/purrr.dll
->>>>>>> Stashed changes
 cb7e071c89fdc1b2d953df7a5a243641 *libs/x64/symbols.rds

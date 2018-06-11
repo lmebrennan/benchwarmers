@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 5692bace63d705badf6472957fbba1cb *DESCRIPTION
-=======
-c8a78ebf41ac14905aadf5515939ede6 *DESCRIPTION
->>>>>>> Stashed changes
 89754a5a35c3b2b05752518b1aa5f561 *INDEX
 d3d2f503f5c96ac395a270e7c295ec0b *LICENSE
 37455a132f2a4fca60b1df602b51b0a3 *Meta/Rd.rds
@@ -10,11 +6,7 @@ d3d2f503f5c96ac395a270e7c295ec0b *LICENSE
 9dc6947d5f8927bab3c5e168ef824f5a *Meta/hsearch.rds
 78359b97d6a561d9deb55a24f5d811e9 *Meta/links.rds
 f3d7de98f4cd8139395caa5269b3eff1 *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 7056cdb00871a9a7437ebfe38f23c905 *Meta/package.rds
-=======
-fe471d4c7d8b5393f47a3698e054a59c *Meta/package.rds
->>>>>>> Stashed changes
 bfedbdf528857533acbe57424d0ec1ca *NAMESPACE
 274d33525c49eb357007b7591aaf56fe *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/bindr
@@ -22,14 +14,8 @@ aa8718c5b66c7823f6885a363bbb045f *R/bindr.rdb
 a913ed4dcfb3b5e47aff52071c27de78 *R/bindr.rdx
 da2ae391868a52badf891f1bb20e7397 *help/AnIndex
 c14e02ccf5068ec0779a727eff5d6c2e *help/aliases.rds
-<<<<<<< Updated upstream
 171288cdc3651f06ae59e5a1d0a59a34 *help/bindr.rdb
 0bb2cb77d2fece686271c82eb09daa6f *help/bindr.rdx
 02b8c1b9f520c3ce79dba76027e66cd3 *help/paths.rds
-=======
-ae49d0725cc4ff16d640edd5f12d2e07 *help/bindr.rdb
-c5fdff3e564fdf5c200dfa5388bb0e33 *help/bindr.rdx
-21ed69ef6ac7b5f27f23e6adfa9cab5e *help/paths.rds
->>>>>>> Stashed changes
 41cdf28025d4ba0b4d62bba525d5cc5b *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css

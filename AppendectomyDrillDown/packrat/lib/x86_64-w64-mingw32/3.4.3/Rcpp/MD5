@@ -1,20 +1,12 @@
 25a5891b4f43e3a5075e0ba42ef9038f *CITATION
-<<<<<<< Updated upstream
 e5483d7cc993c2433ed5a4f887fbdf46 *DESCRIPTION
-=======
-5e5e430bc1a655e3bf321996878d1706 *DESCRIPTION
->>>>>>> Stashed changes
 3c7884742c837119b6a29e6f58b6cc41 *INDEX
 1a08d97e6ac593fc9dd04196ce443be8 *Meta/Rd.rds
 317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
 96f0f7ad3eccd970af2cd2b37b027681 *Meta/hsearch.rds
 ed48cd30526bbdbd56fd6bff067607af *Meta/links.rds
 7997fb36acb30eb7ac9f4b63884fabe0 *Meta/nsInfo.rds
-<<<<<<< Updated upstream
 4d18658615d98babf1305bfa8e0076c2 *Meta/package.rds
-=======
-7ed2e48c269f37c2a7fe57fe16f68c51 *Meta/package.rds
->>>>>>> Stashed changes
 08490a9564f6e15aec961af75a6bba3e *Meta/vignette.rds
 ea53ff39862d49d485c00efce9918244 *NAMESPACE
 3811be6ed1a622824dcf4f0a786eb3f1 *NEWS.Rd
@@ -118,17 +110,10 @@ f55a0d78225fef3970fc5f54fddb5801 *examples/functionCallback/newApiExample.r
 2b3ff26140686d910b4fe51505b817a3 *examples/performance/extractors.R
 33c7adefe3137cae65b189490c958c6a *examples/performance/performance.R
 4a43433b91af745ade57779959b28bcc *help/AnIndex
-<<<<<<< Updated upstream
 0f6b6a4c574245f07c7f9172f56f508e *help/Rcpp.rdb
 7f5cadda7d9763965ce1c2d5669888e2 *help/Rcpp.rdx
 3d6f6834378a56aa9bc3013e0714fbf3 *help/aliases.rds
 18628b33d1d8f46802a8a2805dde6243 *help/paths.rds
-=======
-be94368f41b8a5c6cc6df0a716da6a90 *help/Rcpp.rdb
-7e9c7a9366f71901b4e3964b475331ea *help/Rcpp.rdx
-3d6f6834378a56aa9bc3013e0714fbf3 *help/aliases.rds
-58b53641594f211b5d73fb451b5be673 *help/paths.rds
->>>>>>> Stashed changes
 190b09db9fe91c5a10fab49d6fb41f01 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 30b4798a7bda4addd03c8e23a5b7e280 *include/Rcpp.h
@@ -508,15 +493,9 @@ da1d7f9b454f53743882322058e4263f *include/Rcpp/vector/string_proxy.h
 b53a80ae2aa1de12e8bd0fbff69c904b *include/Rcpp/vector/vector_from_string.h
 71ea998e05d6cd3db3e36cb1036f06a7 *include/RcppCommon.h
 83051c918c676565c50377280f3d80a9 *include/doxygen/Examples.h
-<<<<<<< Updated upstream
 8392d48a2d71ea91cf2f8c0fb52348e5 *libs/i386/Rcpp.dll
 e5d51bd9f2d41c649d70977834081cd9 *libs/i386/symbols.rds
 0fdf5ac31e0bd7b265c4911a644e2517 *libs/x64/Rcpp.dll
-=======
-6c15f7336d4b657e718872635309675c *libs/i386/Rcpp.dll
-e5d51bd9f2d41c649d70977834081cd9 *libs/i386/symbols.rds
-0777003cbb5e3e2998de2bb3973deaf6 *libs/x64/Rcpp.dll
->>>>>>> Stashed changes
 841f400c9500c870cd19e7c50ae2137c *libs/x64/symbols.rds
 fc570e7927219c2ed9bdb13ca05134d9 *prompt/module.Rd
 e78047bdda3db5af33456370e65a98d0 *skeleton/Num.cpp

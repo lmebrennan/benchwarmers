@@ -2,19 +2,11 @@ Encoding: UTF-8
 Package: memoise
 Title: Memoisation of Functions
 Version: 1.1.0
-<<<<<<< Updated upstream
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = "aut"),
     person("Jim", "Hester", , "jim.hester@rstudio.com", role = c("aut", "cre")),
     person("Kirill", "Müller", , "krlmlr+r@mailbox.org", role = "aut"),
     person("Daniel", "Cook", , "danielecook@gmail.com", role = "aut"))
-=======
-Authors@R: c( person("Hadley", "Wickham", , "hadley@rstudio.com", role
-    = "aut"), person("Jim", "Hester", , "jim.hester@rstudio.com", role
-    = c("aut", "cre")), person("Kirill", "Müller", ,
-    "krlmlr+r@mailbox.org", role = "aut"), person("Daniel", "Cook", ,
-    "danielecook@gmail.com", role = "aut"))
->>>>>>> Stashed changes
 Description: Cache the results of a function so that when you call it
     again with the same arguments it returns the pre-computed value.
 URL: https://github.com/hadley/memoise
@@ -26,7 +18,6 @@ License: MIT + file LICENSE
 RoxygenNote: 6.0.1
 NeedsCompilation: no
 Packaged: 2017-04-20 17:35:47 UTC; jhester
-<<<<<<< Updated upstream
 Author: Hadley Wickham [aut],
   Jim Hester [aut, cre],
   Kirill Müller [aut],
@@ -35,14 +26,3 @@ Maintainer: Jim Hester <jim.hester@rstudio.com>
 Repository: CRAN
 Date/Publication: 2017-04-21 05:54:22 UTC
 Built: R 3.4.4; ; 2018-06-06 15:41:17 UTC; windows
-=======
-Author: Hadley Wickham [aut], Jim Hester [aut, cre], Kirill Müller
-    [aut], Daniel Cook [aut]
-Maintainer: Jim Hester <jim.hester@rstudio.com>
-Repository: CRAN
-Date/Publication: 2017-04-21 05:54:22 UTC
-Built: R 3.4.4; ; 2018-05-20 08:54:19 UTC; windows
-InstallAgent: packrat 0.4.9.2
-InstallSource: CRAN
-Hash: 410fcd334bc626db100237cc1370f2e9
->>>>>>> Stashed changes

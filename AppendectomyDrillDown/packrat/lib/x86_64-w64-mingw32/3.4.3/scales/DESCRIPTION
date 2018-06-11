@@ -1,6 +1,5 @@
 Package: scales
 Version: 0.5.0
-<<<<<<< Updated upstream
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", c("aut", "cre")),
     person("RStudio", role = "cph")
@@ -9,23 +8,11 @@ Title: Scale Functions for Visualization
 Description: Graphical scales map data to aesthetics, and provide
     methods for automatically determining breaks and labels
     for axes and legends.
-=======
-Authors@R: c( person("Hadley", "Wickham", , "hadley@rstudio.com",
-    c("aut", "cre")), person("RStudio", role = "cph") )
-Title: Scale Functions for Visualization
-Description: Graphical scales map data to aesthetics, and provide
-    methods for automatically determining breaks and labels for axes
-    and legends.
->>>>>>> Stashed changes
 URL: https://github.com/hadley/scales
 BugReports: https://github.com/hadley/scales/issues
 Depends: R (>= 2.13)
 Imports: RColorBrewer, dichromat, plyr, munsell (>= 0.2), labeling,
-<<<<<<< Updated upstream
         Rcpp, R6, viridisLite
-=======
-    Rcpp, R6, viridisLite
->>>>>>> Stashed changes
 LinkingTo: Rcpp
 Suggests: testthat (>= 0.8), bit64, covr, hms
 License: MIT + file LICENSE
@@ -33,7 +20,6 @@ LazyLoad: yes
 RoxygenNote: 6.0.1
 NeedsCompilation: yes
 Packaged: 2017-08-23 21:21:31 UTC; Kara
-<<<<<<< Updated upstream
 Author: Hadley Wickham [aut, cre],
   RStudio [cph]
 Maintainer: Hadley Wickham <hadley@rstudio.com>
@@ -41,14 +27,3 @@ Repository: CRAN
 Date/Publication: 2017-08-24 14:35:38 UTC
 Built: R 3.4.4; x86_64-w64-mingw32; 2018-06-06 17:54:23 UTC; windows
 Archs: i386, x64
-=======
-Author: Hadley Wickham [aut, cre], RStudio [cph]
-Maintainer: Hadley Wickham <hadley@rstudio.com>
-Repository: CRAN
-Date/Publication: 2017-08-24 14:35:38 UTC
-Built: R 3.4.4; x86_64-w64-mingw32; 2018-05-20 11:04:57 UTC; windows
-Archs: i386, x64
-InstallAgent: packrat 0.4.9.2
-InstallSource: CRAN
-Hash: 771a326e90172a053b3e5b9a7add3b13
->>>>>>> Stashed changes

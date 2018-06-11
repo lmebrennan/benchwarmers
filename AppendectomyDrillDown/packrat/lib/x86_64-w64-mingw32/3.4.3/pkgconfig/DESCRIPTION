@@ -3,15 +3,9 @@ Title: Private Configuration for 'R' Packages
 Version: 2.0.1
 Author: Gábor Csárdi
 Maintainer: Gábor Csárdi <csardi.gabor@gmail.com>
-<<<<<<< Updated upstream
 Description: Set configuration options on a per-package basis.
     Options set by a given package only apply to that package,
     other packages are unaffected.
-=======
-Description: Set configuration options on a per-package basis. Options
-    set by a given package only apply to that package, other packages
-    are unaffected.
->>>>>>> Stashed changes
 License: MIT + file LICENSE
 LazyData: true
 Imports: utils
@@ -23,11 +17,4 @@ NeedsCompilation: no
 Packaged: 2017-03-21 10:15:26 UTC; gaborcsardi
 Repository: CRAN
 Date/Publication: 2017-03-21 15:20:20 UTC
-<<<<<<< Updated upstream
 Built: R 3.4.4; ; 2018-06-06 15:38:07 UTC; windows
-=======
-Built: R 3.4.4; ; 2018-05-20 08:52:18 UTC; windows
-InstallAgent: packrat 0.4.9.2
-InstallSource: CRAN
-Hash: 0dda4a2654a22b36a715c2b0b6fbacac
->>>>>>> Stashed changes
