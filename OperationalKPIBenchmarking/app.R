@@ -10,6 +10,7 @@ install.packages(c('devtools',
                    'sparkline',
                    'htmltools',
                    'formattable',
+                   'plotly',
                    'rlang',
                    'DT',
                    'data.table'
