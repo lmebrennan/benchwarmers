@@ -1,11 +1,19 @@
+<<<<<<< Updated upstream
 f2f520033478fdda69771d9cc33e5c9a *DESCRIPTION
+=======
+7093e6f51d70073ec686ca8835161786 *DESCRIPTION
+>>>>>>> Stashed changes
 198a2eb92d43ccc508a9cae52e79cf58 *INDEX
 3685d58b393b5825ad8ad25afa256011 *Meta/Rd.rds
 317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
 5bd1279ec2c644f12b55d18ab8f82b7a *Meta/hsearch.rds
 799a8378dc096d01d41c035167b6dd49 *Meta/links.rds
 4ba8548b2c8109f1c13724c84c4d02a9 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
 540c56357326f42c0b282642e8416901 *Meta/package.rds
+=======
+69f66b31eca92f5a5208440cf52082d2 *Meta/package.rds
+>>>>>>> Stashed changes
 add6e0109119aa6cf267084dd15b2c49 *Meta/vignette.rds
 076be75efe0b6fdb85434c1d6ba4a81e *NAMESPACE
 9f6939434f914a3b7f539ce217df3326 *NEWS.md
@@ -21,6 +29,7 @@ a908e650997ce0208a616ad5f7c69d35 *doc/lazyeval-old.html
 750bd2b0dab394af791c04c9169a68fa *doc/lazyeval.html
 1784783a747e35fa033754cfc400aa79 *help/AnIndex
 691381746b8247ca97f40dd9e8cd0445 *help/aliases.rds
+<<<<<<< Updated upstream
 6e03f7062ead5b98d9943eae4a657e30 *help/lazyeval.rdb
 81d5da2b675fc3ba6c564b25e98f2115 *help/lazyeval.rdx
 7d7bb53339e6ae234916d8fca8706990 *help/paths.rds
@@ -29,4 +38,14 @@ b6763e6916890c631fdc3f2643803b1a *html/R.css
 8be1ddd02f5af3c7b37b47aff3d3dffc *libs/i386/lazyeval.dll
 25d2802416a8d5b2625ec2dd92ffd758 *libs/i386/symbols.rds
 321df2e726a16599f35a4b6d38fe1fff *libs/x64/lazyeval.dll
+=======
+81029fe39cc44f187fbb9a396aa49474 *help/lazyeval.rdb
+c8c6020d80c58e9f58e5167a8e212d40 *help/lazyeval.rdx
+5ea69e65e5edee707ef52546e156b085 *help/paths.rds
+5e5cc6d36ef0c14d419b303e3ed14bf7 *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+ed8045498ac44b0768cf69e7ec0d4c23 *libs/i386/lazyeval.dll
+25d2802416a8d5b2625ec2dd92ffd758 *libs/i386/symbols.rds
+883618d4b1f804d53732f20300499f52 *libs/x64/lazyeval.dll
+>>>>>>> Stashed changes
 eee7a6ee24abe373a6c02dd66d902f88 *libs/x64/symbols.rds
