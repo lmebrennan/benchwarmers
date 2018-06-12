@@ -1,0 +1,44 @@
+<<<<<<< Updated upstream
+de9e57ee82ace1c2a223ce3a84a9f75a *DESCRIPTION
+=======
+62cd59b7fb77d2e04ccc97798ffc7b13 *DESCRIPTION
+>>>>>>> Stashed changes
+e4bfe6f2f070f3de651122c37c6f37bc *INDEX
+15c4bf6fa2eeb9e29ed9492b9918f7e0 *Meta/Rd.rds
+317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
+efeec9c4fe7c585fb8752f6e50e1e416 *Meta/hsearch.rds
+4f117564f3d53dbcd8c9f5d665315bf6 *Meta/links.rds
+4ad8c51addc81994820f4cb837f356c8 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
+7a911aee6124da9660c93ea0da9cdf1a *Meta/package.rds
+4ccbab02ff7f87c39cb7c719aa688a62 *NAMESPACE
+ebf0fc819595d631b8bf280c4b049940 *R/packrat
+cc497582c1eb1ea6b97d943f7b9366a7 *R/packrat.rdb
+047e8f421c857a07853a01a6c707acbc *R/packrat.rdx
+1822f0d08bce1250cf04c60aea274594 *help/AnIndex
+6d4979778d44ae6b9c6275783060330f *help/aliases.rds
+65adec6c3aa230f8ba3e5b48ee038706 *help/packrat.rdb
+e4f5f8bf11f91b4157d78b7c2ff7807b *help/packrat.rdx
+cab7baa1a400122ae1c5f03bf18b2ab9 *help/paths.rds
+43f4a64edb58c0d01862994f31c7345b *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+651a3383e207d9328af18bbb3b01622d *resources/init-rprofile.R
+2882646de629e7ddf5bb86af6587b9e5 *resources/init.R
+=======
+243292d96f964c2bdc7503cb9e8de89d *Meta/package.rds
+4ccbab02ff7f87c39cb7c719aa688a62 *NAMESPACE
+ebf0fc819595d631b8bf280c4b049940 *R/packrat
+0cd577e16937943f9f841ebe52e63a61 *R/packrat.rdb
+a7fa694e5a454aa3e0b38eec84193fa7 *R/packrat.rdx
+1822f0d08bce1250cf04c60aea274594 *help/AnIndex
+6d4979778d44ae6b9c6275783060330f *help/aliases.rds
+b29ac01f302feb422ac27fc06b819a71 *help/packrat.rdb
+737040d468e71c4928bcc1def9b07b5a *help/packrat.rdx
+58b87d855388ab5c672eec2a45a680fe *help/paths.rds
+69863e0fdcba01e22fc6603e03d845c6 *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+dd7a3cb85420352ced1c11387c0aa16f *resources/init-rprofile.R
+2789415f68f091227c73e66e9bad2052 *resources/init.R
+>>>>>>> Stashed changes
+c513f80a21bb4c9d9e21392312392240 *resources/mac_r_userlib.sh
+4affbb9d61d533e48a8274cdd712a9f8 *rstudio/rstudio-protocol

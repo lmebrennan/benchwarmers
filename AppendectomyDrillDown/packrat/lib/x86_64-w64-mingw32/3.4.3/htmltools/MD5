@@ -1,0 +1,43 @@
+<<<<<<< Updated upstream
+b81fb82da2fd6097c9f1c35e48c4d43b *DESCRIPTION
+=======
+22914f43cab8b9db82b9ab5ded0a292b *DESCRIPTION
+>>>>>>> Stashed changes
+a510b4ebb4a0bcc381f4212f4aefb3a4 *INDEX
+608e06d4956ebb488b317c6230598d4b *Meta/Rd.rds
+317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
+1d1afcc9719a0674efda0de5981c262b *Meta/hsearch.rds
+9d10b7885a9342d3953a049724f087e2 *Meta/links.rds
+977594add4ad4b64c5220ae320915b14 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
+abb8e2559470e351a8531c23fda580c2 *Meta/package.rds
+=======
+4c3729877e649371250245e37a0bd410 *Meta/package.rds
+>>>>>>> Stashed changes
+41ac34eea891be5f999ed8b44f87e476 *NAMESPACE
+738bee7e0dd52e6d69ccfe44c8dc0394 *NEWS
+ebf0fc819595d631b8bf280c4b049940 *R/htmltools
+75fe31c0cffb028687539240b08067c3 *R/htmltools.rdb
+656a3682d1105b2616688b4d423ebccb *R/htmltools.rdx
+347ccb3f7ea57b32ec0f6a96e42149b5 *help/AnIndex
+067a568221f75b5b74ed3684f242e0c9 *help/aliases.rds
+<<<<<<< Updated upstream
+33d717884f55768ed0d331523a23657f *help/htmltools.rdb
+0e3d9992150722f2572d4852a55efe17 *help/htmltools.rdx
+8b9301ff0155d404af933fe88652f78e *help/paths.rds
+a1e45fa8c508f561cbf4f79a5ca3551b *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+e80d49806071db16e87a1ceb8c866062 *libs/i386/htmltools.dll
+be0c5fe73c927289012890805863832f *libs/i386/symbols.rds
+8ff61ea58ddf43dcc318a0b60351c2a0 *libs/x64/htmltools.dll
+=======
+9805dafe1bea534ad34cdea36dd30fb9 *help/htmltools.rdb
+6d89c5b62337a217a57076bcd4e3f1c6 *help/htmltools.rdx
+d8b961edd60ac9e696bbcd04d3a100a7 *help/paths.rds
+a1e45fa8c508f561cbf4f79a5ca3551b *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+3180a2ec910fef20e04a3d15f97c4539 *libs/i386/htmltools.dll
+be0c5fe73c927289012890805863832f *libs/i386/symbols.rds
+92e71fb0e6b660a0496d995e90a14ae8 *libs/x64/htmltools.dll
+>>>>>>> Stashed changes
+a62371db23edc832ace4539bf97fe34f *libs/x64/symbols.rds

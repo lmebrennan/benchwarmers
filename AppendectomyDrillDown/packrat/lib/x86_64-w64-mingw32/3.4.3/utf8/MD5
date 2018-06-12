@@ -1,0 +1,57 @@
+<<<<<<< Updated upstream
+8ce97300dd47dfc09734d2ae6cd34099 *DESCRIPTION
+=======
+125ec288b636661e4c79512657d0acaa *DESCRIPTION
+>>>>>>> Stashed changes
+e4a0d8ce544294ce6f1c0eb8d198e01b *INDEX
+3b83ef96387f14655fc854ddc3c6bd57 *LICENSE
+f805525bae41964410d94dea116d0814 *Meta/Rd.rds
+317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
+f8cbc38341cc1ad0d9b31595cc8ca21e *Meta/hsearch.rds
+b7cc6a118b44b2b43eba8b3799c612a7 *Meta/links.rds
+a43dbc0f7d0c7a09adcd4908bb90f904 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
+063f02b3c1371619d0cb1a03e72120f2 *Meta/package.rds
+c7e6b63b8723366903b2f2e7018215e9 *Meta/vignette.rds
+9eb610e029fc704406b2e7ba88b2038a *NAMESPACE
+9fa71eb056c4e25e101b7d4ea45a2e30 *NEWS
+ebf0fc819595d631b8bf280c4b049940 *R/utf8
+c1b3b4f006311751b7fc84e338fc1913 *R/utf8.rdb
+a074ce5f3b7f15e7d245e2d08a819fe0 *R/utf8.rdx
+7fa9df66375d5dcd79098896f9ebcc03 *doc/index.html
+101804d9a1d4b7cbc97e60643eb0f6d0 *doc/utf8.Rmd
+81b88bd3e6a21b2256bca59f6e1a82a3 *doc/utf8.html
+a53b71fe5c5e8f551d16be1db708821b *help/AnIndex
+3273cd44b3bbc681d302c679c709ff94 *help/aliases.rds
+79a3148408a354b0380352010314f304 *help/paths.rds
+067de6fafac5bdfc2f8869eb6db40329 *help/utf8.rdb
+fe89f782868ed2abf04f4bc4b0eacdc1 *help/utf8.rdx
+b098e5bfef5578afa3ca24dc7dd455e6 *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+96eb66f35f7192248394d75c91c8b599 *libs/i386/symbols.rds
+179e64c10272fd13837c52e88e54512f *libs/i386/utf8.dll
+6c20e74fac300aa4cb9d52d17d9791bd *libs/x64/symbols.rds
+0d3dd313966a630dd1499ae76f2822c9 *libs/x64/utf8.dll
+=======
+4e5bbe054a2c297875674678874cb837 *Meta/package.rds
+bb97d231e2975c26b2b3490ebe820829 *Meta/vignette.rds
+9eb610e029fc704406b2e7ba88b2038a *NAMESPACE
+eb5fbc0510b1923cefb5f507cd814b83 *NEWS
+ebf0fc819595d631b8bf280c4b049940 *R/utf8
+bea5006c0130c4c2d3bf58e2d8016001 *R/utf8.rdb
+2ad5dcbb7d90c00efa487e0cf5d5fc41 *R/utf8.rdx
+7fa9df66375d5dcd79098896f9ebcc03 *doc/index.html
+101804d9a1d4b7cbc97e60643eb0f6d0 *doc/utf8.Rmd
+b39e7f322e1f67738dd4b405e53477b8 *doc/utf8.html
+a53b71fe5c5e8f551d16be1db708821b *help/AnIndex
+3273cd44b3bbc681d302c679c709ff94 *help/aliases.rds
+841da7c6b73801e65eb4a29f7e8322c8 *help/paths.rds
+89f1159e850142cfac759b37ed9a8733 *help/utf8.rdb
+7d06c3eb4acc7394f91ff7385c3ffdda *help/utf8.rdx
+94221627f8daa252daf9ec650a191406 *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+96eb66f35f7192248394d75c91c8b599 *libs/i386/symbols.rds
+6027061eca77b0b1ddeb007ad3608a12 *libs/i386/utf8.dll
+6c20e74fac300aa4cb9d52d17d9791bd *libs/x64/symbols.rds
+396fb63264fec60b9fe29174b000d5bc *libs/x64/utf8.dll
+>>>>>>> Stashed changes

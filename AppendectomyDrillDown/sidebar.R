@@ -7,19 +7,19 @@ dbSidebar <- dashboardSidebar(
   sidebarMenu(
     ### Note: All selectizeInput choices will be populated via server using the df
 
-    h3("Compare",align="center"),
+    h4("Entity to Benchmark",align="center"),
     # select an entity to benchmark
     selectizeInput(inputId="customer_entity",label="Select an entity:",choices=NULL),
     hr(),
-    h3("With",align="center"),
-    # create population to benchmark against
+    h4("Benchmark Population", align="center"),
 
-    # selectizeInput(inputId="comparison_entity",label="Entity(ies):",choices=c(ALL=""),multiple=TRUE),
-    selectizeInput(inputId="region",label="Region(s):",choices=c(ALL=""),multiple=TRUE),
+    # create population to benchmark against
+    uiOutput("benchmark_selector"),
+    checkboxGroupInput(inputId="region",label="Region(s):",inline=TRUE),
     selectizeInput(inputId="beds",label="Bedsize(s):",choices=c(ALL=""),multiple=TRUE),
     selectizeInput(inputId="specialty",label="Specialty(ies):",choices=c(ALL=""),multiple=TRUE),
     selectizeInput(inputId="costmodel",label="Select Cost model(s):",choices = c(ALL=""),multiple=TRUE),
 
-    actionBttn(inputId="hospital_refresh",label="Refresh")
+    actionBttn(inputId="refresh",label="Refresh")
   )
 )

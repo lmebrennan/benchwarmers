@@ -1,0 +1,47 @@
+4ddf2ad84203347f690b3ec0527d3c9a *AUTHORS
+a570c78338c55f6460bebfc37da47a7b *CITATION
+ad7ba52b680bdbdd9c9f41bd34686586 *COPYING
+fab51b51886c7f7e35b7c16bbaa143ee *COPYRIGHTS
+<<<<<<< Updated upstream
+aff62fb6dd59ac74162bf2882253aebb *DESCRIPTION
+=======
+444651f50d32adde88e9c78cf0374fcb *DESCRIPTION
+>>>>>>> Stashed changes
+bb30bcf772845a5a64c5c3186393fcdb *INDEX
+8dbfe22e63f4599af115fbb92eb8860a *Meta/Rd.rds
+317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
+62d12b69e4c8b3c2184cc8e2286339c3 *Meta/hsearch.rds
+70b8f9ce01d08b2bc3b8cb8f5b9e51ce *Meta/links.rds
+d7be5b60717a0dc7b467fec9c8775618 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
+56e307bc3360b35af4c3e2d8a525c0a0 *Meta/package.rds
+=======
+ef70a48eac88d614c8e8629d4a51265d *Meta/package.rds
+>>>>>>> Stashed changes
+a2071b6aaf08f79885ce95099cb4e39b *NAMESPACE
+796d5ce6f0a2db42fe34f2b8be24e2ea *NEWS
+ebf0fc819595d631b8bf280c4b049940 *R/git2r
+1795ecd01f8d152411261a1b54613a1b *R/git2r.rdb
+228f6dfc19ec821f2ec6cd4ee47dfe01 *R/git2r.rdx
+826c4e7a0dabc486b6e0f9ca099146ac *help/AnIndex
+19a7d217fd44a8da55bd028d3c19d202 *help/aliases.rds
+<<<<<<< Updated upstream
+c8d223da3c5b0718e0093fb8ef5e3f2f *help/git2r.rdb
+91a79b48a37d04ea75e074d86c8bdc21 *help/git2r.rdx
+c81b5f133f467ff6590ddc18043d73d5 *help/paths.rds
+4be3bb9ed0a56146ce03622a237989df *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+0ce11a53e93731c18cce16c5e06ffe21 *libs/i386/git2r.dll
+4c4cb5446390d575edbb362484ac0b52 *libs/i386/symbols.rds
+dba864225d0085080a640ec1e0ae9915 *libs/x64/git2r.dll
+=======
+25e32a6674c1280b9a0a136de25d9295 *help/git2r.rdb
+d1244d94312ff9f68a11661c14119b91 *help/git2r.rdx
+6513551d09fb4bbdf413b21903dd0058 *help/paths.rds
+4be3bb9ed0a56146ce03622a237989df *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+39cbc1d39d25cbab027dde34af607e44 *libs/i386/git2r.dll
+4c4cb5446390d575edbb362484ac0b52 *libs/i386/symbols.rds
+c5c05600328880d79fead1f01ac4aa5b *libs/x64/git2r.dll
+>>>>>>> Stashed changes
+3f1a7404f6f11e1265a65cabf15252e6 *libs/x64/symbols.rds

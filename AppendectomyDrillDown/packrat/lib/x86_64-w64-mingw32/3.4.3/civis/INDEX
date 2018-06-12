@@ -1,0 +1,1168 @@
+CIVIS_ML_CLASSIFIERS    List of classification models.
+CIVIS_ML_REGRESSORS     List of civis_ml regression models.
+CivisFuture             Evaluate an expression in Civis Platform
+DBI                     DBI methods
+announcements_list      List announcements
+apps_delete_instances_projects
+                        Remove a AppInstance from a project
+apps_delete_instances_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+apps_delete_instances_shares_users
+                        Revoke the permissions a user has on this
+                        object
+apps_get                List details of a Decision Application
+apps_get_instances      Return a given app instance
+apps_get_releases       Return a given app release
+apps_list               List apps
+apps_list_instances     List the instances of a Decision Application
+apps_list_instances_projects
+                        List the projects a AppInstance belongs to
+apps_list_instances_shares
+                        List users and groups permissioned on this
+                        object
+apps_list_releases      List the releases of a particular Decision
+                        Application
+apps_patch_instances    Update a given app instance
+apps_post_instances     Create a new instance of an application of the
+                        given slug
+apps_put_instances_archive
+                        Update the archive status of this object
+apps_put_instances_projects
+                        Add a AppInstance to a project
+apps_put_instances_shares_groups
+                        Set the permissions groups has on this object
+apps_put_instances_shares_users
+                        Set the permissions users have on this object
+await                   Call a function repeatedly until a status is
+                        reached.
+cancel                  Cancel the evaluation of a CivisFuture.
+civis_file              A file in the Civis Platform
+civis_file_manifest     A manifest file in the Civis Platform
+civis_ml                Interface for modeling in the Civis Platform
+civis_ml_extra_trees_classifier
+                        CivisML Extra Trees Classifier
+civis_ml_extra_trees_regressor
+                        CivisML Extra Trees Regressor
+civis_ml_gradient_boosting_classifier
+                        CivisML Gradient Boosting Classifier
+civis_ml_gradient_boosting_regressor
+                        CivisML Gradient Boosting Regressor
+civis_ml_random_forest_classifier
+                        CivisML Random Forest Classifier
+civis_ml_random_forest_regressor
+                        CivisML Random Forest Regressor
+civis_ml_sparse_linear_regressor
+                        CivisML Sparse Linear Regression
+civis_ml_sparse_logistic
+                        CivisML Sparse Logistic
+civis_ml_sparse_ridge_regressor
+                        CivisML Sparse Ridge Regression
+civis_platform          Evaluate an expression in Civis Platform
+civis_table             A table in the Civis Platform
+civis_to_multifile_csv
+                        Split a Redshift table into multiple CSV parts
+                        on S3
+clusters_get_kubernetes
+                        Describe a Kubernetes Cluster
+clusters_get_workers    Describe a Worker Cluster
+clusters_list_kubernetes
+                        List Kubernetes Clusters
+clusters_list_workers   List Worker Clusters
+clusters_list_workers_active_jobs
+                        List Active Jobs for a Worker Cluster
+clusters_list_workers_queued_jobs
+                        List Queued Jobs for a Worker Cluster
+codes_delete            Delete a code
+codes_get               Show basic code info
+codes_list              List codes
+codes_patch             Update a code
+codes_post              Create a new code
+codes_put               Update a code
+credentials_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+credentials_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+credentials_get         Get a credential
+credentials_list        List credentials
+credentials_list_shares
+                        List users and groups permissioned on this
+                        object
+credentials_post        Create a credential
+credentials_post_authenticate
+                        Authenticate against a remote host
+credentials_post_temporary
+                        Generate a temporary credential for accessing
+                        S3
+credentials_put         Update an existing credential
+credentials_put_shares_groups
+                        Set the permissions groups has on this object
+credentials_put_shares_users
+                        Set the permissions users have on this object
+databases_delete_whitelist_ips
+                        Remove a whitelisted IP address
+databases_get_whitelist_ips
+                        View details about a whitelisted IP
+databases_list          List databases
+databases_list_schemas
+                        List schemas in this database
+databases_list_tables   List tables in the specified database,
+                        deprecated use "GET /tables" instead
+databases_list_tables_search
+                        List tables in the specified database,
+                        deprecated use "GET /tables" instead
+databases_list_whitelist_ips
+                        List whitelisted IPs for the specified database
+databases_post_whitelist_ips
+                        Whitelist an IP address
+dbIsReadOnly            Is this DBMS object in read-only mode
+dbi_driver              Civis DBI driver
+default_credential      The current user's default credential.
+download_civis          Download a table or a file from the Civis
+                        Platform to local disk
+endpoints_list          List API endpoints
+enhancements_delete_cass_ncoa_projects
+                        Remove a JobTypes::CassNcoa from a project
+enhancements_delete_cass_ncoa_runs
+                        Cancel a run
+enhancements_delete_cass_ncoa_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+enhancements_delete_cass_ncoa_shares_users
+                        Revoke the permissions a user has on this
+                        object
+enhancements_delete_person_matching_projects
+                        Remove a container docker from a project
+enhancements_delete_person_matching_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+enhancements_delete_person_matching_shares_users
+                        Revoke the permissions a user has on this
+                        object
+enhancements_get_cass_ncoa
+                        Get a CASS/NCOA Enhancement
+enhancements_get_cass_ncoa_runs
+                        Check status of a run
+enhancements_list       List Enhancements
+enhancements_list_cass_ncoa_projects
+                        List the projects a JobTypes::CassNcoa belongs
+                        to
+enhancements_list_cass_ncoa_runs
+                        List runs for the given cass_ncoa
+enhancements_list_cass_ncoa_runs_logs
+                        Get the logs for a run
+enhancements_list_cass_ncoa_runs_outputs
+                        List the outputs for a run
+enhancements_list_cass_ncoa_shares
+                        List users and groups permissioned on this
+                        object
+enhancements_list_person_matching_projects
+                        List the projects a container docker belongs to
+enhancements_list_person_matching_shares
+                        List users and groups permissioned on this
+                        object
+enhancements_list_types
+                        List available enhancement types
+enhancements_patch_cass_ncoa
+                        Update some attributes of this CASS/NCOA
+                        Enhancement
+enhancements_post_cass_ncoa
+                        Create a CASS/NCOA Enhancement
+enhancements_post_cass_ncoa_cancel
+                        Cancel a run
+enhancements_post_cass_ncoa_runs
+                        Start a run
+enhancements_put_cass_ncoa
+                        Replace all attributes of this CASS/NCOA
+                        Enhancement
+enhancements_put_cass_ncoa_archive
+                        Update the archive status of this object
+enhancements_put_cass_ncoa_projects
+                        Add a JobTypes::CassNcoa to a project
+enhancements_put_cass_ncoa_shares_groups
+                        Set the permissions groups has on this object
+enhancements_put_cass_ncoa_shares_users
+                        Set the permissions users have on this object
+enhancements_put_person_matching_archive
+                        Update the archive status of this object
+enhancements_put_person_matching_projects
+                        Add a container docker to a project
+enhancements_put_person_matching_shares_groups
+                        Set the permissions groups has on this object
+enhancements_put_person_matching_shares_users
+                        Set the permissions users have on this object
+exports_list            List
+fetch_all               Retrieve all results from a paginated endpoint
+fetch_and_generate_client
+                        Fetches and generates the client in
+                        generated_client.R
+fetch_logs              Fetch job logs from the Civis Platform
+fetch_oos_scores        Retrieve out of sample/fold predictions
+fetch_predictions       Retrieve predictions from a CivisML prediction
+                        job
+fetch_until             Retrieve some results from a paginated endpoint
+files_delete_projects   Remove a Data::S3File from a project
+files_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+files_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+files_get               Get details about a file
+files_list_projects     List the projects a Data::S3File belongs to
+files_list_shares       List users and groups permissioned on this
+                        object
+files_post              Initiate an upload of a file into the platform
+files_post_multipart    Initiate a multipart upload
+files_post_multipart_complete
+                        Complete a multipart upload
+files_put_projects      Add a Data::S3File to a project
+files_put_shares_groups
+                        Set the permissions groups has on this object
+files_put_shares_users
+                        Set the permissions users have on this object
+generate_client         Generate a client
+get_database_id         Return the database id for a given database
+                        name
+get_error               Get error data from civis_errors
+get_metric              Get model metrics
+get_status              Get the status from results of 'await'
+get_table_id            Return the table id for a given table
+git_repos_delete        Remove the bookmark on a git repository
+git_repos_get           Get a bookmarked git repository
+git_repos_list          List bookmarked git repositories
+git_repos_post          Bookmark a git repository
+groups_list             List Groups
+hist.civis_ml           Plot a histogram of the predicted scores or
+                        probabilities for a CivisML object
+imports_delete_files_runs
+                        Cancel a run
+imports_delete_projects
+                        Remove a JobTypes::Import from a project
+imports_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+imports_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+imports_delete_syncs    Archive a sync (deprecated, use the /archive
+                        endpoint instead)
+imports_get             Get details about an import
+imports_get_batches     Get details about a batch import
+imports_get_files_runs
+                        Check status of a run
+imports_list            List
+imports_list_batches    List batch imports
+imports_list_files_runs
+                        List runs for the given import
+imports_list_files_runs_logs
+                        Get the logs for a run
+imports_list_projects   List the projects a JobTypes::Import belongs to
+imports_list_runs       Get the run history of this import
+imports_list_runs_logs
+                        Get the logs for a run
+imports_list_shares     List users and groups permissioned on this
+                        object
+imports_post            Create a new import configuration
+imports_post_batches    Upload multiple files to Redshift
+imports_post_cancel     Cancel a run
+imports_post_files      Initate an import of a tabular file into the
+                        platform
+imports_post_files_runs
+                        Start a run
+imports_post_runs       Run an import
+imports_post_syncs      Create a sync
+imports_put             Update an import
+imports_put_archive     Update the archive status of this object
+imports_put_projects    Add a JobTypes::Import to a project
+imports_put_shares_groups
+                        Set the permissions groups has on this object
+imports_put_shares_users
+                        Set the permissions users have on this object
+imports_put_syncs       Update a sync
+imports_put_syncs_archive
+                        Update the archive status of this sync
+jobs_delete_projects    Remove a Job from a project
+jobs_delete_runs        Cancel a run
+jobs_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+jobs_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+jobs_get                Show basic job info
+jobs_get_runs           Check status of a job
+jobs_list               List
+jobs_list_children      Show nested tree of children that this job
+                        triggers
+jobs_list_parents       Show chain of parents as a list that this job
+                        triggers from
+jobs_list_projects      List the projects a Job belongs to
+jobs_list_shares        List users and groups permissioned on this
+                        object
+jobs_list_workflows     List the workflows a job belongs to
+jobs_post_runs          Run a job
+jobs_post_trigger_email
+                        Generate and retrieve trigger email address
+jobs_put_projects       Add a Job to a project
+jobs_put_shares_groups
+                        Set the permissions groups has on this object
+jobs_put_shares_users   Set the permissions users have on this object
+match_targets_get       Show Match Target info
+match_targets_list      List match targets
+match_targets_patch     Update a match target
+match_targets_post      Create a new match target
+media_delete_optimizations_runs
+                        Cancel a run
+media_delete_optimizations_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+media_delete_optimizations_shares_users
+                        Revoke the permissions a user has on this
+                        object
+media_delete_ratecards_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+media_delete_ratecards_shares_users
+                        Revoke the permissions a user has on this
+                        object
+media_delete_spot_orders_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+media_delete_spot_orders_shares_users
+                        Revoke the permissions a user has on this
+                        object
+media_get_optimizations
+                        Show a single optimization
+media_get_optimizations_runs
+                        Check status of a run
+media_get_ratecards     Get a Ratecard
+media_get_spot_orders   Show a single spot order
+media_list_dmas         List all Designated Market Areas
+media_list_optimizations
+                        List all optimizations
+media_list_optimizations_runs
+                        List runs for the given optimization
+media_list_optimizations_runs_logs
+                        Get the logs for a run
+media_list_optimizations_shares
+                        List users and groups permissioned on this
+                        object
+media_list_ratecards    List all ratecards
+media_list_ratecards_shares
+                        List users and groups permissioned on this
+                        object
+media_list_spot_orders
+                        List all spot orders
+media_list_spot_orders_shares
+                        List users and groups permissioned on this
+                        object
+media_list_targets      List all Media Targets
+media_patch_optimizations
+                        Edit an existing optimization
+media_patch_ratecards   Update some attributes of this Ratecard
+media_post_optimizations
+                        Create a new optimization
+media_post_optimizations_clone
+                        Clone an existing optimization
+media_post_optimizations_runs
+                        Start a run
+media_post_ratecards    Create a Ratecard
+media_post_spot_orders
+                        Create a spot order
+media_put_optimizations_archive
+                        Update the archive status of this object
+media_put_optimizations_shares_groups
+                        Set the permissions groups has on this object
+media_put_optimizations_shares_users
+                        Set the permissions users have on this object
+media_put_ratecards     Replace all attributes of this Ratecard
+media_put_ratecards_archive
+                        Update the archive status of this object
+media_put_ratecards_shares_groups
+                        Set the permissions groups has on this object
+media_put_ratecards_shares_users
+                        Set the permissions users have on this object
+media_put_spot_orders   Edit the specified spot order
+media_put_spot_orders_archive
+                        Update the archive status of this object
+media_put_spot_orders_shares_groups
+                        Set the permissions groups has on this object
+media_put_spot_orders_shares_users
+                        Set the permissions users have on this object
+models_delete_builds    Cancel a build
+models_delete_projects
+                        Remove a models from a project
+models_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+models_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+models_get              Retrieve model configuration
+models_get_builds       Check status of a build
+models_list             List
+models_list_builds      List builds for the given model
+models_list_builds_logs
+                        Get the logs for a build
+models_list_projects    List the projects a models belongs to
+models_list_schedules   Show the model build schedule
+models_list_shares      List users and groups permissioned on this
+                        object
+models_list_types       List all available model types
+models_patch            Update model configuration
+models_post             Create new configuration for a model
+models_post_builds      Start a build
+models_put_archive      Update the archive status of this object
+models_put_predictions
+                        Add a table on which to apply the predictive
+                        model
+models_put_projects     Add a models to a project
+models_put_schedules    Schedule the model build
+models_put_shares_groups
+                        Set the permissions groups has on this object
+models_put_shares_users
+                        Set the permissions users have on this object
+multipart_upload        Upload to files endpoint in parts.
+notebooks_delete        Archive a Notebook (deprecated, use archiving
+                        endpoints instead)
+notebooks_delete_deployments
+                        Delete a Notebook deployment
+notebooks_delete_projects
+                        Remove a Notebook from a project
+notebooks_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+notebooks_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+notebooks_get           Get a Notebook
+notebooks_get_deployments
+                        Get details about a Notebook deployment
+notebooks_get_git_commits
+                        Get file contents at commit_hash
+notebooks_list          List Notebooks
+notebooks_list_deployments
+                        List deployments for a Notebook
+notebooks_list_deployments_logs
+                        Get the logs for a Notebook deployment
+notebooks_list_git      Get the git metadata attached to this Notebook
+notebooks_list_git_commits
+                        Get the git commits for this Notebook
+notebooks_list_projects
+                        List the projects a Notebook belongs to
+notebooks_list_shares   List users and groups permissioned on this
+                        object
+notebooks_list_update_links
+                        Get URLs to update notebook
+notebooks_patch         Update some attributes of this Notebook
+notebooks_post          Create a Notebook
+notebooks_post_clone    Clone this Notebook
+notebooks_post_deployments
+                        Deploy a Notebook
+notebooks_post_git_commits
+                        Commit and push a new version of the file
+notebooks_put           Replace all attributes of this Notebook
+notebooks_put_archive   Update the archive status of this object
+notebooks_put_git       Attach this Notebook to a git repo/file
+notebooks_put_projects
+                        Add a Notebook to a project
+notebooks_put_shares_groups
+                        Set the permissions groups has on this object
+notebooks_put_shares_users
+                        Set the permissions users have on this object
+notifications_list      Receive a stream of notifications as they come
+                        in
+ontology_list           List the ontology of column names Civis uses
+plot.civis_ml_classifier
+                        Decile plot for classification with civis_ml
+plot.civis_ml_regressor
+                        Y-yhat plot for regression with civis_ml
+predictions_delete_runs
+                        Cancel a run
+predictions_get         Show the specified prediction
+predictions_get_runs    Check status of a run
+predictions_list        List predictions
+predictions_list_runs   List runs for the given prediction
+predictions_list_runs_logs
+                        Get the logs for a run
+predictions_list_schedules
+                        Show the prediction schedule
+predictions_patch       Update a prediction
+predictions_post_runs   Start a run
+predictions_put_schedules
+                        Schedule the prediction
+print.civis_api         Print results from a Civis API call
+projects_delete         Archive a project (deprecated, use the /archive
+                        endpoint instead)
+projects_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+projects_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+projects_get            Get a detailed view of a project and the
+                        objects in it
+projects_list           List projects
+projects_list_shares    List users and groups permissioned on this
+                        object
+projects_post           Create a project
+projects_put            Update a project
+projects_put_archive    Update the archive status of this object
+projects_put_shares_groups
+                        Set the permissions groups has on this object
+projects_put_shares_users
+                        Set the permissions users have on this object
+publish_addin           Add in to Publish an R Markdown file to
+                        Platform Reports from RStudio
+publish_html            Publish HTML to Platform Reports
+publish_rmd             Publish an R Markdown file to Platform Reports
+queries_delete_runs     Cancel a run
+queries_get             Get details about a query
+queries_get_runs        Check status of a run
+queries_list            List
+queries_list_runs       List runs for the given query
+queries_list_runs_logs
+                        Get the logs for a run
+queries_post            Execute a query
+queries_post_runs       Start a run
+queries_put_scripts     Update the query's associated script
+query_civis             Run a Query on Platform
+query_civis_file        Export results from a query to S3 and return a
+                        file id.
+read_civis              Read a table or file from the Civis Platform as
+                        a data frame
+refresh_table           Refresh a table
+remote_hosts_list       List the remote hosts
+remote_hosts_list_data_sets
+                        List data sets available from a remote host
+remote_hosts_post       Create a new remote host
+remote_hosts_post_authenticate
+                        Authenticate against a remote host using either
+                        a credential or a user name and password
+reports_delete_grants   Revoke permission for this report to perform
+                        Civis platform API operations on your behalf
+reports_delete_projects
+                        Remove a Report from a project
+reports_delete_services_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+reports_delete_services_shares_users
+                        Revoke the permissions a user has on this
+                        object
+reports_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+reports_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+reports_get             Show a single report
+reports_get_git_commits
+                        Get file contents at commit_hash
+reports_get_services    Show a single service report
+reports_list            List
+reports_list_git        Get the git metadata attached to this Report
+reports_list_git_commits
+                        Get the git commits for this Report
+reports_list_projects   List the projects a Report belongs to
+reports_list_services_shares
+                        List users and groups permissioned on this
+                        object
+reports_list_shares     List users and groups permissioned on this
+                        object
+reports_list_snapshots
+                        Get details about the report's snapshot
+                        automation settings
+reports_patch           Update a report
+reports_patch_services
+                        Update some attributes of this service report
+reports_patch_snapshots
+                        Update the report's snapshot automation
+                        settings
+reports_post            Create a report
+reports_post_git_commits
+                        Commit and push a new version of the file
+reports_post_grants     Grant this report the ability to perform Civis
+                        platform API operations on your behalf
+reports_post_services   Create a service report
+reports_post_snapshots
+                        Generate and optionally email a snapshot of the
+                        specified report
+reports_put_archive     Update the archive status of this object
+reports_put_git         Attach this Report to a git repo/file
+reports_put_projects    Add a Report to a project
+reports_put_services_shares_groups
+                        Set the permissions groups has on this object
+reports_put_services_shares_users
+                        Set the permissions users have on this object
+reports_put_shares_groups
+                        Set the permissions groups has on this object
+reports_put_shares_users
+                        Set the permissions users have on this object
+results_delete_grants   Revoke permission for this report to perform
+                        Civis platform API operations on your behalf
+results_delete_projects
+                        Remove a Report from a project
+results_delete_services_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+results_delete_services_shares_users
+                        Revoke the permissions a user has on this
+                        object
+results_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+results_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+results_get             Show a single report
+results_get_git_commits
+                        Get file contents at commit_hash
+results_get_services    Show a single service report
+results_list            List
+results_list_git        Get the git metadata attached to this Report
+results_list_git_commits
+                        Get the git commits for this Report
+results_list_projects   List the projects a Report belongs to
+results_list_services_shares
+                        List users and groups permissioned on this
+                        object
+results_list_shares     List users and groups permissioned on this
+                        object
+results_list_snapshots
+                        Get details about the report's snapshot
+                        automation settings
+results_patch           Update a report
+results_patch_services
+                        Update some attributes of this service report
+results_patch_snapshots
+                        Update the report's snapshot automation
+                        settings
+results_post            Create a report
+results_post_git_commits
+                        Commit and push a new version of the file
+results_post_grants     Grant this report the ability to perform Civis
+                        platform API operations on your behalf
+results_post_services   Create a service report
+results_post_snapshots
+                        Generate and optionally email a snapshot of the
+                        specified report
+results_put_archive     Update the archive status of this object
+results_put_git         Attach this Report to a git repo/file
+results_put_projects    Add a Report to a project
+results_put_services_shares_groups
+                        Set the permissions groups has on this object
+results_put_services_shares_users
+                        Set the permissions users have on this object
+results_put_shares_groups
+                        Set the permissions groups has on this object
+results_put_shares_users
+                        Set the permissions users have on this object
+scripts_delete          Archive a script (deprecated, use archive
+                        endpoints instead)
+scripts_delete_containers
+                        Archive a container (deprecated, use archive
+                        endpoints)
+scripts_delete_containers_projects
+                        Remove a container docker from a project
+scripts_delete_containers_runs
+                        Cancel a run
+scripts_delete_containers_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+scripts_delete_containers_shares_users
+                        Revoke the permissions a user has on this
+                        object
+scripts_delete_custom   Archive a Custom Script (deprecated, use
+                        archiving endpoints instead)
+scripts_delete_custom_projects
+                        Remove a Job from a project
+scripts_delete_custom_runs
+                        Cancel a run
+scripts_delete_custom_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+scripts_delete_custom_shares_users
+                        Revoke the permissions a user has on this
+                        object
+scripts_delete_javascript
+                        Archive a JavaScript Script (deprecated, use
+                        archiving endpoints instead)
+scripts_delete_javascript_projects
+                        Remove a scripted sql from a project
+scripts_delete_javascript_runs
+                        Cancel a run
+scripts_delete_javascript_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+scripts_delete_javascript_shares_users
+                        Revoke the permissions a user has on this
+                        object
+scripts_delete_python3
+                        Archive a Python Script (deprecated, use
+                        archiving endpoints instead)
+scripts_delete_python3_projects
+                        Remove a python docker from a project
+scripts_delete_python3_runs
+                        Cancel a run
+scripts_delete_python3_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+scripts_delete_python3_shares_users
+                        Revoke the permissions a user has on this
+                        object
+scripts_delete_r        Archive an R Script (deprecated, use archiving
+                        endpoints instead)
+scripts_delete_r_projects
+                        Remove a r docker from a project
+scripts_delete_r_runs   Cancel a run
+scripts_delete_r_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+scripts_delete_r_shares_users
+                        Revoke the permissions a user has on this
+                        object
+scripts_delete_sql      Archive a SQL script (deprecated, use archiving
+                        endpoints instead)
+scripts_delete_sql_projects
+                        Remove a scripts from a project
+scripts_delete_sql_runs
+                        Cancel a run
+scripts_delete_sql_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+scripts_delete_sql_shares_users
+                        Revoke the permissions a user has on this
+                        object
+scripts_get             Get details about a script
+scripts_get_containers
+                        View a container
+scripts_get_containers_runs
+                        Check status of a run
+scripts_get_custom      Get a Custom Script
+scripts_get_custom_runs
+                        Check status of a run
+scripts_get_javascript
+                        Get a JavaScript Script
+scripts_get_javascript_git_commits
+                        Get file contents at commit_hash
+scripts_get_javascript_runs
+                        Check status of a run
+scripts_get_python3     Get a Python Script
+scripts_get_python3_git_commits
+                        Get file contents at commit_hash
+scripts_get_python3_runs
+                        Check status of a run
+scripts_get_r           Get an R Script
+scripts_get_r_git_commits
+                        Get file contents at commit_hash
+scripts_get_r_runs      Check status of a run
+scripts_get_sql         Get a SQL script
+scripts_get_sql_git_commits
+                        Get file contents at commit_hash
+scripts_get_sql_runs    Check status of a run
+scripts_list            List scripts
+scripts_list_containers_projects
+                        List the projects a container docker belongs to
+scripts_list_containers_runs
+                        List runs for the given container
+scripts_list_containers_runs_logs
+                        Get the logs for a run
+scripts_list_containers_runs_outputs
+                        List the outputs for a run
+scripts_list_containers_shares
+                        List users and groups permissioned on this
+                        object
+scripts_list_custom     List Custom Scripts
+scripts_list_custom_projects
+                        List the projects a Job belongs to
+scripts_list_custom_runs
+                        List runs for the given custom
+scripts_list_custom_runs_logs
+                        Get the logs for a run
+scripts_list_custom_runs_outputs
+                        List the outputs for a run
+scripts_list_custom_shares
+                        List users and groups permissioned on this
+                        object
+scripts_list_history    Get the run history and outputs of this script
+scripts_list_javascript_git
+                        Get the git metadata attached to this scripted
+                        sql
+scripts_list_javascript_git_commits
+                        Get the git commits for this scripted sql
+scripts_list_javascript_projects
+                        List the projects a scripted sql belongs to
+scripts_list_javascript_runs
+                        List runs for the given javascript
+scripts_list_javascript_runs_logs
+                        Get the logs for a run
+scripts_list_javascript_runs_outputs
+                        List the outputs for a run
+scripts_list_javascript_shares
+                        List users and groups permissioned on this
+                        object
+scripts_list_python3_git
+                        Get the git metadata attached to this python
+                        docker
+scripts_list_python3_git_commits
+                        Get the git commits for this python docker
+scripts_list_python3_projects
+                        List the projects a python docker belongs to
+scripts_list_python3_runs
+                        List runs for the given python
+scripts_list_python3_runs_logs
+                        Get the logs for a run
+scripts_list_python3_runs_outputs
+                        List the outputs for a run
+scripts_list_python3_shares
+                        List users and groups permissioned on this
+                        object
+scripts_list_r_git      Get the git metadata attached to this r docker
+scripts_list_r_git_commits
+                        Get the git commits for this r docker
+scripts_list_r_projects
+                        List the projects a r docker belongs to
+scripts_list_r_runs     List runs for the given r
+scripts_list_r_runs_logs
+                        Get the logs for a run
+scripts_list_r_runs_outputs
+                        List the outputs for a run
+scripts_list_r_shares   List users and groups permissioned on this
+                        object
+scripts_list_sql_git    Get the git metadata attached to this scripts
+scripts_list_sql_git_commits
+                        Get the git commits for this scripts
+scripts_list_sql_projects
+                        List the projects a scripts belongs to
+scripts_list_sql_runs   List runs for the given sql
+scripts_list_sql_runs_logs
+                        Get the logs for a run
+scripts_list_sql_runs_outputs
+                        List the outputs for a run
+scripts_list_sql_shares
+                        List users and groups permissioned on this
+                        object
+scripts_list_types      List available script types
+scripts_patch           Update a script
+scripts_patch_containers
+                        Update a container
+scripts_patch_custom    Update some attributes of this Custom Script
+scripts_patch_javascript
+                        Update some attributes of this JavaScript
+                        Script
+scripts_patch_python3   Update some attributes of this Python Script
+scripts_patch_r         Update some attributes of this R Script
+scripts_patch_sql       Update some attributes of this SQL script
+scripts_post            Create a script
+scripts_post_cancel     Cancel a run
+scripts_post_containers
+                        Create a container
+scripts_post_containers_clone
+                        Clone this Container Script
+scripts_post_containers_runs
+                        Start a run
+scripts_post_containers_runs_logs
+                        Add log messages
+scripts_post_containers_runs_outputs
+                        Add an output for a run
+scripts_post_custom     Create a Custom Script
+scripts_post_custom_clone
+                        Clone this Custom Script
+scripts_post_custom_runs
+                        Start a run
+scripts_post_custom_runs_outputs
+                        Add an output for a run
+scripts_post_javascript
+                        Create a JavaScript Script
+scripts_post_javascript_clone
+                        Clone this JavaScript Script
+scripts_post_javascript_git_commits
+                        Commit and push a new version of the file
+scripts_post_javascript_runs
+                        Start a run
+scripts_post_javascript_runs_outputs
+                        Add an output for a run
+scripts_post_python3    Create a Python Script
+scripts_post_python3_clone
+                        Clone this Python Script
+scripts_post_python3_git_commits
+                        Commit and push a new version of the file
+scripts_post_python3_runs
+                        Start a run
+scripts_post_python3_runs_outputs
+                        Add an output for a run
+scripts_post_r          Create an R Script
+scripts_post_r_clone    Clone this R Script
+scripts_post_r_git_commits
+                        Commit and push a new version of the file
+scripts_post_r_runs     Start a run
+scripts_post_r_runs_outputs
+                        Add an output for a run
+scripts_post_run        Run a script
+scripts_post_sql        Create a SQL script
+scripts_post_sql_clone
+                        Clone this SQL script
+scripts_post_sql_git_commits
+                        Commit and push a new version of the file
+scripts_post_sql_runs   Start a run
+scripts_put_containers
+                        Edit a container
+scripts_put_containers_archive
+                        Update the archive status of this object
+scripts_put_containers_projects
+                        Add a container docker to a project
+scripts_put_containers_shares_groups
+                        Set the permissions groups has on this object
+scripts_put_containers_shares_users
+                        Set the permissions users have on this object
+scripts_put_custom      Replace all attributes of this Custom Script
+scripts_put_custom_archive
+                        Update the archive status of this object
+scripts_put_custom_projects
+                        Add a Job to a project
+scripts_put_custom_shares_groups
+                        Set the permissions groups has on this object
+scripts_put_custom_shares_users
+                        Set the permissions users have on this object
+scripts_put_javascript
+                        Replace all attributes of this JavaScript
+                        Script
+scripts_put_javascript_archive
+                        Update the archive status of this object
+scripts_put_javascript_git
+                        Attach this scripted sql to a git repo/file
+scripts_put_javascript_projects
+                        Add a scripted sql to a project
+scripts_put_javascript_shares_groups
+                        Set the permissions groups has on this object
+scripts_put_javascript_shares_users
+                        Set the permissions users have on this object
+scripts_put_python3     Replace all attributes of this Python Script
+scripts_put_python3_archive
+                        Update the archive status of this object
+scripts_put_python3_git
+                        Attach this python docker to a git repo/file
+scripts_put_python3_projects
+                        Add a python docker to a project
+scripts_put_python3_shares_groups
+                        Set the permissions groups has on this object
+scripts_put_python3_shares_users
+                        Set the permissions users have on this object
+scripts_put_r           Replace all attributes of this R Script
+scripts_put_r_archive   Update the archive status of this object
+scripts_put_r_git       Attach this r docker to a git repo/file
+scripts_put_r_projects
+                        Add a r docker to a project
+scripts_put_r_shares_groups
+                        Set the permissions groups has on this object
+scripts_put_r_shares_users
+                        Set the permissions users have on this object
+scripts_put_sql         Replace all attributes of this SQL script
+scripts_put_sql_archive
+                        Update the archive status of this object
+scripts_put_sql_git     Attach this scripts to a git repo/file
+scripts_put_sql_projects
+                        Add a scripts to a project
+scripts_put_sql_shares_groups
+                        Set the permissions groups has on this object
+scripts_put_sql_shares_users
+                        Set the permissions users have on this object
+search_list             Perform a search
+search_list_types       List available search types
+services_delete         Archive a Service (deprecated, use archiving
+                        endpoints instead)
+services_delete_deployments
+                        Delete a ShinyApp deployment
+services_delete_projects
+                        Remove a ShinyApp from a project
+services_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+services_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+services_delete_tokens
+                        Revoke a token by id
+services_get            Get a Service
+services_get_deployments
+                        Get details about a ShinyApp deployment
+services_list           List Services
+services_list_deployments
+                        List deployments for a ShinyApp
+services_list_deployments_logs
+                        Get the logs for a Service deployment
+services_list_projects
+                        List the projects a ShinyApp belongs to
+services_list_shares    List users and groups permissioned on this
+                        object
+services_list_tokens    List tokens
+services_patch          Update some attributes of this Service
+services_post           Create a Service
+services_post_clone     Clone this Service
+services_post_deployments
+                        Deploy a ShinyApp
+services_post_redeploy
+                        Redeploy a ShinyApp
+services_post_tokens    Create a new long-lived service token
+services_put            Replace all attributes of this Service
+services_put_archive    Update the archive status of this object
+services_put_projects   Add a ShinyApp to a project
+services_put_shares_groups
+                        Set the permissions groups has on this object
+services_put_shares_users
+                        Set the permissions users have on this object
+stash_local_dataframe   Stash a data frame in feather or csv format,
+                        depending on CivisML version.
+tables_get              Show basic table info
+tables_get_enhancements_cass_ncoa
+                        View the status of a CASS / NCOA table
+                        enhancement
+tables_get_enhancements_geocodings
+                        View the status of a geocoding table
+                        enhancement
+tables_get_enhancements_prepared_matchings
+                        View a prepared matching enhancement
+tables_get_enhancements_table_matchings
+                        View a table matching enhancement
+tables_list             List tables
+tables_list_columns     List columns in the specified table
+tables_patch            Update a table
+tables_post             Import a file into a table
+tables_post_enhance     Run an enhancement on a table, deprecated use
+                        "POST
+                        /tables/:source_table_id/enhancements/<enhancement-type>"
+                        instead
+tables_post_enhancements_cass_ncoa
+                        Standardize addresses in a table
+tables_post_enhancements_geocodings
+                        Geocode a table
+tables_post_enhancements_prepared_matchings
+                        Match person records against a dynamo table
+                        prepared by Civis
+tables_post_enhancements_table_matchings
+                        Match person records against an arbitrary
+                        Redshift table
+tables_post_refresh     Request a refresh for column and table
+                        statistics
+templates_delete_reports
+                        Archive a Report Template (deprecated, use
+                        archiving endpoints instead)
+templates_delete_reports_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+templates_delete_reports_shares_users
+                        Revoke the permissions a user has on this
+                        object
+templates_delete_scripts
+                        Archive a Script Template (deprecated, use
+                        archiving endpoints instead)
+templates_delete_scripts_projects
+                        Remove a Template::Script from a project
+templates_delete_scripts_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+templates_delete_scripts_shares_users
+                        Revoke the permissions a user has on this
+                        object
+templates_get_reports   Get a Report Template
+templates_get_scripts   Get a Script Template
+templates_list_reports
+                        List Report Templates
+templates_list_reports_shares
+                        List users and groups permissioned on this
+                        object
+templates_list_scripts
+                        List Script Templates
+templates_list_scripts_projects
+                        List the projects a Template::Script belongs to
+templates_list_scripts_shares
+                        List users and groups permissioned on this
+                        object
+templates_patch_reports
+                        Update some attributes of this Report Template
+templates_patch_scripts
+                        Update some attributes of this Script Template
+templates_post_reports
+                        Create a Report Template
+templates_post_scripts
+                        Create a Script Template
+templates_put_reports   Replace all attributes of this Report Template
+templates_put_reports_shares_groups
+                        Set the permissions groups has on this object
+templates_put_reports_shares_users
+                        Set the permissions users have on this object
+templates_put_scripts   Replace all attributes of this Script Template
+templates_put_scripts_projects
+                        Add a Template::Script to a project
+templates_put_scripts_shares_groups
+                        Set the permissions groups has on this object
+templates_put_scripts_shares_users
+                        Set the permissions users have on this object
+transfer_table          Transfer a table from one location to another.
+users_delete_api_keys   Revoke the specified API key
+users_get               Show info about a user
+users_get_api_keys      Show the specified API key
+users_list              List users
+users_list_api_keys     Show API keys belonging to the specified user
+users_list_me           Show info about the logged-in user
+users_patch_me          Update info about the logged-in user
+users_post_api_keys     Create a new API key belonging to the logged-in
+                        user
+workflows_delete_projects
+                        Remove a Workflow::Workflow from a project
+workflows_delete_shares_groups
+                        Revoke the permissions a group has on this
+                        object
+workflows_delete_shares_users
+                        Revoke the permissions a user has on this
+                        object
+workflows_get           Get a Workflow
+workflows_get_executions
+                        Get a workflow execution
+workflows_get_git_commits
+                        Get file contents at commit_hash
+workflows_list          List Workflows
+workflows_list_executions
+                        List workflow executions
+workflows_list_git      Get the git metadata attached to this
+                        Workflow::Workflow
+workflows_list_git_commits
+                        Get the git commits for this Workflow::Workflow
+workflows_list_projects
+                        List the projects a Workflow::Workflow belongs
+                        to
+workflows_list_shares   List users and groups permissioned on this
+                        object
+workflows_patch         Update some attributes of this Workflow
+workflows_post          Create a Workflow
+workflows_post_clone    Clone this Workflow
+workflows_post_executions
+                        Execute a workflow
+workflows_post_executions_cancel
+                        Cancel a workflow execution
+workflows_post_executions_resume
+                        Resume a paused workflow execution
+workflows_post_executions_retry
+                        Retry a failed task, or all failed tasks in an
+                        execution
+workflows_post_git_commits
+                        Commit and push a new version of the file
+workflows_put           Replace all attributes of this Workflow
+workflows_put_archive   Update the archive status of this object
+workflows_put_git       Attach this Workflow::Workflow to a git
+                        repo/file
+workflows_put_projects
+                        Add a Workflow::Workflow to a project
+workflows_put_shares_groups
+                        Set the permissions groups has on this object
+workflows_put_shares_users
+                        Set the permissions users have on this object
+write_chunks            Split a file into chunks of a given chunk size,
+                        returning a list of file names.
+write_civis             Upload a local data frame or csv file to the
+                        Civis Platform (Redshift)
+write_civis_file        Upload a R object or file to Civis Platform
+                        (Files endpoint)

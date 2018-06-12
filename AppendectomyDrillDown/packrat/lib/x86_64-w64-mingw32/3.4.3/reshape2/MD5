@@ -1,0 +1,49 @@
+12120b1cc03a4e744f04421ef99ebc48 *CITATION
+<<<<<<< Updated upstream
+7daa6dfce08dd66893de20da8e3f2477 *DESCRIPTION
+=======
+59c2c158384782fcfd34606d2f384bbc *DESCRIPTION
+>>>>>>> Stashed changes
+0455771df81c45bb13ec84f91931f7db *INDEX
+581827da3959cce1750fb90f1eb98ec8 *LICENSE
+9235fbeef03d619c5b570913d3a9a87e *Meta/Rd.rds
+2214a867f1cdc329108ea21a1384241d *Meta/data.rds
+317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
+d9b8702263fa63ce7d5284ba0d147737 *Meta/hsearch.rds
+942a6f4489a3fe7d78f484633edd3ed8 *Meta/links.rds
+183fa3660c689c95176354db81c32c56 *Meta/nsInfo.rds
+<<<<<<< Updated upstream
+942c35fda2d4bb6cea3a7a6785337b59 *Meta/package.rds
+=======
+852de62ac630af5ad32643f7ca025a1e *Meta/package.rds
+>>>>>>> Stashed changes
+fd8905f0d53ec03f481bb242dd7a0e75 *NAMESPACE
+9bcfaf5b515bbce1a50525ccf75abcc2 *NEWS.md
+ebf0fc819595d631b8bf280c4b049940 *R/reshape2
+df7dc49bbeaaf684f0c4338b615b129a *R/reshape2.rdb
+a8f604b5c813ae0ceb098f24f0ffae88 *R/reshape2.rdx
+9d8de31f525b34680f25c208af569912 *data/Rdata.rdb
+ff73a4cf9f166a1e15994a50b218d389 *data/Rdata.rds
+6ba814b044ed526f530bc59a2dd8a0dc *data/Rdata.rdx
+66b073a4da6cd40d6c2616932f0ee6ba *help/AnIndex
+4d7efbccbbfcf28e64e0ad31e0837dc1 *help/aliases.rds
+<<<<<<< Updated upstream
+4836f2e59f87f309dfefa0dd0df26105 *help/paths.rds
+0c8219f180a43becc9de9134564f3245 *help/reshape2.rdb
+94ab283f5beee20734913a98e6f868b1 *help/reshape2.rdx
+404c476cb19e385e4043eddebf41f9ba *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+996181d94061a2d028142ebcc8189ab8 *libs/i386/reshape2.dll
+a5ffd2a5ff8e3eac5ba416bd8c7a5566 *libs/i386/symbols.rds
+d7b37d03f458b9d9c27c26993356d264 *libs/x64/reshape2.dll
+=======
+e23cb78a2b6de38f0362ac8ed983010f *help/paths.rds
+dd5b771ac5af53be35eb3272c5029365 *help/reshape2.rdb
+43c38cc5a6d67374bd2e7b9c2122cc50 *help/reshape2.rdx
+404c476cb19e385e4043eddebf41f9ba *html/00Index.html
+b6763e6916890c631fdc3f2643803b1a *html/R.css
+fc8673433d38c3b35597a5458fdfe8d2 *libs/i386/reshape2.dll
+a5ffd2a5ff8e3eac5ba416bd8c7a5566 *libs/i386/symbols.rds
+61c855c26094b090e9ab1f5560fa5398 *libs/x64/reshape2.dll
+>>>>>>> Stashed changes
+6a978dde88fa059b5e6efeb2feb7dfad *libs/x64/symbols.rds
