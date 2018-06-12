@@ -1,7 +1,4 @@
-#### CREATE ADULT BENCHMARKING APP ####
-## R script that renders a Shiny app to do cost benchmarking for Adult Hospitals
-## Winter 2018
-## Civis Analytics
+#### CREATE KPI BENCHMARKING APP ####
 ## R version 3.5.0
 
 install.packages(c('devtools',
@@ -263,18 +260,39 @@ server <- function(input, output, session){
                                     "Supply Expense per Adjusted Patient Day","Purchased Services per Adjusted Patient Day"))
     names(income_dat)[1]<-"KPI"
 
-    income_table <- income_dat %>% 
-        group_by(KPI) %>%
-        summarise(
-          Me=paste(round(unique(me_2017),3),collapse=","),
-          Baseline=spk_chr(round(value_baseline,3),type="box"),
-          Trend=spk_chr(round(unique(value_me),3),type="line")
-        )%>%
-        format_table(align = "l") %>% 
-        htmltools::HTML() %>%
-        div() %>%
-        spk_add_deps() %>%
-        {column(width=10, .)}
+
+        income_table <- income_dat %>% 
+          group_by(KPI) %>%
+          summarise(
+            Me=paste(unique(me_2017),collapse=","),
+            q25=quantile(value_baseline,0.25,na.rm=TRUE),
+            q75=quantile(value_baseline,0.75,na.rm=TRUE),
+            Baseline=spk_chr(value_baseline,type="box"),
+            Trend=spk_chr(unique(value_me),type="line")
+          )%>%
+          mutate(
+            Me=ifelse(KPI %in% c("Inpatient Revenue per Inpatient Day","EBITDA per Adjusted Patient Day",
+                                 "Employment Expense per Adjusted Patient Day","Supply Expense per Adjusted Patient Day",
+                                 "Purchased Services per Adjusted Patient Day"),paste("$",Me,sep=""),
+                      ifelse(KPI %in% c("Average Length of Stay","TIE Ratio"),paste(Me),paste(Me,"%",sep=""))
+            ),
+            q25=paste("[",ifelse(KPI %in% c("Inpatient Revenue per Inpatient Day","EBITDA per Adjusted Patient Day",
+                                            "Employment Expense per Adjusted Patient Day","Supply Expense per Adjusted Patient Day",
+                                            "Purchased Services per Adjusted Patient Day"),paste("$",q25,sep=""),
+                                 ifelse(KPI %in% c("Average Length of Stay","TIE Ratio"),paste(q25),paste(q25,"%",sep=""))),
+                      ",",ifelse(KPI %in% c("Inpatient Revenue per Inpatient Day","EBITDA per Adjusted Patient Day",
+                                            "Employment Expense per Adjusted Patient Day","Supply Expense per Adjusted Patient Day",
+                                            "Purchased Services per Adjusted Patient Day"),paste("$",q75,sep=""),
+                                 ifelse(KPI %in% c("Average Length of Stay","TIE Ratio"),paste(q75),paste(q75,"%",sep=""))),
+                      "]")
+            
+          )%>%select(-q75)%>% `colnames<-`(c("KPI", "Me", "Percentile [25th,75th]","Baseline","Trend"))%>%
+          
+          format_table(align = "l")%>% 
+          htmltools::HTML() %>%
+          div() %>%
+          spk_add_deps() %>%
+          {column(width=10, .)}
     
       return(income_table)
     })
