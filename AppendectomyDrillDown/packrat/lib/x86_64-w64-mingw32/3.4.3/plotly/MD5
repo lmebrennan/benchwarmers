@@ -1,4 +1,4 @@
-674cd1207dfbffba9b79eb071393c104 *DESCRIPTION
+e3588bd6f31bcb7db2abe381f138678c *DESCRIPTION
 173ef3dda31707e5505ee40a9eec77ff *INDEX
 dcd388f52af8e3cb24839540e1b67823 *LICENSE
 8581e8ff93ce652a024007a02d5eb188 *Meta/Rd.rds
@@ -8,7 +8,7 @@ a3c711433a1949198e092bafb59b9d3c *Meta/demo.rds
 5ce19d9cfa26f76791dba74a846a65d8 *Meta/hsearch.rds
 0460cfe1b8c893ebf9fdf6c9f0a7edda *Meta/links.rds
 58c0477ab17e49c46c35386588cd5d16 *Meta/nsInfo.rds
-f3b105a4917cd29e0631eb258753c6db *Meta/package.rds
+93e9b4f39e319378a4128eb912d44e0d *Meta/package.rds
 a24419669b21d5de7a5e5f9de7b1ee8f *NAMESPACE
 2f61144c2013d4817942f3861571416d *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/plotly
@@ -68,9 +68,9 @@ f3ba3e205351f6742da4beb76ba1dd6a *examples/shiny/proxy_relayout/app.R
 61b72d299f37c7cbf9e2ca3aa2b6ed6e *examples/shiny/proxy_restyle_economics/app.R
 4e37920655c45ee12e3c958fbee8097e *help/AnIndex
 cbbc0ed41a01320725a3805b79475133 *help/aliases.rds
-66a1b157ea4168aeb49a01a3f828aacd *help/paths.rds
-55365bb6c32628c6b462530656917d66 *help/plotly.rdb
-3cb2634066efd303fe903b1850b1537a *help/plotly.rdx
+0f64d649918e2b94d793584b4cc84abd *help/paths.rds
+f315438b9dca276a23a55da2b00df968 *help/plotly.rdb
+88a1681aeed8d206dda8604614460000 *help/plotly.rdx
 e06f2340323703bcac3098fbf70922b2 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 ebf70b59f17ab360a1a9a2099ef4c806 *htmlwidgets/lib/colourpicker/LICENSE

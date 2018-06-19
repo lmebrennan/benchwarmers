@@ -1,4 +1,4 @@
-a97d1f6a128353f59a81ccfe0867b600 *DESCRIPTION
+c5dcf55fb187f2731e26164360d5307f *DESCRIPTION
 81f9be28642fd67ad8617b231fef8b66 *INDEX
 178bbca05ea6984418eb25eab868a9e6 *LICENSE
 ffd03ec9a5cfd8392c7237f676038a30 *Meta/Rd.rds
@@ -7,7 +7,7 @@ ffd03ec9a5cfd8392c7237f676038a30 *Meta/Rd.rds
 10daa7ddf9e36ca8011fbeb3171bf3a4 *Meta/hsearch.rds
 e118f9660a90911f051d2e45684599d5 *Meta/links.rds
 66eb87098709653907f480bac9de6dfc *Meta/nsInfo.rds
-520b21dc1e544e192e14b5c992f185ed *Meta/package.rds
+36efc218d8137b0471856801c6d620f0 *Meta/package.rds
 9325f0f4522b277c4a8c066d1d01bdf7 *NAMESPACE
 500c05defc346ebeabb7835821183e5a *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/shinyWidgets
@@ -54,9 +54,9 @@ c480bc949add9494e81c291c58452d05 *examples/shinyWidgets/global.R
 0d1b0e74121dcb0ab3cce58ab1ee4766 *examples/update_switchInput.R
 7adfcf806b248bd6701215416048e7e7 *help/AnIndex
 af9f65c7eecdcf06f1ab338a161c7253 *help/aliases.rds
-888a4ef19be4ccdbc13c32056c74e7b8 *help/paths.rds
-980cc0a4f76c2ddb17c36a9e14fc6bba *help/shinyWidgets.rdb
-02f6b5b3c986cb9f2363632f6dd4528b *help/shinyWidgets.rdx
+06e4a461824eb837690213268f3a5c29 *help/paths.rds
+754d76c132e7f56397607649849b9c06 *help/shinyWidgets.rdb
+d44a74b4c655f9ae22b32e33b02b4d05 *help/shinyWidgets.rdx
 42dd5a1eb2b93ec312758ef01241ccf9 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 8a87bf6ea0f2388c8a8de3aff237e54e *images/checkboxGroupButtons.png

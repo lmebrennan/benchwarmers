@@ -1,4 +1,4 @@
-785963bd04ba27cb78dd148d0cb8e51b *DESCRIPTION
+fbbfe53d3e80f2cf528ce8a6b5647c97 *DESCRIPTION
 7680cf4988f8c52c10c17b0fbf2ce11a *INDEX
 1734bf7b2a958fa874a85d6417f4a0e0 *LICENSE
 9ac35a55aaedd72eb80ff087a6eae102 *Meta/Rd.rds
@@ -8,7 +8,7 @@ e43be12b97ff5676fd38fcfe509386b8 *Meta/demo.rds
 066869ead28625f2299b2741a09edeee *Meta/hsearch.rds
 67aa32cb8dbf87292a9ada856945445c *Meta/links.rds
 302a662a1b157b5d600889442608e8f2 *Meta/nsInfo.rds
-bcc635cdd03adb9b16e78a46bc74c1de *Meta/package.rds
+6c1762bdb9e38cc5daa85cc3629945fc *Meta/package.rds
 2537dd6e7ff645548a60625bc6dea972 *Meta/vignette.rds
 40796b90ad3298b9c8e59da4734950f0 *NAMESPACE
 1799a2a905294ac067b77af9fc70a94d *NEWS.md
@@ -30,12 +30,12 @@ dab75d51631c1ccabb3ce15e376419ba *doc/tidy-data.html
 744fd10648d04ae611d27164e47ef997 *help/AnIndex
 b0f005fd1f8f57e3aa2832a3e6d75ffd *help/aliases.rds
 58683d719cadab671f0336bab86bbf27 *help/figures/logo.png
-7011bad0687bc1664829376762145316 *help/paths.rds
-ffad7d7040eec42570d3204006ad2fe3 *help/tidyr.rdb
-82387cea4929002c709ab922872fa0a0 *help/tidyr.rdx
+5fd17ca45ffc4fdbce353b2748eb7104 *help/paths.rds
+d683ec716b6ba472d33134a1178bbcf2 *help/tidyr.rdb
+870c16b8a8b4e3ab42a3b6120ea279a4 *help/tidyr.rdx
 f19ea52263c8d8e64f7e8a9c51016a04 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 fc4f5574d35a84332c19cd004293234f *libs/i386/symbols.rds
-40df2e5957f58ee1fb977fa58aea6af5 *libs/i386/tidyr.dll
+5b1fd9e113dd017694eb4fe491ee62b5 *libs/i386/tidyr.dll
 5e6f5569fcd1e426da767bc67d99cc0e *libs/x64/symbols.rds
-81e9bdfbbc5f5c1383b46d2b8eacf6c6 *libs/x64/tidyr.dll
+fef0a49954ca6bc893745423f36d09c2 *libs/x64/tidyr.dll

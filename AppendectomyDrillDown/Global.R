@@ -9,8 +9,9 @@
 ### * To make regions all the same length, CTRL+SHIFT+R then before the region name, paste the following
 ###   '# ----------------------------------------------------'
 
-
-# ---------------------------------------------------- 1. SET UP R PACKAGES --------------------------------------------------------
+###################################################################################################################################-
+##### 1. SET UP R WORKSPACE --------------------------------------------------------------------------------------------------------
+###################################################################################################################################-
 
 #all r packages needed
 packages<-c('rlang',
@@ -41,182 +42,218 @@ devtools::install_github("civisanalytics/civis-r")
 #load each package into r library
 inst = lapply(packages,require,character.only=TRUE)
 
-
-
-# ---------------------------------------------------- 2. SET UP WORKSPACE -----------------------------------------------------
+# preferences in r environment
+options(warn = -1) # suppress warnings in console
+Sys.setenv(CIVIS_API_KEY='6156c21bdeeb714a16511f176b896d568787abf51deb1bd1165d1ee3685f1c2d')
 
 # load all other files in the project
 source('header.R')
 source('sidebar.R')
 source('body.R')
 
-
-# ---------------------------------------------------- 3. GET DATA -------------------------------------------------------------
-
-
-# ---------------------------------------------------- _ a. set up civis api key  ----------------------------------------------
-
-Sys.setenv(CIVIS_API_KEY='6156c21bdeeb714a16511f176b896d568787abf51deb1bd1165d1ee3685f1c2d')
+###############################################################################################################################-
+##### 2. GET DATA --------------------------------------------------------------------------------------------------------------
+###############################################################################################################################-
 
 
-# ---------------------------------------------------- _ b. load data ----------------------------------------------------------
+###############################################################################################################################-
+##### _ a. load data -----------------------------------------------------------------------------------------------------------
+#####-
+#####-NOTE: THE FOLLOWING COMMENTED OUT CODE WAS USED TO CREATE THE ENCOUNTER_CHILDREN TABLE IN CIVIS
+#####------- KEEPING THIS CODE HERE FOR RECORD KEEPING, BUT NOT NECESSARY ANYMORE
+###############################################################################################################################-
 
-#####-NOTE: THE FOLLOWING CODE WAS USED TO CREATE THE FULL_CHILDREN TABLE IN CIVIS
-######-
+    # # load all customer data from S drive
+    # if(!exists("raw_customer1")){
+    #   raw_customer1<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer1.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer3")){
+    #   raw_customer3<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer3.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer4")){
+    #   raw_customer4<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer4.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer5")){
+    #   raw_customer5<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer5.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer6")){
+    #   raw_customer6<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer6.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer7")){
+    #   raw_customer7<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer7.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer9")){
+    #   raw_customer9<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer9.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer11")){
+    #   raw_customer11<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer11.csv",fileEncoding="UTF-8-BOM")
+    # }
+    # if(!exists("raw_customer12")){
+    #   raw_customer12<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer12.csv",fileEncoding="UTF-8-BOM")
+    # }
+    #
+    # # combine all customer data into an encounter df
+    # dfs_customers <- grep("raw_customer", ls()[sapply(mget(ls(), .GlobalEnv), is.data.frame)], value = TRUE)
+    # encounter_df <- do.call("bind_rows",mget(dfs_customers))
+    #
+    # # save raw encounter df to civis
+    # write_civis(encounter_df,"public.encounter_children",database="Strata Decision Technologies")
 
-# load all customer data from S drive
-if(!exists("raw_customer1")){
-  raw_customer1<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer1.csv",fileEncoding="UTF-8-BOM")
+###############################################################################################################################-
+##### Load data from Civis, then merge into full_df
+###############################################################################################################################-
+
+# get ENTITY data from civis
+if(!(exists("hospital_info"))){
+  hospital_info <- read_civis("public.hospital_info",database="Strata Decision Technologies")
 }
-if(!exists("raw_customer3")){
-  raw_customer3<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer3.csv",fileEncoding="UTF-8-BOM")
-}
-if(!exists("raw_customer4")){
-  raw_customer4<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer4.csv",fileEncoding="UTF-8-BOM")
-}
-if(!exists("raw_customer5")){
-  raw_customer5<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer5.csv",fileEncoding="UTF-8-BOM")
-}
-if(!exists("raw_customer6")){
-  raw_customer6<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer6.csv",fileEncoding="UTF-8-BOM")
-}
-if(!exists("raw_customer7")){
-  raw_customer7<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer7.csv",fileEncoding="UTF-8-BOM")
-}
-if(!exists("raw_customer9")){
-  raw_customer9<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer9.csv",fileEncoding="UTF-8-BOM")
-}
-if(!exists("raw_customer11")){
-  raw_customer11<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer11.csv",fileEncoding="UTF-8-BOM")
-}
-if(!exists("raw_customer12")){
-  raw_customer12<-read.csv("S:/Product Management/1 - Roadmap Projects/1 - Cross-Solution Projects/Data Services/Civis Project/Customer12.csv",fileEncoding="UTF-8-BOM")
+# get ENCOUNTER data from civis
+if(!(exists("raw_encounter_df"))){
+  raw_encounter_df <- read_civis("public.encounter_children",database="Strata Decision Technologies")
 }
 
-# get hospital data from civis
-if(!(exists("raw_hospital_df"))){
-  raw_hospital_df <- read_civis("public.hospital_info",database="Strata Decision Technologies")
-}
+# safe gaurd the data
+entity_df<-hospital_info
+encounter_df<-raw_encounter_df
 
-
-# ---------------------------------------------------- _ c. create full df ------------------------------------------------------
-
-# maintain raw hospital df, and raw customer dfs untouched - we are going to manipulate the data a lot
-hospital_df<-raw_hospital_df
-
-# combine all customer data into an encounter df
-dfs_customers <- grep("raw_customer", ls()[sapply(mget(ls(), .GlobalEnv), is.data.frame)], value = TRUE)
-encounter_df <- do.call("bind_rows",mget(dfs_customers))
+# we can drop this column, because we are using entityid_fixed instead
+entity_df$entityid<- NULL
 
 # create a df to hold all information, merging hospital and customer info
 full_df <- merge(x=encounter_df,
-                   y=raw_hospital_df,
-                   by.x = c("CustomerID","EntityID"),
+                   y=entity_df,
+                   by.x = c("customerid","entityid"),
                    by.y = c("customerid","entityid_fixed"))
 
-
-# ---------------------------------------------------- _ d. edit full df -------------------------------------------------------
+###############################################################################################################################-
+###### _ b. edit full_df -------------------------------------------------------------------------------------------------------
+###############################################################################################################################-
 
 # remove all data that does not have APRDRGCODE = 225 (Appendectomy)
-full_df <- full_df[full_df$APRDRGCODE=="225",]
+full_df <- full_df[full_df$aprdrgcode=="225",]
 
 # function to use to manipulate UBRevCode column
 getUBRevCode_Short <- function(ubrevcodefull){
+  ubrevcodefull<-as.character(ubrevcodefull)
   unlist(strsplit(ubrevcodefull," - "))[1]
 }
 
 # add a column for just ub rev code (and not description)
-full_df$UBRevCode_Short <-  sapply(full_df$UBRevCode, getUBRevCode_Short)
+full_df$ubrevcode_short <- sapply(full_df$ubrevcode, getUBRevCode_Short)
 
 # list of groupings for grouping costs
-calc_groups <- c("region", "beds", "specialty", #benchmark parameters
-                 "CustomerID", "entityid", "customer_entity", "isstratastandardcost",  # hospital parameters
-                 "EncounterID", "ROM", "SOI", "agebucket", "PatientTypeRollup", "DischargeStatusGroup", "CostDriver", "HospitalAcqCondition",  # benchmark breakdowns
-                 "LengthOfStay", "imaging_ubrev_group","los_ubrev_group", "UBRevCode")
+calc_groups <- c("region", "beds", "specialty", "customerid", "entityid", "customer_entity", "isstratastandardcost",  # Entity Filters
+                 "encounterid", "rom", "soi", "agebucket", "patienttyperollup", "dischargestatusgroup", "hospitalacqcondition", "costdriver", # Encounter Filters
+                 "lengthofstay", "imaging_ubrev_group","los_ubrev_group", "ubrevcode") # Benchmarking Columns
 
 # function to caclulate Sums info
 groupingCalcs <- function(df, grouping_vars){
   out <- df %>%
-    group_by(.dots = grouping_vars) %>%
-    summarise(FixedDirectCost = sum(FixedDirectCost, na.rm = TRUE),
-              FixedIndirectCost = sum(FixedIndirectCost, na.rm = TRUE),
-              VariableDirectCost = sum(VariableDirectCost, na.rm = TRUE),
-              VariableIndirectCost = sum(VariableIndirectCost, na.rm = TRUE)
-    ) %>% ungroup() %>%
-    gather("CostKey", "Costs", (ncol(.)-3):ncol(.)) %>%
+    # group_by(.dots = grouping_vars) %>%
+    # summarise(fixeddirectcost = sum(fixeddirectcost, na.rm = TRUE),
+    #           fixedindirectcost = sum(fixedindirectcost, na.rm = TRUE),
+    #           variabledirectcost = sum(variabledirectcost, na.rm = TRUE),
+    #           variableindirectcost = sum(variableindirectcost, na.rm = TRUE)
+    # ) %>% ungroup() %>%
+    gather("costkey", "costs", (ncol(.)-3):ncol(.)) %>%
     mutate(
-      FixedVariable = case_when(
-        CostKey == "VariableDirectCost" | CostKey == "VariableIndirectCost" ~ "Variable",
-        CostKey == "FixedDirectCost" | CostKey == "FixedIndirectCost" ~ "Fixed"),
-      DirectIndirect = case_when(
-        CostKey == "VariableDirectCost" | CostKey == "FixedDirectCost" ~ "Direct",
-        CostKey == "VariableIndirectCost" | CostKey == "FixedIndirectCost" ~ "Indirect")
+      fixedvariable = case_when(
+        costkey == "variabledirectcost" | costkey == "variableindirectcost" ~ "variable",
+        costkey == "fixeddirectcost" | costkey == "fixedindirectcost" ~ "fixed"),
+      directindirect = case_when(
+        costkey == "variabledirectcost" | costkey == "fixeddirectcost" ~ "direct",
+        costkey == "variableindirectcost" | costkey == "fixedindirectcost" ~ "indirect")
     )
   return(out)
 }
 
-# ---------------------------------------------------- _ _ Edit Full_df columns ------------------------------------------------
+###############################################################################################################################-
+##### _ c. Add/Edit columns ----------------------------------------------------------------------------------------------------
+###############################################################################################################################-
+
 full_df <- full_df %>%
   mutate(
-    # _ _ * UPDATE: Patient Type Rollup ---------------------------------------
-    PatientTypeRollup = case_when(
-      grepl("in", tolower(PatientTypeRollup)) ~ "Inpatient",
-      grepl("out", tolower(PatientTypeRollup)) ~ "Outpatient",
-      PatientTypeRollup == "Emergency" ~ "Emergency",
+    ##### __ * UPDATE: Patient Type Rollup ---------------------------------------
+    patienttyperollup = case_when(
+      grepl("in", tolower(patienttyperollup)) ~ "Inpatient",
+      grepl("out", tolower(patienttyperollup)) ~ "Outpatient",
+      patienttyperollup == "Emergency" ~ "Emergency",
       TRUE ~ as.character(NA)
     ),
 
-    # _ _ * UPDATE: Discharge Status Group ------------------------------------
-    DischargeStatusGroup = ifelse(is.na(DischargeStatusGroup), "Not Specified", DischargeStatusGroup),
+    ##### __ * UPDATE: Discharge Status Group ------------------------------------
+    dischargestatusgroup = ifelse(is.na(dischargestatusgroup), "Not Specified", dischargestatusgroup),
 
-    # _ _ * ADD: Age Bucket ---------------------------------------------------
+    ##### __ * ADD: age Bucket ---------------------------------------------------
     agebucket = case_when(
-      Age < 1 ~ "Infant",
-      Age >= 1 & Age < 2 ~ "Toddler",
-      Age >= 2 & Age <= 5 ~ "Early Childhood",
-      Age >= 6 & Age <= 11 ~ "Middle Childhood",
-      Age >= 12 & Age <= 17 ~ "Adolescence",
-      Age >= 18 ~ "Adult",
+      age < 1 ~ "Infant",
+      age >= 1 & age < 2 ~ "Toddler",
+      age >= 2 & age <= 5 ~ "Early Childhood",
+      age >= 6 & age <= 11 ~ "Middle Childhood",
+      age >= 12 & age <= 17 ~ "Adolescence",
+      age >= 18 ~ "Adult",
       TRUE ~ as.character(NA)
     ),
 
-    # _ _ * ADD: Imaging UBRev Group ------------------------------------------
+    ##### __ * ADD: Imaging UBRev Group ------------------------------------------
     imaging_ubrev_group = case_when(
-      UBRevCode_Short=="0341" | UBRevCode_Short=="0343" | UBRevCode_Short=="0340" | UBRevCode_Short=="0342" | UBRevCode_Short=="0344" ~ "Nuclear Med",
-      UBRevCode_Short=="0610" | UBRevCode_Short=="0615" | UBRevCode_Short=="0616" | UBRevCode_Short=="0618" | UBRevCode_Short=="0614" | UBRevCode_Short=="0612" | UBRevCode_Short=="0619" ~ "MRT",
-      UBRevCode_Short=="0352" | UBRevCode_Short=="0359" | UBRevCode_Short=="0350" | UBRevCode_Short=="0351" ~ "CT",
-      UBRevCode_Short=="0401" | UBRevCode_Short=="0400" | UBRevCode_Short=="0409" | UBRevCode_Short=="0404" | UBRevCode_Short=="0403" | UBRevCode_Short=="0402" ~ "Other Imaging",
-      UBRevCode_Short=="0321" | UBRevCode_Short=="0323" | UBRevCode_Short=="0322" | UBRevCode_Short=="0324" | UBRevCode_Short=="0320" | UBRevCode_Short=="0329" ~ "Radiology",
-      UBRevCode_Short=="0860" | UBRevCode_Short=="0861" ~ "MEG",
-      UBRevCode_Short=="0740" ~ "EEG",
+      ubrevcode_short=="0341" | ubrevcode_short=="0343" | ubrevcode_short=="0340" | ubrevcode_short=="0342" | ubrevcode_short=="0344" ~ "Nuclear Med",
+      ubrevcode_short=="0610" | ubrevcode_short=="0615" | ubrevcode_short=="0616" | ubrevcode_short=="0618" | ubrevcode_short=="0614" | ubrevcode_short=="0612" | ubrevcode_short=="0619" ~ "MRT",
+      ubrevcode_short=="0352" | ubrevcode_short=="0359" | ubrevcode_short=="0350" | ubrevcode_short=="0351" ~ "CT",
+      ubrevcode_short=="0401" | ubrevcode_short=="0400" | ubrevcode_short=="0409" | ubrevcode_short=="0404" | ubrevcode_short=="0403" | ubrevcode_short=="0402" ~ "Other Imaging",
+      ubrevcode_short=="0321" | ubrevcode_short=="0323" | ubrevcode_short=="0322" | ubrevcode_short=="0324" | ubrevcode_short=="0320" | ubrevcode_short=="0329" ~ "Radiology",
+      ubrevcode_short=="0860" | ubrevcode_short=="0861" ~ "MEG",
+      ubrevcode_short=="0740" ~ "EEG",
       TRUE ~ ""
     ),
 
-    # _ _ * ADD: LOS UBRev Group ----------------------------------------------
+    ##### __ * ADD: LOS UBRev Group ----------------------------------------------
     los_ubrev_group = case_when(
-      UBRevCode_Short=="0101" ~ "Room and Board",
-      UBRevCode_Short>="0110" & UBRevCode_Short<="0114" ~ "Room and Board",
-      UBRevCode_Short>="0116" & UBRevCode_Short<="0124" ~ "Room and Board",
-      UBRevCode_Short>="0126" & UBRevCode_Short<="0134" ~ "Room and Board",
-      UBRevCode_Short>="0136" & UBRevCode_Short<="0144" ~ "Room and Board",
-      UBRevCode_Short>="0146" & UBRevCode_Short<="0154" ~ "Room and Board",
-      UBRevCode_Short>="0156" & UBRevCode_Short<="0159" ~ "Room and Board",
-      UBRevCode_Short=="0164" ~ "Room and Board",
-      UBRevCode_Short>="0170" & UBRevCode_Short<="0174" ~ "Nursery",
-      UBRevCode_Short=="0719" ~ "Nursery",
-      UBRevCode_Short>="0200" & UBRevCode_Short<="0204" ~ "ICU",
-      UBRevCode_Short>="0206" & UBRevCode_Short<="0209" ~ "ICU",
-      UBRevCode_Short>="0210" & UBRevCode_Short<="0212" ~ "CCU",
-      UBRevCode_Short=="0214" ~ "CCU",
-      UBRevCode_Short=="0219" ~ "CCU",
+      ubrevcode_short=="0101" ~ "Room and Board",
+      ubrevcode_short>="0110" & ubrevcode_short<="0114" ~ "Room and Board",
+      ubrevcode_short>="0116" & ubrevcode_short<="0124" ~ "Room and Board",
+      ubrevcode_short>="0126" & ubrevcode_short<="0134" ~ "Room and Board",
+      ubrevcode_short>="0136" & ubrevcode_short<="0144" ~ "Room and Board",
+      ubrevcode_short>="0146" & ubrevcode_short<="0154" ~ "Room and Board",
+      ubrevcode_short>="0156" & ubrevcode_short<="0159" ~ "Room and Board",
+      ubrevcode_short=="0164" ~ "Room and Board",
+      ubrevcode_short>="0170" & ubrevcode_short<="0174" ~ "Nursery",
+      ubrevcode_short=="0719" ~ "Nursery",
+      ubrevcode_short>="0200" & ubrevcode_short<="0204" ~ "ICU",
+      ubrevcode_short>="0206" & ubrevcode_short<="0209" ~ "ICU",
+      ubrevcode_short>="0210" & ubrevcode_short<="0212" ~ "CCU",
+      ubrevcode_short=="0214" ~ "CCU",
+      ubrevcode_short=="0219" ~ "CCU",
       TRUE ~ ""
     )
   ) %>%
   groupingCalcs(grouping_vars=calc_groups)
 
-# ---------------------------------------------------- 3. LOAD FUNCTIONS ----------------------------------------------------------
+##### __ * ADD: Placeholders for Filters ------------------------------------
+# these placeholders make future coding easier because they will be associated with the data frames
+# these filters will be dynamically updated to TRUE/FALSE values depending on user inputs
+full_df$filter_myentity = TRUE
+full_df$filter_region = TRUE
+full_df$filter_size = TRUE
+full_df$filter_specialty = TRUE
+full_df$filter_costmodel = TRUE
+full_df$filtered_entity = TRUE
 
-# ---------------------------------------------------- _ General Functions --------------------------------------------------------
+full_df$filter_costdriver = TRUE
+
+full_df$filter_rom = TRUE
+full_df$filter_soi = TRUE
+full_df$filter_age = TRUE
+full_df$filter_patienttype = TRUE
+full_df$filter_dischargestatus = TRUE
+full_df$filter_costtype = TRUE
+full_df$filter_qualityincidents = TRUE
+
+###################################################################################################################################-
+##### 3. FUNCTIONS -----------------------------------------------------------------------------------------------------------------
+###################################################################################################################################-
+
+##### _ a. General Functions ------------------------------------------------
 
 # function to calculate summary info
 calcSummary <- function(df, summary_var, outlier_threshold = 2, grouping_vars = NULL){
@@ -259,7 +296,54 @@ calcSummary <- function(df, summary_var, outlier_threshold = 2, grouping_vars = 
 }
 
 
-# ---------------------------------------------------- _ Graphing Functions ----------------------------------------------------
+##### _ b. Graphing Functions ------------------------------------------------
+
+# theming plots
+theme_plot<-function(base_size = 10,legend.pos = 'bottom') {
+  t = (theme_foundation(base_size = base_size)
+       + theme(plot.title = element_text(face = "bold", size = rel(1.2), hjust = 0.5),
+               text = element_text(),
+               panel.background = element_rect(colour = NA),
+               plot.background = element_rect(colour = NA),
+               panel.border = element_rect(colour = NA),
+               axis.title = element_text(face = "bold",size = rel(1)),
+               axis.title.x = element_text(vjust = -0.2),
+               axis.title.y = element_text(angle = 90,vjust = 2),
+               axis.text = element_text(),
+               axis.line = element_line(colour = "black"),
+               axis.ticks = element_line(),
+               panel.grid.major = element_line(colour = "#f0f0f0"),
+               panel.grid.minor = element_black(),
+               legend.key = element_rect(colour=NA),
+               legend.position = legend.pos,
+               legend.title = element_text(face="italic"),
+               plot.margin = unit(c(10,5,5,5),"mm"),
+               strip.background = element_rect(colour = "#f0f0f0"),
+               strip.text = element_text(face = "italic")
+               )
+       )
+  return(t)
+}
+
+scale_fill_plot <- function(...){
+  library(scales)
+  discrete_scale("fill","Publication",manual_pal(values = rep(c("#386cb0","#fdb462","#7fc97f","#ef3b2c","#662506","#a6cee3","#fb9a99","#984ea3","#ffff33", "#FFA500", "#3cb371", "#1E90FF"), 2)), ...)
+}
+
+scale_colour_plot <- function(...){
+  library(scales)
+  discrete_scale("colour","Publication",manual_pal(values = rep(c("#386cb0","#fdb462","#7fc97f","#ef3b2c","#662506","#a6cee3","#fb9a99","#984ea3","#ffff33", "#FFA500", "#3cb371", "#1E90FF"), 2)), ...)
+}
+
+plot_custom <- function(p, saveTo = NULL, palette = 'tableau20', base_size=10, legend.pos = "right", color = TRUE, fill = FALSE) {
+  out = p + theme_plot(base_size, legend.pos)
+  if(color) out = out + scale_colour_tableau(palette = palette)
+  if(fill) out = out + scale_fill_tableau(palette = palette)
+  if(is.null(saveTo)) return(out)
+  ggsave(saveTo, out)
+  return(out)
+}
+
 
 ## Function to add facet to a plot ##
 addFacet <- function(plot, facet_formula) {
@@ -283,13 +367,6 @@ setY_AxisScale <- function(plot, logscale = FALSE){
   return(plot)
 }
 
-# ---------------------------------------------------- _ Imaging Cost Driver Functions -----------------------------------------
-
-
-# ---------------------------------------------------- _ LOS Cost Driver Functions ---------------------------------------------
-
-
-# ---------------------------------------------------- _ Pharmacy Cost Driver Functions ----------------------------------------
 
 
 

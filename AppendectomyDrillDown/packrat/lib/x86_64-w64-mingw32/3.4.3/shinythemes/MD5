@@ -1,4 +1,4 @@
-37bad9a28a4118a1b39e93f7dacbcc23 *DESCRIPTION
+21ca66c1a3aa72b1bc2baf166c684ddc *DESCRIPTION
 0135a44dd394ac8aace433a1fa605682 *INDEX
 a4de7751b0cdec8d36483852c76cddd3 *LICENSE
 7925490c06d49940558d0ba2a3594e35 *Meta/Rd.rds
@@ -6,7 +6,7 @@ a4de7751b0cdec8d36483852c76cddd3 *LICENSE
 8dfd38e55d2ed423a85541da9e91adb0 *Meta/hsearch.rds
 bd9673621afaf33cdc951ba6536e5c92 *Meta/links.rds
 2eac7e161289b266e0fd1797daaf9f36 *Meta/nsInfo.rds
-64c732824500cea23f19c479a461a583 *Meta/package.rds
+cdf87de47548608128bc1e0aec057039 *Meta/package.rds
 835a8e35df837b9d81d71f0875e75320 *NAMESPACE
 343bad0f6c1273422f03f6bc6e491357 *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/shinythemes
@@ -14,9 +14,9 @@ ebf0fc819595d631b8bf280c4b049940 *R/shinythemes
 077765e166587e2e59605a383269be78 *R/shinythemes.rdx
 8ba06962939a926d3c9cc6f3cf4eb554 *help/AnIndex
 850ea6e45301a90703aae825fd6913a4 *help/aliases.rds
-88a8a5d7d627257b40c42c9d6907c050 *help/paths.rds
-b37e0cf14d35457af43ced4ae73276f1 *help/shinythemes.rdb
-515e9d1e97a6bfff05ae9599fe566555 *help/shinythemes.rdx
+8b4c04a08a75e087b25dd585627ed89d *help/paths.rds
+7f202d90efe6a684c4dc86d9d2e48ae0 *help/shinythemes.rdb
+ae95d430f11b91051bb510be9e5fa8af *help/shinythemes.rdx
 0df311911eea5d0576f52f256338fcfc *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 6f0be0bcebc191c8eb52174622fe3765 *shinythemes/css/cerulean.min.css

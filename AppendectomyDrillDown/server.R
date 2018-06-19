@@ -3,44 +3,53 @@
 ## Strata Decision Technology
 ## May 2018
 
+### NOTES:
+###
+###
 
-# SERVER -----------------------------------------------------------------------
+###################################################################################################################################-
+##### SERVER -----------------------------------------------------------------------------------------------------------------------
+###################################################################################################################################-
+
 shinyServer(function(input, output, session) {
 
-  #  Sidebar logic -------------------------------------------------------------
+  #################################################################################################################################-
+  ##### SIDEBAR LOGIC --------------------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
 
-  # _ I. Populate Dropdowns ----------------------------------------------------
+  ##### _ 1. Populate Dropdowns ----------------------------------------------------------------------------------------------------
 
   # updates each dropdown with values from the database, alphabetized
   updateSelectizeInput(session,"customer_entity",
-                       choices=hospital_df[order(hospital_df$customerid,hospital_df$entityid),]$customer_entity,
+                       choices=hospital_info[order(hospital_info$customerid,hospital_info$entityid),]$customer_entity,
                        server=TRUE)
 
-  output$benchmark_selector = renderUI({
-    selectizeInput(inputId="customer_entity_benchmark",
-                   label="Select Entity(ies):",
-                   choices=c(ALL="",hospital_df[hospital_df$customer_entity!=input$customer_entity]$customer_entity),
-                   multiple=TRUE)
-  })
-
-  checkboxGroupInput(session,"region",
-                       choices=as.factor(hospital_df[order(hospital_df$region),]$region))
+  updateSelectizeInput(session,"region",
+                     choices=as.factor(hospital_info[order(hospital_info$region),]$region),
+                     server=TRUE)
   updateSelectizeInput(session,"beds",
-                       choices=as.factor(hospital_df[order(hospital_df$beds_fixed),]$beds_fixed),
+                       choices=as.factor(hospital_info[order(hospital_info$beds_fixed),]$beds_fixed),
                        server=TRUE)
   updateSelectizeInput(session,"specialty",
-                       choices=as.factor(hospital_df[order(hospital_df$specialty),]$specialty),
+                       choices=as.factor(hospital_info[order(hospital_info$specialty),]$specialty),
                        server=TRUE)
   updateSelectizeInput(session,"costmodel",
                        choices=c("Hospitals with Strata Standardized Cost Models" = "standard",
                                  "Hospitals without Strata Standardized Cost Models" = "non"),
                        server=TRUE)
 
-  # Body logic -------------------------------------------------------------------
+  output$benchmark_selector = renderUI({
+    selectizeInput(inputId="customer_entity_benchmark",
+                   label="Select Entity(ies):",
+                   choices=c(ALL="",hospital_info[hospital_info$customer_entity!=input$customer_entity]$customer_entity),
+                   multiple=TRUE)
+  })
 
-  # _ I. Populate Information ----------------------------------------------------
+  #################################################################################################################################-
+  ##### BODY LOGIC -----------------------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
 
-  # _ _ 1. My Entity Info --------------------------------------------------------
+  ##### _ 1. My Entity Info --------------------------------------------------------------------------------------------------------
 
   # populate selected entity
   output$selected_entity = renderText({
@@ -49,42 +58,43 @@ shinyServer(function(input, output, session) {
 
   # populate selected entity's region
   output$selected_region = renderText({
-    paste("<b>Region:</b>", hospital_df$region[hospital_df$customer_entity == input$customer_entity])
+    paste("<b>Region:</b>", hospital_info$region[hospital_info$customer_entity == input$customer_entity])
   })
 
   # populate selected entity's bed size
   output$selected_size = renderText({
-    paste("<b>Bed Size:</b>", hospital_df$beds_fixed[hospital_df$customer_entity == input$customer_entity])
+    paste("<b>Bed Size:</b>", hospital_info$beds_fixed[hospital_info$customer_entity == input$customer_entity])
   })
 
   # populate selected entity's specialty
   output$selected_specialty = renderText({
-    paste("<b>Specialty:</b>", hospital_df$specialty[hospital_df$customer_entity == input$customer_entity])
+    paste("<b>Specialty:</b>", hospital_info$specialty[hospital_info$customer_entity == input$customer_entity])
   })
 
   # populate selected entity's cost model classification
   output$selected_costmodel = renderText({
     paste("<b>Cost Model:</b>",
-      ifelse(is.null(input$customer_entity),
-             "",
-             if(hospital_df$isstratastandardcost[hospital_df$customer_entity == input$customer_entity] == "t") {
-               "Strata Standard Cost Model"
-             }
-             else if(hospital_df$isstratastandardcost[hospital_df$customer_entity == input$customer_entity] == "f"){
-               "Not Strata Standard Cost Model"
-             })
-    )
+          if_else(length(input$customer_entity)==0,
+            "",
+            if(hospital_info$isstratastandardcost[hospital_info$customer_entity == input$customer_entity] == "t") {
+              "Strata Standard Cost Model"
+            }
+            else if(hospital_info$isstratastandardcost[hospital_info$customer_entity == input$customer_entity] == "f"){
+              "Not Strata Standard Cost Model"
+            },
+            ""
+          ))
   })
 
-  # _ _ 2. Benchmark Population Info -------------------------------------------
+  ##### _ 2. Benchmark Population Info -------------------------------------------------------------------------------------------
 
   # populate comparison population entities
   output$comparison_entities = renderText({
       if(length(input$costmodel) == 1 & "standard" %in% input$costmodel){
-        df <- hospital_df %>%
+        df <- hospital_info %>%
           filter(isstratastandardcost == "t")
 
-        paste("<b>Benchmark Institution(s):</b><br/>",
+        paste("<b>Benchmark Institution(s):</b>",
               ifelse(is.null(input$customer_entity_benchmark) & is.null(input$region) & is.null(input$beds) & is.null(input$specialty),
                      # if no inputs, then take all the hospitals that aren't the one selected
                      paste(as.vector(unique(df$customer_entity[df$customer_entity != input$customer_entity])), collapse = ", "),
@@ -100,10 +110,10 @@ shinyServer(function(input, output, session) {
                      )))
       }
       else if(length(input$costmodel) == 1 & "non" %in% input$costmodel){
-        df <- hospital_df %>%
+        df <- hospital_info %>%
           filter(isstratastandardcost == "f")
 
-        paste("<b>Benchmark Institution(s):</b><br/>",
+        paste("<b>Benchmark Institution(s):</b>",
               ifelse(is.null(input$customer_entity_benchmark) & is.null(input$region) & is.null(input$beds) & is.null(input$specialty),
                      # if no inputs, then take all the hospitals that aren't the one selected
                      paste(as.vector(unique(df$customer_entity[df$customer_entity != input$customer_entity])), collapse = "; "),
@@ -119,9 +129,9 @@ shinyServer(function(input, output, session) {
                      )))
       }
       else {
-        df <- hospital_df
+        df <- hospital_info
 
-        paste("<b>Benchmark Institution(s):</b><br/>",
+        paste("<b>Benchmark Institution(s):</b>",
               ifelse(is.null(input$customer_entity_benchmark) & is.null(input$region) & is.null(input$beds) & is.null(input$specialty),
                      # if no inputs, then take all the hospitals that aren't the one selected
                      paste(as.vector(unique(df$customer_entity[df$customer_entity != input$customer_entity])), collapse = "; "),
@@ -142,7 +152,7 @@ shinyServer(function(input, output, session) {
   output$comparison_regions = renderText({
     paste("<b>Region(s):</b>",
           ifelse(is.null(input$region),
-                 paste(as.vector(unique(hospital_df$region)),collapse=", "),
+                 paste(as.vector(unique(hospital_info$region)),collapse=", "),
                  paste(as.vector(unique(input$region)),collapse=", "))
           )
   })
@@ -151,7 +161,7 @@ shinyServer(function(input, output, session) {
   output$comparison_sizes = renderText({
     paste("<b>Bed Size(s):</b>",
           ifelse(is.null(input$beds),
-                 paste(as.vector(unique(hospital_df$beds_fixed)),collapse=", "),
+                 paste(as.vector(unique(hospital_info$beds_fixed)),collapse=", "),
                  paste(as.vector(unique(input$beds)),collapse=", "))
     )
   })
@@ -160,7 +170,7 @@ shinyServer(function(input, output, session) {
   output$comparison_specialties = renderText({
     paste("<b>Specialty(ies):</b>",
           ifelse(is.null(input$specialty),
-                 paste(as.vector(unique(hospital_df$specialty)),collapse=", "),
+                 paste(as.vector(unique(hospital_info$specialty)),collapse=", "),
                  paste(as.vector(unique(input$specialty)),collapse=", "))
     )
   })
@@ -182,10 +192,9 @@ shinyServer(function(input, output, session) {
     )
   })
 
-
-  # _ II. Reactive  Data Refresh -----------------------------------------------
-
-  # _ _ 1. Entity Data Frame ---------------------------------------------------
+  #################################################################################################################################-
+  ##### ENTITY DF LOGIC ------------------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
 
   # When a user clicks 'refresh' on the BYOBenchmark side bar, the dataframe that is used throughout the application
   #  needs to be refreshed.
@@ -193,35 +202,25 @@ shinyServer(function(input, output, session) {
     # start with the raw customer data
     entity_df <- full_df
 
-
-    # _ _ _ a. filter_costdriver ----------------------------------------------
-    ### A1. filter selected cost driver
-    entity_df$filter_costdriver<-ifelse(entity_df$costdriver==input$costdriver, TRUE, FALSE)
-
-    # _ _ _ b. filter_myEntity ------------------------------------------------
-    ### B1. filter selected hospital
+    ### B1. filter out selected entity
     entity_df$filter_myEntity <- ifelse(entity_df$customer_entity==input$customer_entity,TRUE,FALSE)
 
-    # _ _ _ c. Selected Population Filters -----------------------------------
-    ### C1. filter_region
+    ### update entity filters
     if(!is.null(input$region)){
       entity_df$filter_region<-ifelse(entity_df$region %in% input$region,TRUE,FALSE)
     } else {
       entity_df$filter_region<-TRUE
     }
-    ### C2. filter_size
     if(!is.null(input$size)){
       entity_df$filter_size<-ifelse(entity_df$beds_fixed %in% input$size,TRUE,FALSE)
     } else {
       entity_df$filter_size<-TRUE
     }
-    ### C3. filter_specialty
     if(!is.null(input$specialty)){
       entity_df$filter_specialty<-ifelse(entity_df$specialty %in% input$specialty,TRUE,FALSE)
     } else {
       entity_df$filter_specialty<-TRUE
     }
-    ### C4. filter_costmodel
     if(length(input$costmodel) == 1){
       if("standard" %in% input$costmodel){
         entity_df$filter_costmodel <- ifelse(entity_df$isstratastandardcost == "t", TRUE, FALSE)
@@ -232,141 +231,95 @@ shinyServer(function(input, output, session) {
     else {
       entity_df$filter_costmodel <- TRUE
     }
-    ### C5. hospital benchmark filter (filter_entities)
+
+    ### Master hospital benchmark filter (filtered_entity)
+    ### If Entity matches filters, filtered_entity=TRUE
+    ### If Entity does not match filters, filtered_entity=FALSE
+
     # if the only input is customers/entities, then only use that column to filter
-    if(all(is.null(input$region),is.null(input$size),is.null(input$specialty)) & !is.null(input$customer_entity_benchmark)){
-      entity_df$filter_entities<-ifelse(entity_df$filter_customer_entity, TRUE, FALSE)
+    if(all(is.null(input$region), is.null(input$size), is.null(input$specialty), is.null(input$costmodel))
+       & !is.null(input$customer_entity_benchmark)){
+      entity_df$filtered_entity<-ifelse(entity_df$filter_customer_entity, TRUE, FALSE)
     }
     # if there are input filters, but no customer entity filters, then only use input filters
-    else if(any(!is.null(input$region),!is.null(input$size),!is.null(input$specialty)) & !is.null(input$customer_entity_benchmark))
+    else if(any(!is.null(input$region), !is.null(input$size), !is.null(input$specialty), !is.null(input$costmodel))
+            & !is.null(input$customer_entity_benchmark))
     {
-      entity_df$filter_entities<-ifelse(entity_df$filter_region & entity_df$filter_size & entity_df$specialty, TRUE, FALSE)
+      entity_df$filtered_entity<-ifelse(entity_df$filter_region & entity_df$filter_size & entity_df$specialty, TRUE, FALSE)
     }
     # if there are input filters and customer entity filters, then
-    else if(any(!is.null(input$region),!is.null(input$size),!is.null(input$specialty)) & !is.null(input$customer_entity_benchmark)){
-      entity_df$filter_entities<-ifelse((entity_df$filter_region & entity_df$size & entity_df$specialty) | entity_df$filter_customer_entity, TRUE, FALSE)
+    else if(any(!is.null(input$region),!is.null(input$size),!is.null(input$specialty), !is.null(input$costmodel))
+            & !is.null(input$customer_entity_benchmark)){
+      entity_df$filtered_entity<-ifelse((entity_df$filter_region & entity_df$size & entity_df$specialty)
+                                        | entity_df$filter_customer_entity, TRUE, FALSE)
     }
     # if no filter is selected, then
     else {
-      entity_df$filter_entities<-TRUE
+      entity_df$filtered_entity<-TRUE
     }
 
-    # _ _ _ d. Complete Filtering ---------------------------------------------
     entity_df<-entity_df %>%
-      filter(filter_myEntity | (filter_costmodel)) %>%
-      mutate("Group" = ifelse(filter_myEntity,"Me","Baseline"),
-             "CostDriver_Benchmark"= ifelse(filter_costdriver,costdriver,NA)) %>%
+      filter(filter_myEntity) %>%
+      mutate("Group" = ifelse(filter_myEntity,"Me","Baseline")) %>%
       group_by(region, beds, specialty, customer_entity, costdriver,
                encounterid, rom, soi, agebucket, patienttyperollup,
-               dischargestatusgroup, los_ubrev_group, imaging_ubrev_group,
-               CostDriver_Benchmark) %>%
+               dischargestatusgroup, los_ubrev_group, imaging_ubrev_group) %>%
       summarize("Count"=1,
                 "costs" = sum(costs)) %>%
       ungroup()
+
     return(entity_df)
   })
 
-  # _ _ 2. Encounter Data Frame ---------------------------------------------
+  #################################################################################################################################-
+  ##### ENCOUNTER DF LOGIC ---------------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
+
   # Encounter level data frame with benchmark grouping columns and cost grouping columns as well as
   # columns with cost information;
-  #
+
   # This code filters the full dataframe of all cost data, based off user inputs about how to filter the data
   encounter_df<-eventReactive(input$refresh, {
-    encounter_df <- full_df
+    # we can start with the current filtered state of entity_df
+    encounter_df <- entity_df[which(entity_df$filtered_entity==TRUE)]
 
-    # _ _ _ a. Selected Cost Driver Filter ------------------------------------
-    encounter_df$filter_costdriver<-ifelse(encounter_df$costdriver==input$costdriver, TRUE, FALSE)
-
-    # _ _ _ b. Selected Entity Filter -----------------------------------------
-    ### 1. filter selected hospital
-    encounter_df$filter_myEntity <- ifelse(encounter_df$customer_entity==input$customer_entity,TRUE,FALSE)
-
-    # _ _ _ c. Selected Population Filters -----------------------------------
-    ### 1. hospital region filter
-    if(!is.null(input$region)){
-      encounter_df$filter_region<-ifelse(encounter_df$region %in% input$region,TRUE,FALSE)
-    } else {
-      encounter_df$filter_region<-TRUE
-    }
-    ### 2. hospital size filter
-    if(!is.null(input$size)){
-      encounter_df$filter_size<-ifelse(encounter_df$beds_fixed %in% input$size,TRUE,FALSE)
-    } else {
-      encounter_df$filter_size<-TRUE
-    }
-    ### 3. hospital specialty filter
-    if(!is.null(input$specialty)){
-      encounter_df$filter_specialty<-ifelse(encounter_df$specialty %in% input$specialty,TRUE,FALSE)
-    } else {
-      encounter_df$filter_specialty<-TRUE
-    }
-    ### 4. hospital entities filters
-    if(!is.null(input$customer_entity_benchmark)){
-      encounter_df$filter_customer_entity<-ifelse(encounter_df$customer_entity %in% input$customer_entity_benchmark, TRUE, FALSE)
-    } else {
-      encounter_df$filter_customer_entity<-TRUE
-    }
-    ### 5. hospital cost model filter
-    if(length(input$costmodel) == 1){
-      if("standard" %in% input$costmodel){
-        encounter_df$filter_costmodel <- ifelse(encounter_df$isstratastandardcost == "t", TRUE, FALSE)
-      } else if("non" %in% input$costmodel){
-        encounter_df$filter_costmodel <- ifelse(encounter_df$isstratastandardcost == "f", TRUE, FALSE)
-      }
-    }
-    else {
-      encounter_df$filter_costmodel <- TRUE
-    }
-    # hospital benchmark filter
-    # if the only input is customers/entities, then only use that column to filter
-    if(all(is.null(input$region),is.null(input$size),is.null(input$specialty)) & !is.null(input$customer_entity_benchmark)){
-      encounter_df$filter_entities<-ifelse(encounter_df$filter_customer_entity, TRUE, FALSE)
-    }
-    # if there are input filters, but no customer entity filters, then only use input filters
-    else if(any(!is.null(input$region),!is.null(input$size),!is.null(input$specialty)) & !is.null(input$customer_entity_benchmark))
-    {
-      encounter_df$filter_entities<-ifelse(encounter_df$filter_region & encounter_df$filter_size & encounter_df$specialty, TRUE, FALSE)
-    }
-    # if there are input filters and customer entity filters, then
-    else if(any(!is.null(input$region),!is.null(input$size),!is.null(input$specialty)) & !is.null(input$customer_entity_benchmark)){
-      encounter_df$filter_entities<-ifelse((encounter_df$filter_region & encounter_df$size & encounter_df$specialty) | encounter_df$filter_customer_entity, TRUE, FALSE)
-    }
-    # if no filter is selected, then
-    else {
-      encounter_df$filter_entities<-TRUE
-    }
-
-    # _ _ _ d. Benchmarking filters -------------------------------------------
-    # filter ROM
-    if(!is.null(input$ROM)){
-      encounter_df$filter_rom<-ifelse(encounter_df$rom %in% input$ROM, TRUE, FALSE)
+    # a. Benchmarking filters
+    # # filter ROM
+    if(!is.null(input$rom)){
+      encounter_df$filter_rom<-ifelse(encounter_df$rom %in% input$rom, TRUE, FALSE)
     } else {
       encounter_df$filter_rom<-TRUE
     }
-    # filter SOI
-    if(!is.null(input$SOI)){
-      encounter_df$filter_soi<-ifelse(encounter_df$soi %in% input$ROM, TRUE, FALSE)
+    # # filter SOI
+    if(!is.null(input$soi)){
+      encounter_df$filter_soi<-ifelse(encounter_df$soi %in% input$soi, TRUE, FALSE)
     } else {
       encounter_df$filter_soi<-TRUE
     }
-    # filter age
+    # # filter age
     if(!is.null(input$age)){
-      encounter_df$filter_age<-ifelse(encounter_df$age %in% input$ROM, TRUE, FALSE)
+      encounter_df$filter_age<-ifelse(encounter_df$age %in% input$age, TRUE, FALSE)
     } else {
       encounter_df$filter_age<-TRUE
     }
-    # filter patient type
-    if(!is.null(input$patienttype)){
-      encounter_df$filter_patienttype<-ifelse(encounter_df$PatientTypeRollup %in% input$patienttype, TRUE, FALSE)
+    # # filter patient type
+    if(!is.null(input$patienttyperollup)){
+      encounter_df$filter_patienttype<-ifelse(encounter_df$patienttyperollup %in% input$patienttyperollup, TRUE, FALSE)
     } else {
       encounter_df$filter_patienttype<-TRUE
     }
+    # # filter discharge status
+    if(!is.null(input$dischargestatusgroup)){
+      encounter_df$filter_dischargestatus<-ifelse(encounter_df$dischargestatusgroup %in% input$dischargestatusgroup, TRUE, FALSE)
+    } else {
+      encounter_df$filter_dischargestatus<-TRUE
+    }
 
-    # _ _ _ e. Cost Type Filters  ---------------------------------------------
+    # e. Cost Type Filters
     if(length(input$cost) > 0){
-      encounter_df$temp1<-ifelse(encounter_df$FixedVariable %in% input$costs, 1, 0)
-      encounter_df$temp2<-ifelse(encounter_df$DirectIndirect %in% input$costs, 1, 0)
-      encounter_df$temp3<-ifelse(encounter_df$CostDriver %in% input$costs, 1, 0)
+      encounter_df$temp1<-ifelse(encounter_df$fixedvariable %in% input$costs, 1, 0)
+      encounter_df$temp2<-ifelse(encounter_df$directindirect %in% input$costs, 1, 0)
+      encounter_df$temp3<-ifelse(encounter_df$costdriver %in% input$costs, 1, 0)
       encounter_df$temp_all<-encounter_df$temp1 + encounter_df$temp2 + encounter_df$temp3
       if(max(encounter_df$temp_all)==1){
         encounter_df$filter_costtype<-ifelse(encounter_df$temp_all==1, TRUE, FALSE)
@@ -382,18 +335,18 @@ shinyServer(function(input, output, session) {
     }
 
 
-    # _ _ _ f. Quality Incident Filters ---------------------------------------
-    # if there is only one quality incident filter selected
+    # f. Quality Incident Filters
+    # # if there is only one quality incident filter selected
     if(length(input$qualityincidents)==1){
       # if "Only Keep Encounters without Hospital-Acquired Quality Incidents"
       # filter out hospital - acquired conditions / hospital caused quality incidents
       if(min(input$qualityincidents)=="Remove"){
-        encounter_df$filter_qualityincidents<-ifelse(encounter_df$HospitalAcqCondition=="0", TRUE, FALSE)
+        encounter_df$filter_qualityincidents<-ifelse(encounter_df$hospitalacqcondition=="0", TRUE, FALSE)
       }
       # if "Only Keep Encounters With Hospital-Acquired Quality Incidents"
       # filter out NON hospital-acquired conditions/hospital-caused quality incidents
       else if(min(input$qualityincidents)=="Keep"){
-        encounter_df$filter_qualityincidents<-ifelse(encounter_df$HospitalAcqCondition=="1", TRUE, FALSE)
+        encounter_df$filter_qualityincidents<-ifelse(encounter_df$hospitalacqcondition=="1", TRUE, FALSE)
       }
     }
     # if both are selected, or neither selected, keep both
@@ -401,22 +354,301 @@ shinyServer(function(input, output, session) {
       encounter_df$filter_qualityincidents<-TRUE
     }
 
+    # set conditions for filtering
+    encounter_conditions<-c(encounter_df$filter_rom & encounter_df$filter_soi & encounter_df$filter_age &
+                              encounter_df$filter_patienttype & encounter_df$filter_costtype &
+                              encounter_df$filter_qualityincidents & encounter_df$filter_dischargestatus)
+
+    encounter_df<-encounter_df[encounter_conditions,] %>%
+      mutate(Group=factor(ifelse(filter_myentity,"Me","Baseline"),
+                          levels=c("Baseline","Me"),
+                          ordered=TRUE),
+             name="Benchmark")
+
+
+    #check to see if there's still data after all that filtering!!
+    validate(
+      need(nrow(encounter_df)>0,"The data has zero rows due to filtering. Please adjust your filters.")
+    )
+
+
+    return(encounter_df)
+
+  })
+
+  #################################################################################################################################-
+  ##### SUMMARY DF BENCHMARK LOGIC -------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
+
+  # data frame with summary statistics for all the baseline hospitals
+  # this data frame is used to create the labels for the boxplots, as well as the data tables
+  summary_df_benchmark <- eventReactive(input$refresh, {
+    # initialize empty variables to indicate keep/remove ROM/SOI for custom grouping option
+    remove_ROM <- c()
+    keep_ROM <- c()
+    remove_SOI <- c()
+    keep_SOI <- c()
+
+    # grab all of the possible groupings
+    all_groupings <- c(input$benchmarkbreakdowns, keep_ROM, keep_SOI)
+    # remove unwanted groupings if specified
+    keep_benchmarkgroups <- setdiff(all_groupings, c(remove_ROM, remove_SOI))
+
+    groups <- c("Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
+
+    summary_df_benchmark <- encounter_df() %>%
+      filter(Group == "Baseline") %>%
+      calcSummary(df = ., summary_var = "costs", outlier_threshold = 2, grouping_vars = groups)
+
+    ## check to see there's still data to benchmark against after filtering encounter_df for just the baseline data
+    validate(
+      need(nrow(summary_df_benchmark) > 0, "There is no baseline data due to filtering (i.e. there is no data for the 'Baseline'). Please adjust your data filters.")
+    )
+
+    return(summary_df_benchmark)
   })
 
 
+  #################################################################################################################################-
+  ##### SUMMARY DF ME LOGIC --------------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
 
-  # _ III. Plots ------------------------------------------------------------
+  # data frame with summary statistics for the hospital of interest
+  # this data frame is used to create the labels for the boxplots, as well as the data tables
+  summary_df_me <- eventReactive(input$refresh, {
+    # initialize empty variables to indicate keep/remove ROM/SOI for custom grouping option
+    remove_ROM <- c()
+    keep_ROM <- c()
+    remove_SOI <- c()
+    keep_SOI <- c()
 
+    # grab all of the possible groupings
+    all_groupings <- c(input$benchmarkbreakdowns, keep_ROM, keep_SOI)
+    # remove unwanted groupings if specified
+    keep_benchmarkgroups <- setdiff(all_groupings, c(remove_ROM, remove_SOI))
+
+    groups <- c("Group", "msdrggroup", "CostGrouping", "BenchmarkGrouping", keep_benchmarkgroups, input$costbreakdowns)
+
+    summary_df_me <- encounter_df() %>%
+      filter(Group == "Me") %>%
+      calcSummary(df = ., summary_var = "costs", outlier_threshold = 2, grouping_vars = groups)
+
+    ## check to see there's still data to benchmark after filtering encounter_df for just the "Me" data
+    validate(
+      need(nrow(summary_df_me) > 0, "There is no data to benchmark due to filtering (i.e. there is no data for 'Me'). Please adjust your data filters.")
+    )
+
+    return(summary_df_me)
+  })
+
+
+  #################################################################################################################################-
+  ##### SUMMARY DF COMPARE LOGIC ---------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
+
+  # data frame with the summary information for "Me" and the "Baseline" next to each other in order to calculate differences
+  # used to create labels for the difference barplots, as well as the comparison data table
+  compare_df <- eventReactive(input$refresh, {
+    # initialize empty variables to indicate keep/remove ROM/SOI for custom grouping option
+    remove_ROM <- c()
+    keep_ROM <- c()
+    remove_SOI <- c()
+    keep_SOI <- c()
+    # grab all of the possible groupings
+    all_groupings <- c(input$benchmarkbreakdowns, keep_ROM, keep_SOI)
+    # remove unwanted groupings if specified
+    keep_benchmarkgroups <- setdiff(all_groupings, c(remove_ROM, remove_SOI))
+
+    groups <- c("msdrggroup", "BenchmarkGrouping", "CostGrouping", keep_benchmarkgroups, input$costbreakdowns)
+
+    # grab summary df of "Me"
+    me <- summary_df_me()
+    # append "_ME" to end of summary column names (excluding join keys (i.e. groups))
+    colnames(me)[!(colnames(me) %in% groups)] <- paste0(colnames(me)[!(colnames(me) %in% groups)], "_ME")
+
+    # full join the summary df of all the benchmark hospitals, and the summary df of "Me"
+    # use the groupings as join keys
+    compare_out <- summary_df_benchmark() %>%
+      full_join(me, by = groups)
+
+    compare_out <- compare_out %>%
+      mutate(diff_median = round(median_ME - median, 2),                            # difference in medians b/w "Me" and benchmark
+             diff_mean = round(mean_ME - mean, 2),                                  # difference in mean b/w "Me" and benchmark
+             # percent difference in median b/w "Me" and benchmark
+             proport_diff_median = ifelse(is.infinite(diff_median/median_ME),
+                                          round(coalesce(diff_median / 1, 0), 2),  # if division by zero, divide by 1 instead
+                                          round(coalesce(diff_median / median_ME, 0), 2)),
+             # percent difference in mean b/w "Me" and benchmark
+             proport_diff_mean = ifelse(is.infinite(diff_mean/mean_ME),
+                                        round(coalesce(diff_mean / 1, 0), 2),    # if division by zero, divide by 1 instead
+                                        round(coalesce(diff_mean / mean_ME, 0), 2)),
+             Difference = "Difference",                                             # column to indicate this is the "difference" data frame; used for faceting
+             empty_flag = ifelse(is.na(min) | is.na(min_ME), 1, 0))                 # flag for if missing data
+
+
+    return(compare_out)
+  })
+
+  #################################################################################################################################-
+  ##### GRAPHING LOGIC -------------------------------------------------------------------------------------------------------------
+  #################################################################################################################################-
+  # _ II. Plots ------------------------------------------------------------
 
   # _ _ 0. General ----------------------------------------------------------
   costdriver_overview_plot<-eventReactive(input$refresh, {
     #grab reactive data frames
     encounter_df<-encounter_df()
+    encounter_df<-encounter_df %>%
+      group_by(group, costdriver, customer_entity) %>%
+      summarise(Count=sum(Count)) %>%
+      ungroup()
 
+    costdriver_overview_plot<-ggplot() +
+      geom_boxplot(data = encounter_df[encounter_df$group == "Me", ])
+      geom_boxplot(data = encounter_df[encounter_df$group == "Baseline", ])
+      scale_fill_manual(values = c("Baseline" = "#1f78b4",    # blue
+                                   "Me" = "#ff7f00"),         # orange
+                        name = "") +
+      scale_color_manual(values = c("Baseline" = "#1f78b4",    # blue
+                                    "Me" = "#ff7f00"),         # orange
+                         guide = FALSE) +
+      scale_y_continuous(expand = c(0,0)) +
+      labs(x = "# of Encounters",
+           y = "# of Benchmark Institutions") +
+      theme(axis.text.y = element_blank(),
+            axis.ticks.x = element_blank())
 
-
-
+    return(costdriver_overview_plot)
   })
+
+  ## -----------<< Benchmark Plot >>-----------
+  plot <- eventReactive(input$refresh, {
+
+    ## grab all reactive data frames
+    main_df <- encounter_df()
+    benchmark <- summary_df_benchmark()
+    me <- summary_df_me()
+    comparison <- compare_df()
+
+    ## stack together "Baseline" summary df and "Me" summary df for boxplot labels
+    all <- union_all(benchmark, me)
+
+
+    ## -----------<<< Set Plotting Parameters >>>-----------
+    # if no cost grouping, don't facet
+    if(is.null(input$costbreakdowns)){
+      facet_group <- as.formula(".~Name")             # faceting for "gg"
+      facet_diff_group <- as.formula(".~Difference")  # faceting for "diff"
+    }
+    # if there is cost grouping, facet by cost grouping
+    else {
+      facet_group <- as.formula("CostGrouping~Name")             # faceting for "gg
+      facet_diff_group <- as.formula("CostGrouping~Difference")  # faceting for "diff"
+    }
+
+    # if no benchmark grouping, set axis name as "MS-DRG Code" for default
+    if(is.null(input$benchmarkbreakdowns)){
+      axis_name <- "MSDRG"
+    }
+    # if benchmark grouping, set axis name as combo of all the grouping column names
+    else {
+      axis_name <- paste0(input$benchmarkbreakdowns, collapse = " & ")
+    }
+
+
+  ## -----------<<< gg -- "Baseline" vs. "Me" plot >>>-----------
+  gg <- ggplot(encounter_df) +
+    geom_boxplot(aes(x = BenchmarkGrouping, y = costs, color = Group), position = "dodge") +
+    geom_text(data = all,
+              aes(x = BenchmarkGrouping, y = median, label = paste0("$", scales::comma(median)), group = Group,
+                  hjust = -0.2, vjust = -0.5,
+                  fontface = "bold"),
+              position = position_dodge(width = 0.75), size = 5) +
+    coord_flip() +
+    facet_grid(facet_group) +
+    scale_x_discrete(name = axis_name) +
+    scale_color_manual(values = c("Baseline" = "#1f78b4",  # blue
+                                  "Me" = "#ff7f00"),       # orange
+                       name = "") +
+    # lines that separate different groupings
+    # remove first value in sequence (0.5) because don't want one between panel border and first plot
+    geom_vline(xintercept = seq(from = 0.5, to = length(unique(comparison[["BenchmarkGrouping"]])) -0.5, by = 1)[-1],
+               color = "black") +
+    theme_bw() +
+    theme(plot.title = element_text(size = 18, face = "bold"),
+          panel.background = element_rect(fill = "white"),
+          panel.grid.minor = element_line(color = "lightgray"),
+          strip.background = element_blank(),
+          strip.text.y = element_blank(),
+          axis.ticks = element_blank(),
+          axis.text = element_text(size = 15),
+          strip.text.x = element_text(size = 15),
+          axis.title = element_text(size = 15),
+          legend.position = "bottom",
+          legend.text = element_text(size = 24)) +
+    guides(colour = guide_legend(override.aes = list(size = 2))) +
+
+  ## set axis for costs to be either normal or log based on user input
+  if(input$scale == TRUE){
+    gg <- gg +
+      scale_y_log10(name = "Cost per Encounter\n($)",
+                    labels = scales::dollar)
+  }
+  # use normal scale if no input or input is "normal" (default)
+  if(input$scale == FALSE){
+    gg <- gg +
+      scale_y_continuous(name = "Cost per Encounter\n($)",
+                         labels = scales::dollar)
+  }
+
+  ## -----------<<< diff -- plot showing differences between "Baseline" and "Me" >>>-----------
+  diff <- ggplot(comparison,
+                 aes(fill = ifelse(proport_diff_median > 0, 'pos', 'neg'))) +   # if % difference positive, then "pos", else "neg" (for setting colors)
+    geom_bar(aes(x = BenchmarkGrouping, y = proport_diff_median),
+             stat = 'identity', width = .95) +
+    # line at 0 mark
+    geom_hline(color = 'black', yintercept = 0) +
+    # lines that separate different groupings
+    # remove first value in sequence (0.5) because don't want one between panel border and first plot
+    geom_vline(xintercept = seq(from = 0.5, to = length(unique(comparison[["BenchmarkGrouping"]]))-0.5, by = 1)[-1],
+               color = "black") +
+    geom_text(aes(label = ifelse(empty_flag == 1,
+                                 "  NA",                                           # if NA, label "NA" (extra spaces for aesthetic purposes to move it right of vertical line)
+                                 paste0(round(proport_diff_median*100, 2), "%")),  # label with %, round to 2 decimal places
+                  x = BenchmarkGrouping,
+                  y = case_when(diff_median >= 0 ~ 0.12*max(abs(proport_diff_median)),    # if positive %, put it to the right
+                                diff_median < 0 ~ -0.4*max(abs(proport_diff_median)),     # if negative %, put it to the left
+                                is.na(diff_median) ~ 0),                                  # if NA because no comparisons, put it at zero and should have "NA" label
+                  fontface = "bold"), size = 5,
+              hjust = 0.15) +
+    scale_y_continuous(name = "Difference\n(%)",
+                       labels = scales::percent,
+                       breaks = scales::pretty_breaks(2),
+                       limits = c(-max(abs(comparison$proport_diff_median)), max(abs(comparison$proport_diff_median)))) +
+    scale_fill_manual(values = c("neg" = "#33a02c",   # green
+                                 "pos" = "#e31a1c"),  # red
+                      guide = FALSE) +
+    scale_color_manual(values = c("big" = 'white', "small" = 'grey20'), guide = FALSE) +
+    coord_flip() +
+    facet_grid(facet_diff_group) +
+    theme_bw() +
+    theme(panel.background = element_rect(fill = "white"),
+          panel.grid = element_blank(),
+          strip.background = element_blank(),
+          axis.title.y = element_blank(),
+          axis.ticks = element_blank(),
+          axis.text.y = element_blank(),
+          axis.title.x = element_text(size = 15),
+          strip.text.x = element_text(size = 15),
+          axis.text.x = element_text(size = 15))
+
+  ## -----------<<< full -- gg and diff plots together >>>-----------
+  full <- plot_grid(gg, diff, ncol = 2, align = "h", axis = "bt", rel_widths = c(1.5, 0.5))
+
+  return(full)
+})
+
+
 
 
 
@@ -473,6 +705,23 @@ shinyServer(function(input, output, session) {
 
   # _ _ _ << Plot: Direct Cost Per Case >> ----------------------------------
 
+  output$costdriver_overview_plot <-renderPlot({
+    plot()
+  })
 
+  output$box_imaging <- renderPlotly({
+    p = ggplot(full_df, aes(imaging_ubrev_group, Cost, color = imaging_ubrev_group, name = Cost)) +
+      stat_boxplot(geom = "errorbar", width = 0.8) + geom_boxplot() + ylim(c(0, 100))
+    (plot_custom(p, legend.pos = 'none') + theme(axis.text.x = element_text(angle = 90, hjust = 1))) %>% ggplotly()
+  })
+
+  box_genre = function(dat) {
+    p = ggplot(encounter_df, aes(imaging_ubrev_group, Cost, color = imaging_ubrev_group, name = Cost)) +
+      stat_boxplot(geom = "errorbar", width = 0.8) + geom_boxplot() + ylim(c(0, 100))
+    (plot_custom(p, legend.pos = 'none') + theme(axis.text.x = element_text(angle = 90, hjust = 1))) %>% ggplotly()
+  }
 
 })
+
+
+

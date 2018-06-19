@@ -13,7 +13,7 @@ b5a02317c3d2de0275cfd1efef086f6f *AdminLTE/fonts/Source_Sans_Pro_400italic.ttf
 39d8befcdcde91747d1b75ab6cadffbd *AdminLTE/fonts/Source_Sans_Pro_600.ttf
 e7dc82fa8534c925644f9af433214d20 *AdminLTE/fonts/Source_Sans_Pro_600italic.ttf
 206f41ff7cdb7df5dbfeda33c847b793 *AdminLTE/fonts/Source_Sans_Pro_700.ttf
-ba9877c844b2771b153b821bf1658240 *DESCRIPTION
+9b0b7a67bdc280b78a559dc039445dfa *DESCRIPTION
 005e6579d5b2b18c8d736baf54f2bc58 *INDEX
 aa74c7f14050df022d9f7da142aa31be *LICENSE
 c697e03d8dfcbe05a2b12b0815298b69 *Meta/Rd.rds
@@ -21,7 +21,7 @@ c697e03d8dfcbe05a2b12b0815298b69 *Meta/Rd.rds
 b35f6cdb8c92993e94cfe84556376a49 *Meta/hsearch.rds
 04c552068f4aa3676ef3b44a8a0edc50 *Meta/links.rds
 cbf2d9a42e9b9fdb6f433f9d6b1663e6 *Meta/nsInfo.rds
-9166dc39193464e996787e9e091dc98c *Meta/package.rds
+c8399ad2158930da5b68820fbcf09846 *Meta/package.rds
 7b13e6353f630a4c48c686b647499740 *NAMESPACE
 f69bb73a6e9b69f29cc816a89dddd6e2 *NEWS.md
 ebf0fc819595d631b8bf280c4b049940 *R/shinydashboard
@@ -29,9 +29,9 @@ b9af81bd3dd0f976f26cba61038b540e *R/shinydashboard.rdb
 ef7f5afc074efe336129d16c0d41e2e0 *R/shinydashboard.rdx
 aeb5d3f37995b0cba21a7cd5c535a377 *help/AnIndex
 c8d4bbbd299a9087302ddcd8135e2872 *help/aliases.rds
-5f0345ea5b8ce101fa5edbdeab0bfa15 *help/paths.rds
-e072783565d759ddc629defe68ab5d94 *help/shinydashboard.rdb
-ed23f108390f1b3f32296fc3d6946839 *help/shinydashboard.rdx
+f8aa69e82d7fe07c5c34fa3dfe946e8b *help/paths.rds
+363a99e4f69e8d0b1b433cd4d2964136 *help/shinydashboard.rdb
+203a00bb8180de56e4a9ce1cb59f393b *help/shinydashboard.rdx
 7c4c836545bc380adc652ae9b4cf2c2d *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
 02c24fb3f5504d1bfc8f050d0392571b *shinydashboard.css

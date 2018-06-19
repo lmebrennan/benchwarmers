@@ -1,11 +1,11 @@
-ac8ff0e3d435bef2b30a80e27034c72b *DESCRIPTION
+2c564a6a7370742544c0832db1ae2706 *DESCRIPTION
 7ca16c7bc38a3eeaf227e03640751b1f *INDEX
 1a2d11b488198aa4701026bb52eefeca *Meta/Rd.rds
 317735fd3091c51c4b67896cd2ea82be *Meta/features.rds
 1af10c729d1e5c97106cad2eef7bd939 *Meta/hsearch.rds
 dbd66cb62e37ee56d66c6181a386bc88 *Meta/links.rds
 cda1afa9f91685f92f54827fa6abe3df *Meta/nsInfo.rds
-d812bc2af8196592574a9f70edd9ff7d *Meta/package.rds
+8f6435223ea33d0c8c6d16c41711983f *Meta/package.rds
 b5f1696670ae62a166fc2046e8ff9532 *Meta/vignette.rds
 a4e49b13defee5c0012d11375c30ec28 *NAMESPACE
 f617fd85e3b7bd769cf635a059a195e0 *NEWS
@@ -30,8 +30,8 @@ a144132e331d5264fb01c783a1c4dc58 *doc/plot_grid.Rmd
 c3076add6eb7230dfd24e537a8467fe5 *doc/shared_legends.html
 e5f349851866fd7f1ac1af6d76fa1c18 *help/AnIndex
 488434d8e3f4d375e05db4ada55d52bf *help/aliases.rds
-e3633c21c0b4f2bcaba4c75bdd9eedef *help/cowplot.rdb
-1e7530133576948d3ab3f6d1c9010e24 *help/cowplot.rdx
-a51767ecd5bc7e5bf2f65eda54ed8ad4 *help/paths.rds
+64f0b8c3e2a2275e710a2fcf8520b963 *help/cowplot.rdb
+1b8b9c4a18641e1bd8f79b6941d202d2 *help/cowplot.rdx
+118c8ed7140a2dcdb5b52f035540c423 *help/paths.rds
 0812802335de25886ca571b9dc1d98a8 *html/00Index.html
 b6763e6916890c631fdc3f2643803b1a *html/R.css
