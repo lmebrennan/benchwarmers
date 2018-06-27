@@ -35,6 +35,7 @@ packages<-c('rlang',
 
 #install each package
 install.packages(packages,repos = 'https://cran.rstudio.com/')
+library(civis)
 
 #make sure civis is intalled
 #devtools::install_github("civisanalytics/civis-r")
