@@ -109,7 +109,7 @@ if(!(exists("hospital_info"))){
 }
 # get ENCOUNTER data from civis
 if(!(exists("raw_encounter_df"))){
-  raw_encounter_df <- read_civis("public.encounter_children1",database="Strata Decision Technologies")
+  raw_encounter_df <- read_civis("public.encounter_children",database="Strata Decision Technologies")
 }
 
 # safe gaurd the data
