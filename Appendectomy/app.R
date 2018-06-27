@@ -43,7 +43,7 @@ install.packages(packages,repos = 'https://cran.rstudio.com/')
 inst = lapply(packages,require,character.only=TRUE)
 
 # load all other files in the project
-source('S:/Users/sxie/Proof of Concept Projects/Appendectomy Drill Down/functions.R')
+source('functions.R',local = TRUE)
 ###############################################################################################################################-
 ##### Load data from Civis, then merge into full_df
 ###############################################################################################################################-
