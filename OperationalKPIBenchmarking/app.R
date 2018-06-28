@@ -230,7 +230,7 @@ server <- function(input, output, session){
     names(dat)[2]<-"me_2017"
     
     
-    spark_dat<-subset(table_df,((fiscalyear<=2017 & timeclass=="A")|fiscalyear==2018)&Group=="Me",
+    spark_dat<-subset(table_df,fiscalyear<=2017 & timeclass=="A" &Group=="Me",
               select=c(fiscalyear,kpi,value))
     spark_dat<-spark_dat[order(spark_dat$kpi,spark_dat$fiscalyear),]
     names(spark_dat)[3]<-"value_me"
@@ -241,7 +241,13 @@ server <- function(input, output, session){
               select=c(customer_entity,kpi,value))
     names(box_dat)[3]<-"value_baseline"
     
-    income_dat<-subset(Reduce(function(...) merge(..., all=TRUE), list(dat,spark_dat,box_dat)),
+    Percentrank<-subset(table_df,fiscalyear==2017 & timeclass=="A",select=c(kpi,value,Group))%>%
+      group_by(kpi)%>%
+      mutate(percrank=round((rank(value)/length(value))*100,0),
+             percentile=percrank[Group=="Me"]
+      )%>%distinct(kpi,percentile)
+    
+    income_dat<-subset(Reduce(function(...) merge(..., all=TRUE), list(dat,spark_dat,box_dat,Percentrank)),
                        kpi %in% c("iprevperipday","revenue_growthrate","npr_totalgrosscharge","baddebt_npr","charity_npr",
                                   "employmentexpense_npr","salaries_npr","supplies_npr","purchasedservice_npr",
                                   "totalexpense_npr","ebitda_adpatientday","tie_ratio","operatingmargin","netincomemargin",
@@ -266,8 +272,7 @@ server <- function(input, output, session){
       group_by(KPI) %>%
       summarise(
         Me=paste(unique(me_2017),collapse=","),
-        `25th Percentile`=quantile(value_baseline,0.25,na.rm=TRUE),
-        `75th Percentile`=quantile(value_baseline,0.75,na.rm=TRUE),
+        Percentile=paste(unique(percentile),collapse=","),
         Baseline=spk_chr(value_baseline,type="box"),
         Trend=spk_chr(unique(value_me),type="line")
       )%>%
@@ -277,32 +282,24 @@ server <- function(input, output, session){
                              "Purchased Services per Adjusted Patient Day"),paste("$",Me,sep=""),
                   ifelse(KPI %in% c("Average Length of Stay","TIE Ratio"),paste(Me),paste(Me,"%",sep=""))
         ),
-        `25th Percentile`=ifelse(KPI %in% c("Inpatient Revenue per Inpatient Day","EBITDA per Adjusted Patient Day",
-                                            "Employment Expense per Adjusted Patient Day","Supply Expense per Adjusted Patient Day",
-                                            "Purchased Services per Adjusted Patient Day"),paste("$",`25th Percentile`,sep=""),
-                                 ifelse(KPI %in% c("Average Length of Stay","TIE Ratio"),paste(`25th Percentile`),paste(`25th Percentile`,"%",sep=""))),
-        `75th Percentile`=ifelse(KPI %in% c("Inpatient Revenue per Inpatient Day","EBITDA per Adjusted Patient Day",
-                                            "Employment Expense per Adjusted Patient Day","Supply Expense per Adjusted Patient Day",
-                                            "Purchased Services per Adjusted Patient Day"),paste("$",`75th Percentile`,sep=""),
-                                 ifelse(KPI %in% c("Average Length of Stay","TIE Ratio"),paste(`75th Percentile`),paste(`75th Percentile`,"%",sep="")))
-        
-      )%>%
-      format_table(align = "l",list(Me = 
+        Percentile=paste(Percentile,"%",sep="")
+      )%>%`colnames<-`(c("KPI", "Me (2017 Actual)", "Percentile Rank","Baseline (2017 Actual)","Trend (2014 - 2017 Actual)"))%>%
+      format_table(align = "l",list(`Me (2017 Actual)` = 
                                       formatter("span", 
                                                 style = ~ style(color = ifelse(KPI %in% c("Inpatient Revenue per Inpatient Day",
                                                                                           "Revenue Growth Rate","NPR as % of Total Gross Charges",
                                                                                           "EBITDA per Adjusted Patient Day","TIE Ratio",
-                                                                                          "Operating Margin","Net Income Margin")&as.numeric(gsub("[^0-9\\.]","",Me))<as.numeric(gsub("[^0-9\\.]","",`25th Percentile`)), "red",
+                                                                                          "Operating Margin","Net Income Margin")&as.numeric(gsub("[^0-9\\.]","",`Percentile Rank`))<25, "red",
                                                                                ifelse(!(KPI %in% c("Inpatient Revenue per Inpatient Day",
                                                                                                    "Revenue Growth Rate","NPR as % of Total Gross Charges",
                                                                                                    "EBITDA per Adjusted Patient Day","TIE Ratio",
-                                                                                                   "Operating Margin","Net Income Margin"))&as.numeric(gsub("[^0-9\\.]","",Me))>as.numeric(gsub("[^0-9\\.]","",`75th Percentile`)) ,"red" ,"black"))))))%>%
+                                                                                                   "Operating Margin","Net Income Margin"))&as.numeric(gsub("[^0-9\\.]","",`Percentile Rank`))>75 ,"red" ,"black")))
+                                                )))%>%
       htmltools::HTML() %>%
       div() %>%
       spk_add_deps() %>%
       {column(width=10, .)}
-    
-    
+ 
       return(income_table)
     })
    output$Table<-renderUI({
